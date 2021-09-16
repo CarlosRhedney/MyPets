@@ -105,7 +105,7 @@ MyPets by Carlos Rhedney
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">Orgs</a></li>
+                    <li><a href="#">Ongs</a></li>
                     <li><a href="#">Animais</a></li>
                 </ul>
             </div>  
