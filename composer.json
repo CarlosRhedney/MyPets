@@ -1,0 +1,22 @@
+{
+    "name": "carlosrhedney/mypets",
+    "description": "Plataforma para adocao de animais.",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Mypets\\": "vendor/mypets/php-classes/src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Carlos Rhedney",
+            "email": "twisterpsa@hotmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+    	"phpmailer/phpmailer":"5.2.22",
+    	"slim/slim":"2.0",
+    	"rain/raintpl":"3.0.0"
+    }
+}
