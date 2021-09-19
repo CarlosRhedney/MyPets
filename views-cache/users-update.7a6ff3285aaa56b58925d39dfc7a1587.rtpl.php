@@ -3,7 +3,7 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    Lista de Usuários
+    Edição de Usuários
   </h1>
 </section>
 
@@ -18,27 +18,27 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form role="form">
+        <form role="form" action="/admin/users/<?php echo htmlspecialchars( $user["iduser"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" method="post">
           <div class="box-body">
             <div class="form-group">
               <label for="person">Nome</label>
-              <input type="text" class="form-control" id="person" name="person" placeholder="Digite o nome">
+              <input type="text" class="form-control" id="person" name="person" placeholder="Digite o nome" value="<?php echo htmlspecialchars( $user["person"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
             </div>
             <div class="form-group">
               <label for="login">Login</label>
-              <input type="text" class="form-control" id="login" name="login" placeholder="Digite o login">
+              <input type="text" class="form-control" id="login" name="login" placeholder="Digite o login" value="<?php echo htmlspecialchars( $user["login"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
             </div>
             <div class="form-group">
               <label for="nrphone">Telefone</label>
-              <input type="tel" class="form-control" id="nrphone" name="nrphone" placeholder="Digite o telefone">
+              <input type="tel" class="form-control" id="nrphone" name="nrphone" placeholder="Digite o telefone" value="<?php echo htmlspecialchars( $user["nrphone"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
             </div>
             <div class="form-group">
               <label for="mail">E-mail</label>
-              <input type="email" class="form-control" id="mail" name="mail" placeholder="Digite o e-mail">
+              <input type="email" class="form-control" id="mail" name="mail" placeholder="Digite o e-mail" value="<?php echo htmlspecialchars( $user["mail"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" name="inadmin" value="1"> Acesso de Administrador
+                <input type="checkbox" name="inadmin" value="1" <?php if( $user["inadmin"] == 1 ){ ?>checked<?php } ?>> Acesso de Administrador
               </label>
             </div>
           </div>
