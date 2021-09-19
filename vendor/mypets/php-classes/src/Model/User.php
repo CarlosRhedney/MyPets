@@ -70,5 +70,21 @@ class User extends Model
 		return $sql->select("SELECT * FROM tb_users a INNER JOIN tb_persons b USING(idperson) ORDER BY b.person");
 		
 	}
+
+	public function save()
+	{
+		$sql = new Sql();
+
+		$results = $sql->select("CALL sp_users_save(:person, :login, :despassword, :mail, :nrphone, :inadmin)", array(
+				":person"=>$this->getperson(),
+				":login"=>$this->getlogin(),
+				":despassword"=>$this->getdespassword(),
+				":mail"=>$this->getmail(),
+				":nrphone"=>$this->getnrphone(),
+				":inadmin"=>$this->getinadmin()
+			));
+
+		$this->setData($results[0]);
+	}
 }
 ?>
