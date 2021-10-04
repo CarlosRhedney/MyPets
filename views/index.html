@@ -86,7 +86,7 @@
                         <div class="product-carousel">
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="/res/site/img/product-1.jpg" alt="">
+                                    <img src="/res/site/img/product-1.png" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Visitar</a>
                                         <a href="#" class="view-details-link"><i class="fa fa-link"></i> Doar</a>
@@ -101,7 +101,7 @@
                             </div>
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="/res/site/img/product-2.jpg" alt="">
+                                    <img src="/res/site/img/product-2.png" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Visitar</a>
                                         <a href="#" class="view-details-link"><i class="fa fa-link"></i> Doar</a>
@@ -115,7 +115,7 @@
                             </div>
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="/res/site/img/product-3.jpg" alt="">
+                                    <img src="/res/site/img/product-3.png" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Visitar</a>
                                         <a href="#" class="view-details-link"><i class="fa fa-link"></i> Doar</a>
@@ -130,7 +130,7 @@
                             </div>
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="/res/site/img/product-4.jpg" alt="">
+                                    <img src="/res/site/img/product-4.png" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Visitar</a>
                                         <a href="#" class="view-details-link"><i class="fa fa-link"></i> Doar</a>
@@ -145,7 +145,7 @@
                             </div>
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="/res/site/img/product-5.jpg" alt="">
+                                    <img src="/res/site/img/product-5.png" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Visitar</a>
                                         <a href="#" class="view-details-link"><i class="fa fa-link"></i> Doar</a>
@@ -160,7 +160,7 @@
                             </div>
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="/res/site/img/product-6.jpg" alt="">
+                                    <img src="/res/site/img/product-6.png" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Visitar</a>
                                         <a href="#" class="view-details-link"><i class="fa fa-link"></i> Doar</a>
