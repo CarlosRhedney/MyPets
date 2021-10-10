@@ -1,22 +1,47 @@
 <?php
+//Iniciando a sessão.
 session_start();
 
+// vendor/autoload.php contem os arquivos necessarios para que nosso sistema possa
+// encontre os demais arquivos necessarios para o sistema.
 require_once("vendor/autoload.php");
 
+// Utilização das classes necessarias para a configuração do sistema.
+// Todas contidas no diretorio vendor, onde utilizamos alguns outros frameworks e onde contem o nosso proprio vendor mypets, que por sua vez contem nossas classes de configuração do sistema, model que contem o DAO dos usuarios e as categorias, por o fim nossa conexão com o Banco de Dados.
+// Por isso a importancia da configuração do vendor/autoload.php , é ele quem "encontra" essas classes.
+// Slim framework para rotas.
 use \Slim\Slim;
+
+//  \Page Classe principal do sistema (HomePage), é o primeiro contato entre usuario e sistema.
 use \Mypets\Page;
+
+//  \PageAdmin Classe da administração do sistema, onde gerenciamos todo o sistema e quem esta cadastrado nele, PageAdmin é herança da classe Page, pois herda todos os seus atributos e metodos.
 use \Mypets\PageAdmin;
+
+//  \User Classe da administração do sistema, onde redirecionamos o usuario previamente cadastrado como administrador, que gerencia "certa" parte do sistema para a tela de login, valida se os dados são autenticos e validos no sistema, logout, save, get, update....
+// Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/Model/User.php.
 use \Mypets\Model\User;
+
+// \Category Classe da administração do sitema, onde relaconamos as categorias do sistema.
+// O usuario previamente cadastrado como administrador, que gerencia "certa" parte do sistema tem acesso, contem os metodos listAll, save, get, delete....
+// Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/Model/Category.php.
 use \Mypets\Model\Category;
 
+// Iniciamos uma nova aplicação do Slim framework.
 $app = new Slim();
 
+// Depuração do sistema
 $app->config('debug', true);
 
+// Nossa rota inicial '/', todos os usuarios assim que acessam o sistema são direcionados para a homepage do sistema.
 $app->get('/', function(){
 
+	// Iniciamos o objeto $page, que recebe a classe Page.
+	// Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/Page.php.
 	$page = new Page();
 
+	// Chamamos o metodo setTpl() contido em Page.php, e chamamos o template index.html.
+	// Para mais detalhes verificar o arquivo em views/index.html.
 	$page->setTpl("index");
 
 });

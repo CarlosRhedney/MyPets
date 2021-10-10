@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/icon" href="/res/site/img/logo.png">
   <title>MyPets</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -14,8 +15,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="/res/admin/dist/css/AdminLTE.min.css">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="/res/admin/plugins/iCheck/square/blue.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -27,11 +26,10 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="#"><b>My</b>Pets</a>
+    <a href="/"><b>My</b>Pets</a>
   </div>
   <div class="login-box-body">
     <div align="center"><p class="fa fa-paw"></p></div>
-
     <form action="/admin/login" method="post">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" placeholder="Login" name="login">
@@ -57,16 +55,5 @@
 <script src="/res/admin/plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="/res/admin/bootstrap/js/bootstrap.min.js"></script>
-<!-- iCheck -->
-<script src="/res/admin/plugins/iCheck/icheck.min.js"></script>
-<script>
-  $(function () {
-    $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
-      radioClass: 'iradio_square-blue',
-      increaseArea: '20%'
-    });
-  });
-</script>
 </body>
 </html>

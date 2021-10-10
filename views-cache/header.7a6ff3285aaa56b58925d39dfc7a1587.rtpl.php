@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/icon" href="/res/site/img/logo.png">
   <title>MyPets</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -51,8 +52,8 @@ desired effect
   <header class="main-header">
 
     <a href="/admin" class="logo">
-      <span class="logo-mini"><b>A</b>MP</span>
-      <span class="logo-lg"><b>Admin</b>MyPets</span>
+      <span class="logo-mini"><b>M</b>Ps</span>
+      <span class="logo-lg"><b>My</b>Pets</span>
     </a>
 
     <nav class="navbar navbar-static-top" role="navigation">
