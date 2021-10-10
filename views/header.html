@@ -82,7 +82,7 @@
             
             <div class="col-sm-6">
                 <div class="shopping-item">
-                    <a href="#">Animais<i class="fa fa-home"></i> <span class="product-count">5</span></a>
+                    <a href="#"><i class="fa fa-home"></i> <span class="product-count">5</span></a>
                 </div>
             </div>
         </div>
@@ -102,7 +102,7 @@
             </div> 
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
+                    <li class="active"><a href="/">Home</a></li>
                     <li><a href="#">Ongs</a></li>
                     <li><a href="#">Animais</a></li>
                 </ul>

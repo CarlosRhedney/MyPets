@@ -41,88 +41,146 @@ $app->get('/', function(){
 	$page = new Page();
 
 	// Chamamos o metodo setTpl() contido em Page.php, e chamamos o template index.html.
-	// Para mais detalhes verificar o arquivo em views/index.html.
+	// Para mais detalhes verificar o template em views/index.html.
 	$page->setTpl("index");
 
 });
 
+// Rota do sistema administrativo
 $app->get('/admin', function(){
 
+	// Metodo estatico veryfyLogin criado na classe User
+	// Metodo verifica se a seção foi iniciada, se ela existe, se id do usuario daquela seção é maior que 0 e se o mesmo faz parte da administração do sistema.
 	User::verifyLogin();
 
+	// Iniciamos o objeto $page com a classe PageAdmin.
+	// PageAdmin é herança de Page.
+	// Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/Page.php.
+	// Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/PageAdmin.php.
 	$page = new PageAdmin();
 
+	// Chamamos o metodo setTpl() contido em Page.php, e chamamos o template index.html contido em views/admin.
+	// Para mais detalhes verificar o template em views/admin/index.html.
 	$page->setTpl("index");
 	
 });
 
+
+// Rota do sistema administrativo, apresenta o template (pagina) para o usuario inserir login e senha.
 $app->get('/admin/login', function(){
 
+	// Iniciamos o objeto $page com a classe PageAdmin.
+	// Desativamos a chamada padrão do header e footer, pois nossa pagina de login já contém o header e footer padrão na propria pagina login.html.
+	// Para mais detalhes verificar o template em views/admin/login.html.
+	// Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/PageAdmin.php.
 	$page = new PageAdmin([
 		"header"=>false,
 		"footer"=>false
 	]);
 
+	// Chamamos o metodo setTpl() contido em Page.php, e chamamos o template login.html contido em views/admin.
+	// Para mais detalhes verificar o template em views/admin/login.html.
 	$page->setTpl("login");
 
 });
 
+// Rota da administração para verificação do login e senha.
 $app->post('/admin/login', function(){
 
+	// Metodo estatico login criado na classe User.
+	// Metodo verifica se o login e senha digitados realmente existem no sistema, caso não exista erros durante a verificação o usuario é redirecionado para a parte administrativa do sistema.
 	User::login($_POST["login"], $_POST["password"]);
 
+	// Redirecionamento o usuario para parte da administração.
 	header("Location: /admin");
 
+	// Interrompemos a execução, uma vez que o usuario já está logado.
 	exit;
 
 });
 
+// Rota da administração para o logout do sistema.
 $app->get('/admin/logout', function(){
 
+	// Metodo estatico logout criado na classe User.
+	// Metodo faz o logout do sistema.
 	User::logout();
 
+	// Redirecionamento o usuario para o template de login.
 	header("Location: /admin/login");
 
+	// Interrompemos a execução, uma vez que o usuario já fez o logout.
 	exit;
 	
 });
 
+// Rota da administração que apresenta o template (pagina) para listagem dos usuarios do sistema.
 $app->get('/admin/users', function(){
 
+	// Metodo estatico veryfyLogin criado na classe User.
+	// Metodo verifica se a seção foi iniciada, se ela existe, se id do usuario daquela seção é maior que 0 e se o mesmo faz parte da administração do sistema.
 	User::verifyLogin();
 
+	// Metodo estatico listAll criado na classe User.
+	// Lista todos os usuarios contidos no Banco de Dados.
+	// $users é um array vindo do Banco de Dados com todas as informações de todos os usuarios cadastrados no sistema.
+	// Setamos $users no template users.html, para a listagem dos usuarios na parte administrativa do sistema.
 	$users = User::listAll();
 
+	// Iniciamos o objeto $page com a classe PageAdmin.
+	// Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/PageAdmin.php.
 	$page = new PageAdmin();
 
+	// Chamamos o metodo setTpl() contido em Page.php, e chamamos o template users.html contido em views/admin.
+	// Passamos para o template users.html, um array com todos os dados dos usuarios, para serem listados na parte administrativa do sistema.
+	// Para mais detalhes verificar o template em views/admin/users.html.
+	// "users"=>$users aqui o processo de chave=valor, setamos o valor no template.
 	$page->setTpl("users", array(
 		"users"=>$users
 	));
 
 });
 
+// Rota da administração que apresenta o template (pagina) para criação dos usuarios do sistema.
 $app->get('/admin/users/create', function(){
 
+	// Metodo estatico veryfyLogin criado na classe User.
+	// Metodo verifica se a seção foi iniciada, se ela existe, se id do usuario daquela seção é maior que 0 e se o mesmo faz parte da administração do sistema.
 	User::verifyLogin();
 
+	// Iniciamos o objeto $page com a classe PageAdmin.
+	// Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/PageAdmin.php.
 	$page = new PageAdmin();
 
+	// Chamamos o metodo setTpl() contido em Page.php, e chamamos o template users-create.html contido em views/admin.
+	// Para mais detalhes verificar o template em views/admin/users-create.html.
 	$page->setTpl("users-create");
 
 });
 
+// Rota da administração que carrega o usuario selecionado para ser removido do sistema.
 $app->get('/admin/users/:iduser/delete', function($iduser){
 
+	// Metodo estatico veryfyLogin criado na classe User.
+	// Metodo verifica se a seção foi iniciada, se ela existe, se id do usuario daquela seção é maior que 0 e se o mesmo faz parte da administração do sistema.
 	User::verifyLogin();
 
+	// Iniciamos o objeto $user com a classe User.
+	// Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/Model/User.php.
 	$user = new User();
 
+	// Carregamos o objeto com o metodo get, que traz o id do usuario selecionado para ser deletado do sistema.
+	// Fazemos um cast para int (inteiro), para termos certeza de que o que foi enviado realmente é um numero (id), e se aquele usuario realmente existe no sistema.
 	$user->get((int)$iduser);
 
+	// Chamamos o metodo delete() contido na classe User.php, metodo utilizado para remover usuarios do sistema.
+	// Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/Model/User.php.
 	$user->delete();
 
+	// Redirecionamento o usuario para o template users.html.
 	header("Location: /admin/users");
 
+	// Interrompemos a execução, uma vez que o usuario acabou de realizar uma ação no sistema.
 	exit;
 
 });
