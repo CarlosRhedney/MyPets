@@ -78,13 +78,13 @@ MyPets by Carlos Rhedney
         <div class="row">
             <div class="col-sm-6">
                 <div class="logo">
-                    <h1><a href="#"><img src="/res/site/img/logo.png"></a></h1>
+                    <h1><a href="/"><img src="/res/site/img/logo.png"></a></h1>
                 </div>
             </div>
             
             <div class="col-sm-6">
                 <div class="shopping-item">
-                    <a href="#">Animais<i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                    <a href="#">Animais<i class="fa fa-home"></i> <span class="product-count">5</span></a>
                 </div>
             </div>
         </div>
