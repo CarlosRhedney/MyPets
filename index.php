@@ -177,7 +177,7 @@ $app->get('/admin/users/:iduser/delete', function($iduser){
 	// Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/Model/User.php.
 	$user->delete();
 
-	// Redirecionamento o usuario para o template users.html.
+	// Redirecionamos o usuario para o template users.html.
 	header("Location: /admin/users");
 
 	// Interrompemos a execução, uma vez que o usuario acabou de realizar uma ação no sistema.
@@ -185,62 +185,109 @@ $app->get('/admin/users/:iduser/delete', function($iduser){
 
 });
 
+// Rota da administração que carrega o usuario selecionado para ser atualizado no sistema.
 $app->get('/admin/users/:iduser', function($iduser){
 
+	// Metodo estatico veryfyLogin criado na classe User.
+	// Metodo verifica se a seção foi iniciada, se ela existe, se id do usuario daquela seção é maior que 0 e se o mesmo faz parte da administração do sistema.
 	User::verifyLogin();
 
+	// Iniciamos o objeto $user com a classe User.
+	// Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/Model/User.php.
 	$user = new User();
 
+	// Carregamos o objeto com o metodo get, que traz o id do usuario selecionado para ser atualizado no sistema.
+	// Fazemos um cast para int (inteiro), para termos certeza de que o que foi enviado realmente é um numero (id), e se aquele usuario realmente existe no sistema.
 	$user->get((int)$iduser);
 
+	// Iniciamos o objeto $page com a classe PageAdmin.
+	// Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/PageAdmin.php.
 	$page = new PageAdmin();
 
+	// Chamamos o metodo setTpl() contido em Page.php, e chamamos o template users-update.html contido em views/admin.
+	// Passamos para o template users-update.html, um array com os dados carregados do usuario, para serem listados no template (pagina) users-update.html, para que possa ser alterado.
+	// Para mais detalhes verificar o template em views/admin/users-update.html.
+	// "user"=>$user->getValues aqui o processo de chave=valor recebe os valores do metodo getValues() contido na classe Model.php, setamos o valor no template.
 	$page->setTpl("users-update", array(
 		"user"=>$user->getValues()
 	));
 
 });
 
+// Rota da administração que faz a criação dos usuarios do sistema.
 $app->post('/admin/users/create', function(){
 
+	// Metodo estatico veryfyLogin criado na classe User.
+	// Metodo verifica se a seção foi iniciada, se ela existe, se id do usuario daquela seção é maior que 0 e se o mesmo faz parte da administração do sistema.
 	User::verifyLogin();
 
+	// Iniciamos o objeto $user com a classe User.
+	// Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/Model/User.php.
 	$user = new User();
 
+	// Verificamos se o campo input checkbox foi marcado
+	// Caso venha marcado o usuario tambel é administrador do sistema.
+	// Caso não venha marcado o usuario não é administrador do sistema.
 	$_POST["inadmin"] = (isset($_POST["inadmin"])) ? 1 : 0;
 
+	// Pegamos a senha digitada pelo usuario e transformamos num hash.
+	// O mesmo hash é enviado para o Banco de Dados.
 	$_POST['despassword'] = password_hash($_POST["despassword"], PASSWORD_DEFAULT, [
 
  		"cost"=>12
 
  	]);
 	
+	// Setamos tudo que o usuario preencheu na criação de um novo usuario.
+	// Chamamos o metodo setData() contido na classe Model.php, metodo utilizado para a criação dinamica dos getters and setters no sistema.
+	// Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/Model.php.
 	$user->setData($_POST);
 
+	// Chamamos o metodo save() contido na classe User.php, metodo utilizado para criação de usuarios no sistema.
+	// Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/Model/User.php.
 	$user->save();
 
+	// Redirecionamos o usuario para o template users.html.
 	header("Location: /admin/users");
 
+	// Interrompemos a execução, uma vez que o usuario acabou de realizar uma ação no sistema.
 	exit;
 
 });
 
+// Rota da administração que atualiza e salva o usuario selecionado para ser atualizado no sistema.
 $app->post('/admin/users/:iduser', function($iduser){
 
+	// Metodo estatico veryfyLogin criado na classe User.
+	// Metodo verifica se a seção foi iniciada, se ela existe, se id do usuario daquela seção é maior que 0 e se o mesmo faz parte da administração do sistema.
 	User::verifyLogin();
 
+	// Iniciamos o objeto $user com a classe User.
+	// Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/Model/User.php.
 	$user = new User();
 
+	// Carregamos o objeto com o metodo get, que traz o id do usuario selecionado para ser atualizado no sistema.
+	// Fazemos um cast para int (inteiro), para termos certeza de que o que foi enviado realmente é um numero (id), e se aquele usuario realmente existe no sistema.
 	$user->get((int)$iduser);
 
+	// Verificamos se o campo input checkbox foi marcado
+	// Caso venha marcado o usuario tambem é administrador do sistema.
+	// Caso não venha marcado o usuario não é administrador do sistema.
 	$_POST["inadmin"] = (isset($_POST["inadmin"])) ? 1 : 0;
 
+	// Setamos tudo que o usuario preencheu na atualização de um usuario.
+	// Chamamos o metodo setData() contido na classe Model.php, metodo utilizado para a criação dinamica dos getters and setters no sistema.
+	// Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/Model.php.
 	$user->setData($_POST);
 
+	// Chamamos o metodo update() contido na classe User.php, metodo utilizado para a atualização de um usuario no sistema.
+	// Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/Model/User.php.
 	$user->update();
 
+	// Redirecionamos o usuario para o template users.html.
 	header("Location: /admin/users");
 
+	// Interrompemos a execução, uma vez que o usuario acabou de realizar uma ação no sistema.
 	exit;
 
 });
