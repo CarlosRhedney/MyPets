@@ -73,7 +73,14 @@ class Pet extends Model
 			break;
 		}
 
-		$dist = $_SERVER["DOCUMENT_ROOT"] . DIRECTORY_SEPARATOR . "res" . DIRECTORY_SEPARATOR . "site" . DIRECTORY_SEPARATOR . "img" . DIRECTORY_SEPARATOR . "pets";
+		$dist = $_SERVER["DOCUMENT_ROOT"] . DIRECTORY_SEPARATOR . "res" . DIRECTORY_SEPARATOR . "site" . DIRECTORY_SEPARATOR . "img" . DIRECTORY_SEPARATOR . "pets" . DIRECTORY_SEPARATOR . $this->getidpet() . ".jpg";
+
+		$sql = new Sql();
+		
+		$sql->select("INSERT INTO tb_photos(idpet, photo)VALUES(:idpet, :photo)", array(
+			":idpet"=>$this->getidpet(),
+			":photo"=>$dist
+		));
 
 		imagejpeg($image, $dist);
 

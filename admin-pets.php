@@ -48,6 +48,8 @@ $app->post('/admin/pets/create', function(){
 
 	header("Location: /admin/pets");
 
+	$pet->addPhoto($_FILES["file"]);
+
 	exit;
 
 });

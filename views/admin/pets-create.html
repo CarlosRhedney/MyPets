@@ -23,7 +23,7 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form role="form" action="/admin/pets/create" method="post">
+        <form role="form" action="/admin/pets/create" method="post" enctype="multipart/form-data">
           <div class="box-body">
             <div class="form-group">
               <label for="pet">Nome do animal</label>
@@ -48,6 +48,15 @@
             <div class="form-group">
               <label for="url">Url</label>
               <input type="text" class="form-control" id="url" name="url" >
+            </div>
+            <div class="form-group">
+              <label for="file">Foto</label>
+              <input type="file" class="form-control" id="file" name="file" >
+              <div class="box box-widget">
+                <div class="box-body">
+                  <img class="img-responsive" id="image-preview" alt="Photo">
+                </div>
+              </div>
             </div>
           </div>
           <!-- /.box-body -->
