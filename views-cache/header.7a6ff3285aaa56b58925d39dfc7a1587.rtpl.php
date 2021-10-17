@@ -209,6 +209,7 @@ desired effect
         <li class="header">HEADER</li>
         <li><a href="/admin/users"><i class="fa fa-users"></i> <span>Usuários</span></a></li>
         <li><a href="/admin/categories"><i class="fa fa-cubes"></i> <span>Categorias</span></a></li>
+        <li><a href="/admin/pets"><i class="fa fa-cubes"></i> <span>Animais</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
             <span class="pull-right-container">
