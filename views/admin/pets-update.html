@@ -25,10 +25,6 @@
               <input type="text" class="form-control" id="pet" name="pet" placeholder="Digite o nome do produto" value="{$pet.pet}">
             </div>
             <div class="form-group">
-              <label for="vlprice">Preço</label>
-              <input type="number" class="form-control" id="vlprice" name="vlprice" step="0.01" placeholder="0.00" value="{$pet.vlprice}">
-            </div>
-            <div class="form-group">
               <label for="vlwidth">Largura</label>
               <input type="number" class="form-control" id="vlwidth" name="vlwidth" step="0.01" placeholder="0.00" value="{$pet.vlwidth}">
             </div>
@@ -45,11 +41,15 @@
               <input type="number" class="form-control" id="vlweight" name="vlweight" step="0.01" placeholder="0.00" value="{$pet.vlweight}">
             </div>
             <div class="form-group">
+              <label for="url">Url</label>
+              <input type="text" class="form-control" id="url" name="url" value="{$pet.url}">
+            </div>
+            <div class="form-group">
               <label for="file">Foto</label>
-              <input type="file" class="form-control" id="file" name="file" value="{$pet.vlweight}">
+              <input type="file" class="form-control" id="file" name="file">
               <div class="box box-widget">
                 <div class="box-body">
-                  <img class="img-responsive" id="image-preview" src="{$pet.desphoto}" alt="Photo">
+                  <img class="img-responsive" id="image-preview" alt="Photo">
                 </div>
               </div>
             </div>
@@ -60,7 +60,6 @@
             <button type="submit" class="btn btn-primary">Salvar</button>
           </div>
         </form>
-      </div>
   	</div>
   </div>
 

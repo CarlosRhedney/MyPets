@@ -5,11 +5,6 @@
   <h1>
     Lista de Animais
   </h1>
-  <ol class="breadcrumb">
-    <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li><a href="/admin/pets">Categorias</a></li>
-    <li class="active"><a href="/admin/pets/create">Cadastrar</a></li>
-  </ol>
 </section>
 
 <!-- Main content -->
@@ -17,41 +12,41 @@
 
   <div class="row">
   	<div class="col-md-12">
-  		<div class="box box-success">
+  		<div class="box box-primary">
         <div class="box-header with-border">
-          <h3 class="box-title">Novo Animal</h3>
+          <h3 class="box-title">Editar Animal</h3>
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form role="form" action="/admin/pets/create" method="post" enctype="multipart/form-data">
+        <form role="form" action="/admin/pets/<?php echo htmlspecialchars( $pet["idpet"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" method="post" enctype="multipart/form-data">
           <div class="box-body">
             <div class="form-group">
               <label for="pet">Nome do animal</label>
-              <input type="text" class="form-control" id="pet" name="pet" placeholder="Digite o nome do animal">
+              <input type="text" class="form-control" id="pet" name="pet" placeholder="Digite o nome do produto" value="<?php echo htmlspecialchars( $pet["pet"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
             </div>
             <div class="form-group">
               <label for="vlwidth">Largura</label>
-              <input type="number" class="form-control" id="vlwidth" name="vlwidth" step="0.01" placeholder="0.00">
+              <input type="number" class="form-control" id="vlwidth" name="vlwidth" step="0.01" placeholder="0.00" value="<?php echo htmlspecialchars( $pet["vlwidth"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
             </div>
             <div class="form-group">
               <label for="vlheight">Altura</label>
-              <input type="number" class="form-control" id="vlheight" name="vlheight" step="0.01" placeholder="0.00">
+              <input type="number" class="form-control" id="vlheight" name="vlheight" step="0.01" placeholder="0.00" value="<?php echo htmlspecialchars( $pet["vlheight"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
             </div>
             <div class="form-group">
               <label for="vllength">Comprimento</label>
-              <input type="number" class="form-control" id="vllength" name="vllength" step="0.01" placeholder="0.00">
+              <input type="number" class="form-control" id="vllength" name="vllength" step="0.01" placeholder="0.00" value="<?php echo htmlspecialchars( $pet["vllength"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
             </div>
             <div class="form-group">
               <label for="vlweight">Peso</label>
-              <input type="number" class="form-control" id="vlweight" name="vlweight" step="0.01" placeholder="0.00">
+              <input type="number" class="form-control" id="vlweight" name="vlweight" step="0.01" placeholder="0.00" value="<?php echo htmlspecialchars( $pet["vlweight"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
             </div>
             <div class="form-group">
               <label for="url">Url</label>
-              <input type="text" class="form-control" id="url" name="url" >
+              <input type="text" class="form-control" id="url" name="url" value="<?php echo htmlspecialchars( $pet["url"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
             </div>
             <div class="form-group">
               <label for="file">Foto</label>
-              <input type="file" class="form-control" id="file" name="file" >
+              <input type="file" class="form-control" id="file" name="file">
               <div class="box box-widget">
                 <div class="box-body">
                   <img class="img-responsive" id="image-preview" alt="Photo">
@@ -59,12 +54,12 @@
               </div>
             </div>
           </div>
+          </div>
           <!-- /.box-body -->
           <div class="box-footer">
-            <button type="submit" class="btn btn-success">Cadastrar</button>
+            <button type="submit" class="btn btn-primary">Salvar</button>
           </div>
         </form>
-      </div>
   	</div>
   </div>
 

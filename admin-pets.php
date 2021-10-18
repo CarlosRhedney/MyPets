@@ -54,4 +54,55 @@ $app->post('/admin/pets/create', function(){
 
 });
 
+$app->get('/admin/pets/:idpet', function($idpet){
+
+	User::verifyLogin();
+
+	$pet = new Pet();
+
+	$pet->get((int)$idpet);
+
+	$page = new PageAdmin();
+
+	$page->setTpl("pets-update", array(
+		"pet"=>$pet->getValues()
+	));
+});
+
+$app->post('/admin/pets/:idpet', function($idpet){
+
+	User::verifyLogin();
+
+	$pet = new Pet();
+
+	$pet->get((int)$idpet);
+
+	$pet->setData($_POST);
+
+	$pet->save();
+
+	$pet->addPhoto($_FILES["file"]);
+
+	header("Location: /admin/pets");
+
+	exit;
+
+});
+
+$app->get('/admin/pets/:idpet/delete', function($idpet){
+
+	User::verifyLogin();
+
+	$pet = new Pet();
+
+	$pet->get((int)$idpet);
+
+	$pet->delete();
+
+	header("Location: /admin/pets");
+
+	exit;
+
+});
+
 ?>
