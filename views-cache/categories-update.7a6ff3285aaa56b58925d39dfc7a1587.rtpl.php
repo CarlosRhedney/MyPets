@@ -22,7 +22,7 @@
           <div class="box-body">
             <div class="form-group">
               <label for="category">Nome da categoria</label>
-              <input type="text" class="form-control" id="category" name="category" placeholder="Digite o nome da categoria" value="<?php echo htmlspecialchars( $category["category"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+              <input type="text" class="form-control" id="category" name="category" placeholder="Digite o nome da categoria" value="<?php echo htmlspecialchars( $category["category"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required >
             </div>
           </div>
           <!-- /.box-body -->

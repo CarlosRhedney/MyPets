@@ -27,7 +27,7 @@
                 <thead>
                   <tr>
                     <th style="width: 10px">#</th>
-                    <th>Nome da Animal</th>
+                    <th>Nome do Animal</th>
                     <th>Largura</th>
                     <th>Altura</th>
                     <th>Comprimento</th>

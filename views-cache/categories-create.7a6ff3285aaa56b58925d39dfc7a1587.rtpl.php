@@ -27,7 +27,7 @@
           <div class="box-body">
             <div class="form-group">
               <label for="category">Nome da categoria</label>
-              <input type="text" class="form-control" id="category" name="category" placeholder="Digite o nome da categoria">
+              <input type="text" class="form-control" id="category" name="category" placeholder="Digite o nome da categoria" required >
             </div>
           </div>
           <!-- /.box-body -->

@@ -22,19 +22,19 @@
           <div class="box-body">
             <div class="form-group">
               <label for="person">Nome</label>
-              <input type="text" class="form-control" id="person" name="person" placeholder="Digite o nome" value="<?php echo htmlspecialchars( $user["person"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+              <input type="text" class="form-control" id="person" name="person" placeholder="Digite o nome" value="<?php echo htmlspecialchars( $user["person"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required >
             </div>
             <div class="form-group">
               <label for="login">Login</label>
-              <input type="text" class="form-control" id="login" name="login" placeholder="Digite o login" value="<?php echo htmlspecialchars( $user["login"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+              <input type="text" class="form-control" id="login" name="login" placeholder="Digite o login" value="<?php echo htmlspecialchars( $user["login"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required >
             </div>
             <div class="form-group">
               <label for="nrphone">Telefone</label>
-              <input type="tel" class="form-control" id="nrphone" name="nrphone" placeholder="Digite o telefone" value="<?php echo htmlspecialchars( $user["nrphone"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+              <input type="tel" class="form-control" id="nrphone" name="nrphone" placeholder="Digite o telefone" value="<?php echo htmlspecialchars( $user["nrphone"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required >
             </div>
             <div class="form-group">
               <label for="mail">E-mail</label>
-              <input type="email" class="form-control" id="mail" name="mail" placeholder="Digite o e-mail" value="<?php echo htmlspecialchars( $user["mail"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+              <input type="email" class="form-control" id="mail" name="mail" placeholder="Digite o e-mail" value="<?php echo htmlspecialchars( $user["mail"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required >
             </div>
             <div class="checkbox">
               <label>

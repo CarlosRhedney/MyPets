@@ -22,34 +22,34 @@
           <div class="box-body">
             <div class="form-group">
               <label for="pet">Nome do animal</label>
-              <input type="text" class="form-control" id="pet" name="pet" placeholder="Digite o nome do produto" value="{$pet.pet}">
+              <input type="text" class="form-control" id="pet" name="pet" placeholder="Digite o nome do produto" value="{$pet.pet}" required >
             </div>
             <div class="form-group">
               <label for="vlwidth">Largura</label>
-              <input type="number" class="form-control" id="vlwidth" name="vlwidth" step="0.01" placeholder="0.00" value="{$pet.vlwidth}">
+              <input type="number" class="form-control" id="vlwidth" name="vlwidth" step="0.01" placeholder="0.00" value="{$pet.vlwidth}" required >
             </div>
             <div class="form-group">
               <label for="vlheight">Altura</label>
-              <input type="number" class="form-control" id="vlheight" name="vlheight" step="0.01" placeholder="0.00" value="{$pet.vlheight}">
+              <input type="number" class="form-control" id="vlheight" name="vlheight" step="0.01" placeholder="0.00" value="{$pet.vlheight}" required >
             </div>
             <div class="form-group">
               <label for="vllength">Comprimento</label>
-              <input type="number" class="form-control" id="vllength" name="vllength" step="0.01" placeholder="0.00" value="{$pet.vllength}">
+              <input type="number" class="form-control" id="vllength" name="vllength" step="0.01" placeholder="0.00" value="{$pet.vllength}" required >
             </div>
             <div class="form-group">
               <label for="vlweight">Peso</label>
-              <input type="number" class="form-control" id="vlweight" name="vlweight" step="0.01" placeholder="0.00" value="{$pet.vlweight}">
+              <input type="number" class="form-control" id="vlweight" name="vlweight" step="0.01" placeholder="0.00" value="{$pet.vlweight}" required >
             </div>
             <div class="form-group">
               <label for="url">Url</label>
-              <input type="text" class="form-control" id="url" name="url" value="{$pet.url}">
+              <input type="text" class="form-control" id="url" name="url" value="{$pet.url}" required >
             </div>
             <div class="form-group">
               <label for="file">Foto</label>
-              <input type="file" class="form-control" id="file" name="file">
+              <input type="file" class="form-control" id="file" name="file" value="{$pet.photo}" required >
               <div class="box box-widget">
                 <div class="box-body">
-                  <img class="img-responsive" id="image-preview" alt="Photo">
+                  <img class="img-responsive" id="image-preview" src="/{$pet.photo}" alt="Photo">
                 </div>
               </div>
             </div>

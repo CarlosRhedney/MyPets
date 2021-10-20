@@ -35,7 +35,7 @@ class Pet extends Model
 	{
 		$sql = new Sql();
 
-		$results = $sql->select("SELECT * FROM tb_pets WHERE idpet = :idpet", array(
+		$results = $sql->select("SELECT * FROM tb_pets a INNER JOIN tb_photos b USING(idpet) WHERE idpet = :idpet", array(
 			":idpet"=>$idpet
 		));
 
@@ -73,7 +73,13 @@ class Pet extends Model
 			break;
 		}
 
-		$dist = $_SERVER["DOCUMENT_ROOT"] . DIRECTORY_SEPARATOR . "res" . DIRECTORY_SEPARATOR . "site" . DIRECTORY_SEPARATOR . "img" . DIRECTORY_SEPARATOR . "pets" . DIRECTORY_SEPARATOR . $this->getidpet() . ".jpg";
+		/* 
+		Esta seria a forma correta  de se salvar o caminho da imagem no BD.
+		Porem ao retornar o caminho completo, estou tendo problemas na apresentação das imagens
+		Pois o DIRECTORY_SEPARATOR esta colocando contrabarra (\) no lugar de barra (/).
+		$dist = $_SERVER["DOCUMENT_ROOT"] . DIRECTORY_SEPARATOR . "res" . DIRECTORY_SEPARATOR . "site" . DIRECTORY_SEPARATOR . "img" . DIRECTORY_SEPARATOR . "pets" . DIRECTORY_SEPARATOR . $file["name"] . $this->getidpet() . ".jpg";
+		*/
+		$dist = "res/site/img/pets/" . $file["name"] . $this->getidpet() . ".jpg";
 
 		$sql = new Sql();
 		
