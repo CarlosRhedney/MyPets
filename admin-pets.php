@@ -7,7 +7,7 @@ use \Mypets\PageAdmin;
 // Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/Model/User.php.
 use \Mypets\Model\User;
 
-// \Category Classe da administração do sitema, onde relaconamos as categorias do sistema.
+// \Pet Classe da administração do sitema, onde relaconamos as categorias do sistema.
 // O usuario previamente cadastrado como administrador, que gerencia "certa" parte do sistema tem acesso, contem os metodos listAll, save, get, delete....
 // Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/Model/Category.php.
 use \Mypets\Model\Pet;

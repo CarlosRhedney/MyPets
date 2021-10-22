@@ -84,95 +84,23 @@
                     <div class="latest-product">
                         <h2 class="section-title">Animais</h2>
                         <div class="product-carousel">
+                            <?php $counter1=-1;  if( isset($pets) && ( is_array($pets) || $pets instanceof Traversable ) && sizeof($pets) ) foreach( $pets as $key1 => $value1 ){ $counter1++; ?>
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="/res/site/img/product-1.png" alt="">
+                                    <img src="<?php echo htmlspecialchars( $value1["photo"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" alt="">
                                     <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-eye"></i> Visitar</a>
-                                        <a href="#" class="view-details-link"><i class="fa fa-paw"></i> Adotar</a>
+                                        <a href="#" class="add-to-cart-link"><i class="fa fa-eye"></i> Adotar</a>
+                                        <a href="/pets/<?php echo htmlspecialchars( $value1["url"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="view-details-link"><i class="fa fa-paw"></i> ver detalhes</a>
                                     </div>
                                 </div>
                                 
-                                <h2><a href="#">Nome do Animal</a></h2>
+                                <h2><a href="/pets/<?php echo htmlspecialchars( $value1["url"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><?php echo htmlspecialchars( $value1["pet"], ENT_COMPAT, 'UTF-8', FALSE ); ?></a></h2>
                                 
                                 <div class="product-carousel-price">
                                     <p>Descrição do Animal...</p>
                                 </div> 
                             </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="/res/site/img/product-2.png" alt="">
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-eye"></i> Visitar</a>
-                                        <a href="#" class="view-details-link"><i class="fa fa-paw"></i> Adotar</a>
-                                    </div>
-                                </div>
-                                
-                                <h2>Nome do Animal</h2>
-                                <div class="product-carousel-price">
-                                    <p>Descrição do Animal...</p>
-                                </div> 
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="/res/site/img/product-3.png" alt="">
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-eye"></i> Visitar</a>
-                                        <a href="#" class="view-details-link"><i class="fa fa-paw"></i> Adotar</a>
-                                    </div>
-                                </div>
-                                
-                                <h2>Nome do Animal</h2>
-
-                                <div class="product-carousel-price">
-                                    <p>Descrição do Animal...</p>
-                                </div>                                 
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="/res/site/img/product-4.png" alt="">
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-eye"></i> Visitar</a>
-                                        <a href="#" class="view-details-link"><i class="fa fa-paw"></i> Adotar</a>
-                                    </div>
-                                </div>
-                                
-                                <h2><a href="#">Nome do Animal</a></h2>
-
-                                <div class="product-carousel-price">
-                                    <p>Descrição do Animal...</p>
-                                </div>                            
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="/res/site/img/product-5.png" alt="">
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-eye"></i> Visitar</a>
-                                        <a href="#" class="view-details-link"><i class="fa fa-paw"></i> Adotar</a>
-                                    </div>
-                                </div>
-                                
-                                <h2>Nome do Animal</h2>
-
-                                <div class="product-carousel-price">
-                                    <p>Descrição do Animal...</p>
-                                </div>                                 
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="/res/site/img/product-6.png" alt="">
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-eye"></i> Visitar</a>
-                                        <a href="#" class="view-details-link"><i class="fa fa-paw"></i> Adotar</a>
-                                    </div>
-                                </div>
-                                
-                                <h2><a href="#">Nome do Animal</a></h2>
-
-                                <div class="product-carousel-price">
-                                    <p>Descrição do Animal...</p>
-                                </div>                            
-                            </div>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>

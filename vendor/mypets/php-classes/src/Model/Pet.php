@@ -35,7 +35,7 @@ class Pet extends Model
 	{
 		$sql = new Sql();
 
-		$results = $sql->select("SELECT * FROM tb_pets a INNER JOIN tb_photos b USING(idpet) WHERE idpet = :idpet", array(
+		$results = $sql->select("SELECT * FROM tb_pets a INNER JOIN tb_photos b USING(idpet) WHERE a.idpet = :idpet", array(
 			":idpet"=>$idpet
 		));
 
