@@ -10,7 +10,7 @@ class Pet extends Model
 	{
 		$sql = new Sql();
 
-		return $sql->select("SELECT * FROM tb_pets ORDER BY pet");
+		return $sql->select("SELECT * FROM tb_pets a INNER JOIN tb_photos b WHERE a.idpet = b.idpet ORDER BY pet");
 
 	}
 
