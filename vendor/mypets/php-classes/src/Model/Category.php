@@ -66,5 +66,31 @@ class Category extends Model
 		file_put_contents($_SERVER["DOCUMENT_ROOT"] . DIRECTORY_SEPARATOR . "views" . DIRECTORY_SEPARATOR . "categories-menu.html", implode("", $html));
 	}
 
+	public function getPets($related = true)
+	{
+		$sql = new Sql();
+
+		if($related === true)
+		{
+			return $sql->select("
+				SELECT * FROM tb_pets WHERE idpet IN(
+				    SELECT a.idpet FROM tb_pets a INNER JOIN tb_categoriespets b ON a.idpet = b.idpet WHERE b.idcategory = :idcategory
+				)
+			", array(
+				":idcategory"=>$this->getidcategory()
+			));
+
+		}else
+		{
+			return $sql->select("
+				SELECT * FROM tb_pets WHERE idpet NOT IN(
+				    SELECT a.idpet FROM tb_pets a INNER JOIN tb_categoriespets b ON a.idpet = b.idpet WHERE b.idcategory = :idcategory
+				)
+			", array(
+				":idcategory"=>$this->getidcategory()
+			));
+		}
+	}
+
 }
 ?>

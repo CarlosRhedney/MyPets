@@ -102,4 +102,22 @@ $app->post('/admin/categories/:idcategory', function($idcategory){
 
 });
 
+$app->get('/admin/categories/:idcategory/pets', function($idcategory){
+
+	User::verifyLogin();
+
+	$category = new Category();
+
+	$category->get((int)$idcategory);
+
+	$page = new PageAdmin();
+
+	$page->setTpl("categories-pets", array(
+		"category"=>$category->getValues(),
+		"petsRelated"=>$category->getPets(),
+		"petsNotRelated"=>$category->getPets(false)
+	));
+
+});
+
 ?>
