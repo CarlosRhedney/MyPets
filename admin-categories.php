@@ -12,6 +12,11 @@ use \Mypets\Model\User;
 // Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/Model/Category.php.
 use \Mypets\Model\Category;
 
+// \Category Classe da administração do sitema, onde relaconamos as categorias do sistema.
+// O usuario previamente cadastrado como administrador, que gerencia "certa" parte do sistema tem acesso, contem os metodos listAll, save, get, delete....
+// Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/Model/Category.php.
+use \Mypets\Model\Pet;
+
 $app->get('/admin/categories', function(){
 
 	User::verifyLogin();
@@ -117,6 +122,46 @@ $app->get('/admin/categories/:idcategory/pets', function($idcategory){
 		"petsRelated"=>$category->getPets(),
 		"petsNotRelated"=>$category->getPets(false)
 	));
+
+});
+
+$app->get('/admin/categories/:idcategory/pets/:idpet/add', function($idcategory, $idpet){
+
+	User::verifyLogin();
+
+	$category = new Category();
+
+	$category->get((int)$idcategory);
+
+	$pet = new Pet();
+
+	$pet->get((int)$idpet);
+
+	$category->addPet($pet);
+
+	header("Location: /admin/categories/".$idcategory."/pets");
+
+	exit;
+
+});
+
+$app->get('/admin/categories/:idcategory/pets/:idpet/remove', function($idcategory, $idpet){
+
+	User::verifyLogin();
+
+	$category = new Category();
+
+	$category->get((int)$idcategory);
+
+	$pet = new Pet();
+
+	$pet->get((int)$idpet);
+
+	$category->removePet($pet);
+
+	header("Location: /admin/categories/".$idcategory."/pets");
+
+	exit;
 
 });
 

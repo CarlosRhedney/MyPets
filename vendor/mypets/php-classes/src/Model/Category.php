@@ -92,5 +92,25 @@ class Category extends Model
 		}
 	}
 
+	public function addPet($pet)
+	{
+		$sql = new Sql();
+
+		$sql->query("INSERT INTO tb_categoriespets(idcategory, idpet)VALUES(:idcategory, :idpet)", array(
+			":idcategory"=>$this->getidcategory(),
+			":idpet"=>$pet->getidpet()
+		));
+	}
+
+	public function removePet($pet)
+	{
+		$sql = new Sql();
+
+		$sql->query("DELETE FROM tb_categoriespets WHERE idcategory = :idcategory AND idpet = :idpet", array(
+			":idcategory"=>$this->getidcategory(),
+			":idpet"=>$pet->getidpet()
+		));
+	}
+
 }
 ?>

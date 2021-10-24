@@ -40,7 +40,7 @@ $app->get('/categories/:idcategory', function($idcategory){
 
 	$page->setTpl("category", array(
 		"category"=>$category->getValues(),
-		"pets"=>array()
+		"pets"=>Pet::checkList($category->getPets())
 	));
 
 });
