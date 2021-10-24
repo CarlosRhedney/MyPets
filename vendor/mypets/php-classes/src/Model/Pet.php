@@ -10,7 +10,22 @@ class Pet extends Model
 	{
 		$sql = new Sql();
 
-		return $sql->select("SELECT * FROM tb_pets a INNER JOIN tb_photos b WHERE a.idpet = b.idpet ORDER BY pet");
+		return $sql->select("SELECT * FROM tb_pets ORDER BY pet");
+
+	}
+
+	public static function checkList($list)
+	{
+		foreach($list as &$row)
+		{
+			$p = new Pet();
+
+			$p->setData($row);
+
+			$row = $p->getValues();
+		}
+
+		return $list;
 
 	}
 
@@ -52,6 +67,32 @@ class Pet extends Model
 		));
 	}
 
+	public function getValues()
+	{
+		$this->checkPhoto();
+
+		$values = parent::getValues();
+
+		return $values;
+
+	}
+
+	public function checkPhoto()
+	{
+		if(file_exists("res/site/img/pets/" . $this->getpet() . $this->getidphoto() . $this->getidpet() . ".jpg"))
+		{
+			$url = "res/site/img/pets/" . $this->getpet() . $this->getidphoto() . $this->getidpet() . ".jpg";
+
+		}else if(file_exists("res/site/img/pets/" . $this->getpet() . $this->getidpet() . ".jpg"))
+		{
+			$url = "res/site/img/pets/" . $this->getpet() . $this->getidpet() . ".jpg";
+
+		}
+
+		return $this->setphoto($url);
+
+	}
+
 	public function addPhoto($file)
 	{
 		$ext = explode(".", $file["name"]);
@@ -79,7 +120,7 @@ class Pet extends Model
 		Pois o DIRECTORY_SEPARATOR esta colocando contrabarra (\) no lugar de barra (/).
 		$dist = $_SERVER["DOCUMENT_ROOT"] . DIRECTORY_SEPARATOR . "res" . DIRECTORY_SEPARATOR . "site" . DIRECTORY_SEPARATOR . "img" . DIRECTORY_SEPARATOR . "pets" . DIRECTORY_SEPARATOR . $file["name"] . $this->getidpet() . ".jpg";
 		*/
-		$dist = "res/site/img/pets/" . $file["name"] . $this->getidpet() . ".jpg";
+		$dist = "res/site/img/pets/" . $this->getpet() . $this->getidphoto() . $this->getidpet() . ".jpg";
 
 		$sql = new Sql();
 		
@@ -91,6 +132,8 @@ class Pet extends Model
 		imagejpeg($image, $dist);
 
 		imagedestroy($image);
+
+		$this->checkPhoto();
 
 	}
 }

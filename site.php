@@ -25,7 +25,7 @@ $app->get('/', function(){
 	// Chamamos o metodo setTpl() contido em Page.php, e chamamos o template index.html.
 	// Para mais detalhes verificar o template em views/index.html.
 	$page->setTpl("index", array(
-		"pets"=>$pets
+		"pets"=>Pet::checkList($pets)
 	));
 
 });
