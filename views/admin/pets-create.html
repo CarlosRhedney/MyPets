@@ -30,8 +30,8 @@
               <input type="text" class="form-control" id="pet" name="pet" placeholder="Digite o nome do animal" required >
             </div>
             <div class="form-group">
-              <label for="vlwidth">Largura</label>
-              <input type="number" class="form-control" id="vlwidth" name="vlwidth" step="0.01" placeholder="0.00" required >
+              <label for="rc">Raça/Cor do animal</label>
+              <input type="text" class="form-control" id="rc" name="rc" placeholder="Digite a raça e a cor do animal" required >
             </div>
             <div class="form-group">
               <label for="vlheight">Altura</label>
