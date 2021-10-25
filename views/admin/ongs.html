@@ -1,0 +1,64 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    Lista de ONGs
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li class="active"><a href="/admin/ongs">ONGs</a></li>
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+  <div class="row">
+  	<div class="col-md-12">
+  		<div class="box box-primary">
+            
+            <div class="box-header">
+              <a href="/admin/ongs/create" class="btn btn-success">Cadastrar ONG</a>
+            </div>
+
+            <div class="box-body no-padding">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th style="width: 10px">#</th>
+                    <th>Nome da Ong</th>
+                    <th>CNPJ</th>
+                    <th>logradouro</th>
+                    <th>Cidade</th>
+                    <th>Número</th>
+                    <th style="width: 140px">&nbsp;</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {loop="$ongs"}
+                  <tr>
+                    <td>{$value.idong}</td>
+                    <td>{$value.ong}</td>
+                    <td>{$value.cnpj}</td>
+                    <td>{$value.logradouro}</td>
+                    <td>{$value.city}</td>
+                    <td>{$value.number}</td>
+                    <td>
+                      <a href="/admin/ongs/{$value.idong}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
+                      <a href="/admin/ongs/{$value.idong}/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+                    </td>
+                  </tr>
+                  {/loop}
+                </tbody>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+  	</div>
+  </div>
+
+</section>
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
