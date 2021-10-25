@@ -50,7 +50,7 @@ class Ong extends Model
 	{
 		$sql = new Sql();
 
-		$results = $sql->select("SELECT * FROM tb_ongs a INNER JOIN tb_photos b USING(idpet) WHERE a.idong = :idong", array(
+		$results = $sql->select("SELECT * FROM tb_ongs WHERE idong = :idong", array(
 			":idong"=>$idong
 		));
 

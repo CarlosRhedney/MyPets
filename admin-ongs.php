@@ -40,13 +40,64 @@ $app->post('/admin/ongs/create', function(){
 
 	User::verifyLogin();
 
-	$pet = new Ong();
+	$ong = new Ong();
 
-	$pet->setData($_POST);
+	$ong->setData($_POST);
 
-	$pet->save();
+	$ong->save();
 
-	$pet->addPhoto($_FILES["file"]);
+	$ong->addPhoto($_FILES["file"]);
+
+	header("Location: /admin/ongs");
+
+	exit;
+
+});
+
+$app->get('/admin/ongs/:idong', function($idong){
+
+	User::verifyLogin();
+
+	$ong = new Ong();
+
+	$ong->get((int)$idong);
+
+	$page = new PageAdmin();
+
+	$page->setTpl("ongs-update", array(
+		"ong"=>$ong->getValues()
+	));
+});
+
+$app->post('/admin/ongs/:idong', function($idong){
+
+	User::verifyLogin();
+
+	$ong = new Ong();
+
+	$ong->get((int)$idong);
+
+	$ong->setData($_POST);
+
+	$ong->save();
+
+	$ong->addPhoto($_FILES["file"]);
+
+	header("Location: /admin/ongs");
+
+	exit;
+
+});
+
+$app->get('/admin/ongs/:idong/delete', function($idong){
+
+	User::verifyLogin();
+
+	$ong = new Ong();
+
+	$ong->get((int)$idong);
+
+	$ong->delete();
 
 	header("Location: /admin/ongs");
 
