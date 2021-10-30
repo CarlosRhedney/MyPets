@@ -92,7 +92,7 @@ class Category extends Model
 		}
 	}
 
-	public function addPet($pet)
+	public function addPet(Pet $pet)
 	{
 		$sql = new Sql();
 
@@ -102,7 +102,7 @@ class Category extends Model
 		));
 	}
 
-	public function removePet($pet)
+	public function removePet(Pet $pet)
 	{
 		$sql = new Sql();
 
