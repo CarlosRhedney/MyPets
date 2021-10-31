@@ -25,8 +25,8 @@
               <input type="text" class="form-control" id="pet" name="pet" placeholder="Digite o nome do produto" value="<?php echo htmlspecialchars( $pet["pet"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required >
             </div>
             <div class="form-group">
-              <label for="vlwidth">Largura</label>
-              <input type="number" class="form-control" id="vlwidth" name="vlwidth" step="0.01" placeholder="0.00" value="<?php echo htmlspecialchars( $pet["vlwidth"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required >
+              <label for="rc">Raça/Cor do animal</label>
+              <input type="text" class="form-control" id="rc" name="rc" placeholder="Digite a raça e a cor do animal" value="<?php echo htmlspecialchars( $pet["rc"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required >
             </div>
             <div class="form-group">
               <label for="vlheight">Altura</label>
@@ -49,7 +49,10 @@
               <input type="file" class="form-control" id="file" name="file" value="<?php echo htmlspecialchars( $pet["photo"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required >
               <div class="box box-widget">
                 <div class="box-body">
-                  <img class="img-responsive" id="image-preview" src="/<?php echo htmlspecialchars( $pet["photo"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" alt="Photo">
+                  <!-- / é necessario para encontrar o caminho da imagem.
+                      No banco de dados o caminho salvo é res/site/img/pets/ . $this->getpet() . $this->getidphoto() . $this->getidpet() . ".jpg" , então o retorno é o mesmo, como se trata de um diretorio / para encontrar.
+                  -->
+                  <img class="img-responsive" id="image-preview" src="/<?php echo htmlspecialchars( $pet["photo"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" alt="Imagem do animal">
                 </div>
               </div>
             </div>

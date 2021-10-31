@@ -25,6 +25,7 @@ require_once("admin-login.php");
 require_once("admin-categories.php");
 require_once("admin-ongs.php");
 require_once("admin-pets.php");
+require_once("ong.php");
 
 $app->run();
 
