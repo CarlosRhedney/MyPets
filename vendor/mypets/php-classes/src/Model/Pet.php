@@ -33,14 +33,15 @@ class Pet extends Model
 	{
 		$sql = new Sql();
 
-		$results = $sql->select("CALL sp_pets_save(:idpet, :pet, :rc, :vlheight, :vllength, :vlweight, :url)", array(
+		$results = $sql->select("CALL sp_pets_save(:idpet, :pet, :rc, :vlheight, :vllength, :vlweight, :url, :descr)", array(
 			":idpet"=>$this->getidpet(),
 			":pet"=>$this->getpet(),
 			":rc"=>$this->getrc(),
 			":vlheight"=>$this->getvlheight(),
 			":vllength"=>$this->getvllength(),
 			":vlweight"=>$this->getvlweight(),
-			":url"=>$this->geturl()
+			":url"=>$this->geturl(),
+			":descr"=>$this->getdescr()
 		));
 
 		$this->setData($results[0]);

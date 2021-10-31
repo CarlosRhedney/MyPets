@@ -45,6 +45,10 @@
               <input type="text" class="form-control" id="url" name="url" value="<?php echo htmlspecialchars( $pet["url"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required >
             </div>
             <div class="form-group">
+              <label for="descr">Descrição do Animal</label>
+              <input type="text" class="form-control" id="descr" name="descr" value="<?php echo htmlspecialchars( $pet["descr"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required >
+            </div>
+            <div class="form-group">
               <label for="file">Foto</label>
               <input type="file" class="form-control" id="file" name="file" value="<?php echo htmlspecialchars( $pet["photo"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required >
               <div class="box box-widget">

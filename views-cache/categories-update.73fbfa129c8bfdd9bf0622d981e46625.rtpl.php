@@ -1,4 +1,4 @@
-<!-- Content Wrapper. Contains page content -->
+<?php if(!class_exists('Rain\Tpl')){exit;}?><!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 <!-- Content Header (Page header) -->
 <section class="content-header">
@@ -18,11 +18,11 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form role="form" action="/ong/categories/{$category.idcategory}" method="post">
+        <form role="form" action="/ong/categories/<?php echo htmlspecialchars( $category["idcategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" method="post">
           <div class="box-body">
             <div class="form-group">
               <label for="category">Nome da categoria</label>
-              <input type="text" class="form-control" id="category" name="category" placeholder="Digite o nome da categoria" value="{$category.category}" required >
+              <input type="text" class="form-control" id="category" name="category" placeholder="Digite o nome da categoria" value="<?php echo htmlspecialchars( $category["category"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required >
             </div>
           </div>
           <!-- /.box-body -->

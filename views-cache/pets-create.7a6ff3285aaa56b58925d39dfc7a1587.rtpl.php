@@ -50,6 +50,10 @@
               <input type="text" class="form-control" id="url" name="url" required >
             </div>
             <div class="form-group">
+              <label for="descr">Descrição do Animal</label>
+              <input type="text" class="form-control" id="descr" name="descr" required placeholder="Diga como o animal chegou, em que condições chegou..." >
+            </div>
+            <div class="form-group">
               <label for="file">Foto</label>
               <input type="file" class="form-control" id="file" name="file" required >
               <div class="box box-widget">

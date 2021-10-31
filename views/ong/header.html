@@ -207,6 +207,7 @@ desired effect
 
       <ul class="sidebar-menu">
         <li class="header">HEADER</li>
+        <li><a href="/ong/users"><i class="fa fa-users"></i> <span>Usuários</span></a></li>
         <li><a href="/ong/pets"><i class="fa fa-paw"></i> <span>Animais</span></a></li>
         <li><a href="/ong/categories"><i class="fa fa-cubes"></i> <span>Categorias</span></a></li>
         <li class="treeview">
