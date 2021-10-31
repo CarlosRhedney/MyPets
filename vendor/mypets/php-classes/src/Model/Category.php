@@ -92,6 +92,26 @@ class Category extends Model
 		}
 	}
 
+	public function getPetsPage($page = 1, $itensPerPage = 3)
+	{
+		$start = ($page - 1) * $itensPerPage;
+
+		$sql = new Sql();
+
+		$results = $sql->select("SELECT SQL_CALC_FOUND_ROWS * FROM tb_pets a INNER JOIN tb_categoriespets b ON a.idpet = b.idpet INNER JOIN tb_categories c ON c.idcategory = b.idcategory WHERE c.idcategory = :idcategory LIMIT $start, $itensPerPage", array(
+			":idcategory"=>$this->getidcategory()
+		));
+
+		$resultTotal = $sql->select("SELECT FOUND_ROWS() AS nrtotal");
+
+		return array(
+			"data"=>Pet::checkList($results),
+			"total"=>$resultTotal[0]["nrtotal"],
+			"pages"=>ceil($resultTotal[0]["nrtotal"] / $itensPerPage)
+		);
+
+	}
+
 	public function addPet(Pet $pet)
 	{
 		$sql = new Sql();
