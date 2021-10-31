@@ -59,4 +59,20 @@ $app->get('/categories/:idcategory', function($idcategory){
 
 });
 
+$app->get('/pets/:url', function($url){
+
+	$pet = new Pet();
+
+	$pet->getFromUrl($url);
+
+	$page = new Page();
+
+	$page->setTpl("pet-detail", array(
+
+		"pet"=>$pet->getValues(),
+		"categories"=>$pet->getCategory()
+	));
+
+});
+
 ?>

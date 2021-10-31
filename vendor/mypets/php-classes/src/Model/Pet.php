@@ -136,5 +136,26 @@ class Pet extends Model
 		$this->checkPhoto();
 
 	}
+
+	public function getFromUrl($url)
+	{
+		$sql = new Sql();
+
+		$rows = $sql->select("SELECT * FROM tb_pets WHERE url = :url LIMIT 1", array(
+			":url"=>$url
+		));
+
+		$this->setData($rows[0]);
+	}
+
+	public function getCategory()
+	{
+		$sql = new Sql();
+
+		return $sql->select("SELECT * FROM tb_categories a INNER JOIN tb_categoriespets b ON a.idcategory = b.idcategory WHERE b.idpet = :idpet", array(
+			":idpet"=>$this->getidpet()
+		));
+	}
+
 }
 ?>
