@@ -57,6 +57,7 @@ $app->get('/ong/pets/create', function(){
 	$page = new Ong();
 
 	$page->setTpl("pets-create");
+	
 });
 
 $app->post('/ong/pets/create', function(){

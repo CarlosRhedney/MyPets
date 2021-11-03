@@ -70,7 +70,8 @@ $app->get('/pets/:url', function($url){
 	$page->setTpl("pet-detail", array(
 
 		"pet"=>$pet->getValues(),
-		"categories"=>$pet->getCategory()
+		"categories"=>$pet->getCategory(),
+		"person"=>$pet->getPerson()
 	));
 
 });

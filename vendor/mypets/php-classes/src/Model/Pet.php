@@ -31,10 +31,13 @@ class Pet extends Model
 
 	public function save()
 	{
+		$idperson = $_SESSION[User::SESSION]["idperson"];
+
 		$sql = new Sql();
 
-		$results = $sql->select("CALL sp_pets_save(:idpet, :pet, :rc, :vlheight, :vllength, :vlweight, :url, :descr)", array(
+		$results = $sql->select("CALL sp_pets_save(:idpet, :idperson, :pet, :rc, :vlheight, :vllength, :vlweight, :url, :descr)", array(
 			":idpet"=>$this->getidpet(),
+			":idperson"=>$idperson,
 			":pet"=>$this->getpet(),
 			":rc"=>$this->getrc(),
 			":vlheight"=>$this->getvlheight(),
@@ -154,6 +157,15 @@ class Pet extends Model
 		$sql = new Sql();
 
 		return $sql->select("SELECT * FROM tb_categories a INNER JOIN tb_categoriespets b ON a.idcategory = b.idcategory WHERE b.idpet = :idpet", array(
+			":idpet"=>$this->getidpet()
+		));
+	}
+
+	public function getPerson()
+	{
+		$sql = new Sql();
+
+		return $sql->select("SELECT * FROM tb_persons a INNER JOIN tb_pets b ON a.idperson = b.idperson WHERE b.idpet = :idpet", array(
 			":idpet"=>$this->getidpet()
 		));
 	}

@@ -31,10 +31,13 @@ class Ong extends Model
 
 	public function save()
 	{
+		$idperson = $_SESSION[User::SESSION]["idperson"];
+
 		$sql = new Sql();
 
-		$results = $sql->select("CALL sp_ongs_save(:idong, :ong, :logradouro, :cnpj, :city, :number, :url)", array(
+		$results = $sql->select("CALL sp_ongs_save(:idong, :idperson, :ong, :logradouro, :cnpj, :city, :number, :url)", array(
 			":idong"=>$this->getidong(),
+			":idperson"=>$idperson,
 			":ong"=>$this->getong(),
 			":logradouro"=>$this->getlogradouro(),
 			":cnpj"=>$this->getcnpj(),

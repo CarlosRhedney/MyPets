@@ -47,7 +47,8 @@
                                 <div role="tabpanel">
                                     <ul class="product-tab" role="tablist">
                                         <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Descrição</a></li>
-                                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Informações do animal</a></li>
+                                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Animal</a></li>
+                                        <li role="presentation"><a href="#profile2" aria-controls="profile" role="tab" data-toggle="tab">Tutor</a></li>
                                     </ul>
                                     <div class="tab-content">
                                         <div role="tabpanel" class="tab-pane fade in active" id="home">
@@ -55,9 +56,9 @@
                                             <p><?php echo htmlspecialchars( $pet["descr"], ENT_COMPAT, 'UTF-8', FALSE ); ?></p>
                                         </div>
                                         <div role="tabpanel" class="tab-pane fade" id="profile">
-                                            <h2>Informações</h2>
+                                            <h2>Informações do Animal</h2>
                                             <div class="box-body no-padding">
-                                              <table class="table table-striped table-bordered">
+                                              <table class="table table-striped table-bordered tabe-condensed">
                                                 <thead>
                                                   <tr>
                                                     <th>Nome do Animal</th>
@@ -79,13 +80,36 @@
                                               </table>
                                             </div>
                                         </div>
+                                        <div role="tabpanel" class="tab-pane fade" id="profile2">
+                                            <h2>Informações do Tutor</h2>
+                                            <div class="box-body no-padding">
+                                              <table class="table table-striped table-bordered">
+                                                <thead>
+                                                  <tr>
+                                                    <th>Nome do Tutor</th>
+                                                    <th>Email</th>
+                                                    <th>Tel</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php $counter1=-1;  if( isset($person) && ( is_array($person) || $person instanceof Traversable ) && sizeof($person) ) foreach( $person as $key1 => $value1 ){ $counter1++; ?>
+
+                                                  <tr>
+                                                    <td><?php echo htmlspecialchars( $value1["person"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                                                    <td><?php echo htmlspecialchars( $value1["mail"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                                                    <td><?php echo htmlspecialchars( $value1["nrphone"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                                                  </tr>
+                                                  <?php } ?>
+
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                
+                                </div>      
                             </div>
                         </div>
                     </div>
-                    
                 </div>                    
             </div>
         </div>

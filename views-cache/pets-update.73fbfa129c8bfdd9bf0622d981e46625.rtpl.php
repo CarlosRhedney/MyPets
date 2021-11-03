@@ -1,4 +1,4 @@
-<!-- Content Wrapper. Contains page content -->
+<?php if(!class_exists('Rain\Tpl')){exit;}?><!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 <!-- Content Header (Page header) -->
 <section class="content-header">
@@ -18,45 +18,45 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form role="form" action="/ong/pets/{$pet.idpet}" method="post" enctype="multipart/form-data">
+        <form role="form" action="/ong/pets/<?php echo htmlspecialchars( $pet["idpet"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" method="post" enctype="multipart/form-data">
           <div class="box-body">
             <div class="form-group">
               <label for="pet">Nome do animal</label>
-              <input type="text" class="form-control" id="pet" name="pet" placeholder="Digite o nome do produto" value="{$pet.pet}" required >
+              <input type="text" class="form-control" id="pet" name="pet" placeholder="Digite o nome do produto" value="<?php echo htmlspecialchars( $pet["pet"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required >
             </div>
             <div class="form-group">
               <label for="rc">Raça/Cor do animal</label>
-              <input type="text" class="form-control" id="rc" name="rc" placeholder="Digite a raça e a cor do animal" value="{$pet.rc}" required >
+              <input type="text" class="form-control" id="rc" name="rc" placeholder="Digite a raça e a cor do animal" value="<?php echo htmlspecialchars( $pet["rc"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required >
             </div>
             <div class="form-group">
               <label for="vlheight">Altura</label>
-              <input type="number" class="form-control" id="vlheight" name="vlheight" step="0.01" placeholder="0.00" value="{$pet.vlheight}" required >
+              <input type="number" class="form-control" id="vlheight" name="vlheight" step="0.01" placeholder="0.00" value="<?php echo htmlspecialchars( $pet["vlheight"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required >
             </div>
             <div class="form-group">
               <label for="vllength">Comprimento</label>
-              <input type="number" class="form-control" id="vllength" name="vllength" step="0.01" placeholder="0.00" value="{$pet.vllength}" required >
+              <input type="number" class="form-control" id="vllength" name="vllength" step="0.01" placeholder="0.00" value="<?php echo htmlspecialchars( $pet["vllength"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required >
             </div>
             <div class="form-group">
               <label for="vlweight">Peso</label>
-              <input type="number" class="form-control" id="vlweight" name="vlweight" step="0.01" placeholder="0.00" value="{$pet.vlweight}" required >
+              <input type="number" class="form-control" id="vlweight" name="vlweight" step="0.01" placeholder="0.00" value="<?php echo htmlspecialchars( $pet["vlweight"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required >
             </div>
             <div class="form-group">
               <label for="url">Url</label>
-              <input type="text" class="form-control" id="url" name="url" value="{$pet.url}" required >
+              <input type="text" class="form-control" id="url" name="url" value="<?php echo htmlspecialchars( $pet["url"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required >
             </div>
             <div class="form-group">
               <label for="descr">Descrição do Animal</label>
-              <input type="text" class="form-control" id="descr" name="descr" value="{$pet.descr}" required >
+              <input type="text" class="form-control" id="descr" name="descr" value="<?php echo htmlspecialchars( $pet["descr"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required >
             </div>
             <div class="form-group">
               <label for="file">Foto</label>
-              <input type="file" class="form-control" id="file" name="file" value="{$pet.photo}" required >
+              <input type="file" class="form-control" id="file" name="file" value="<?php echo htmlspecialchars( $pet["photo"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required >
               <div class="box box-widget">
                 <div class="box-body">
                   <!-- / é necessario para encontrar o caminho da imagem.
                       No banco de dados o caminho salvo é res/site/img/pets/ . $this->getpet() . $this->getidphoto() . $this->getidpet() . ".jpg" , então o retorno é o mesmo, como se trata de um diretorio / para encontrar.
                   -->
-                  <img class="img-responsive" id="image-preview" src="/{$pet.photo}" alt="Imagem do animal">
+                  <img class="img-responsive" id="image-preview" src="/<?php echo htmlspecialchars( $pet["photo"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" alt="Imagem do animal">
                 </div>
               </div>
             </div>
