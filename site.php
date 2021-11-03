@@ -12,6 +12,7 @@ use \Mypets\Model\Category;
 // O usuario previamente cadastrado como administrador, que gerencia "certa" parte do sistema tem acesso, contem os metodos listAll, save, get, delete....
 // Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/Model/Category.php.
 use \Mypets\Model\Pet;
+use \Mypets\Model\User;
 
 // Nossa rota inicial '/', todos os usuarios assim que acessam o sistema são direcionados para a homepage do sistema.
 $app->get('/', function(){
@@ -71,7 +72,8 @@ $app->get('/pets/:url', function($url){
 
 		"pet"=>$pet->getValues(),
 		"categories"=>$pet->getCategory(),
-		"person"=>$pet->getPerson()
+		"person"=>$pet->getPerson(),
+		"ongperson"=>$pet->getPersonOng()
 	));
 
 });

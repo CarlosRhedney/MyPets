@@ -31,7 +31,7 @@ class Pet extends Model
 
 	public function save()
 	{
-		$idperson = $_SESSION[User::SESSION]["idperson"];
+		$idperson = (int)$_SESSION[User::SESSION]["idperson"];
 
 		$sql = new Sql();
 
@@ -167,6 +167,17 @@ class Pet extends Model
 
 		return $sql->select("SELECT * FROM tb_persons a INNER JOIN tb_pets b ON a.idperson = b.idperson WHERE b.idpet = :idpet", array(
 			":idpet"=>$this->getidpet()
+		));
+	}
+
+	public function getPersonOng()
+	{
+		$idperson = (int)$_SESSION[User::SESSION]["idperson"];
+		
+		$sql = new Sql();
+
+		return $sql->select("SELECT * FROM tb_persons a INNER JOIN tb_ongs b ON a.idperson = b.idperson WHERE b.idperson = :idperson", array(
+			":idperson"=>$idperson
 		));
 	}
 

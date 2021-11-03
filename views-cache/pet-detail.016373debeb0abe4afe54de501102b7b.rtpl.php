@@ -52,13 +52,38 @@
                                     </ul>
                                     <div class="tab-content">
                                         <div role="tabpanel" class="tab-pane fade in active" id="home">
+                                            <h2>Descrição da Ong</h2>
+                                            <?php $counter1=-1;  if( isset($ongperson) && ( is_array($ongperson) || $ongperson instanceof Traversable ) && sizeof($ongperson) ) foreach( $ongperson as $key1 => $value1 ){ $counter1++; ?>
+
+                                            <div class="box-body no-padding">
+                                              <table class="table table-striped table-bordered table-condensed">
+                                                <thead>
+                                                  <tr>
+                                                    <th>Nome da Ong</th>
+                                                    <th>Logradouro</th>
+                                                    <th>Cidade</th>
+                                                    <th>Número</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td><?php echo htmlspecialchars( $value1["ong"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                                                    <td><?php echo htmlspecialchars( $value1["logradouro"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                                                    <td><?php echo htmlspecialchars( $value1["city"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                                                    <td><?php echo htmlspecialchars( $value1["number"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                            <?php } ?>
+
                                             <h2>Descrição do Animal</h2>  
                                             <p><?php echo htmlspecialchars( $pet["descr"], ENT_COMPAT, 'UTF-8', FALSE ); ?></p>
                                         </div>
                                         <div role="tabpanel" class="tab-pane fade" id="profile">
                                             <h2>Informações do Animal</h2>
                                             <div class="box-body no-padding">
-                                              <table class="table table-striped table-bordered tabe-condensed">
+                                              <table class="table table-striped table-bordered table-condensed">
                                                 <thead>
                                                   <tr>
                                                     <th>Nome do Animal</th>
@@ -83,7 +108,7 @@
                                         <div role="tabpanel" class="tab-pane fade" id="profile2">
                                             <h2>Informações do Tutor</h2>
                                             <div class="box-body no-padding">
-                                              <table class="table table-striped table-bordered">
+                                              <table class="table table-striped table-bordered table-condensed">
                                                 <thead>
                                                   <tr>
                                                     <th>Nome do Tutor</th>

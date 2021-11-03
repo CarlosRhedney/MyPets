@@ -31,7 +31,7 @@ class Ong extends Model
 
 	public function save()
 	{
-		$idperson = $_SESSION[User::SESSION]["idperson"];
+		$idperson = (int)$_SESSION[User::SESSION]["idperson"];
 
 		$sql = new Sql();
 
