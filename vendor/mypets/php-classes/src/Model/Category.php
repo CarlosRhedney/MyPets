@@ -106,7 +106,7 @@ class Category extends Model
 
 		return array(
 			"data"=>Pet::checkList($results),
-			"total"=>$resultTotal[0]["nrtotal"],
+			"total"=>(int)$resultTotal[0]["nrtotal"],
 			"pages"=>ceil($resultTotal[0]["nrtotal"] / $itensPerPage)
 		);
 

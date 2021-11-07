@@ -2,43 +2,15 @@
         	<!-- Slider -->
 			<div class="block-slider block-slider4">
 				<ul class="" id="bxslider-home4">
+                    <?php $counter1=-1;  if( isset($pets) && ( is_array($pets) || $pets instanceof Traversable ) && sizeof($pets) ) foreach( $pets as $key1 => $value1 ){ $counter1++; ?>
 					<li>
-						<img src="/res/site/img/h4-slide.png" alt="Slide">
+						<img style="width:600px; height: 395px" src="<?php echo htmlspecialchars( $value1["photo"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" alt="Slide">
 						<div class="caption-group">
-							<h2 class="caption title">
-								Animais <span class="primary">para <strong>adoção</strong></span>
-							</h2>
-							<h4 class="caption subtitle">Adoção</h4>
-							<a class="caption button-radius" href="#"><span class="icon"></span>Adotar</a>
+							<h4 class="caption subtitle"><?php echo htmlspecialchars( $value1["pet"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h4>
+							<a class="caption button-radius" href="/pets/<?php echo htmlspecialchars( $value1["url"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><span class="icon"></span>Adotar</a>
 						</div>
 					</li>
-					<li><img src="/res/site/img/h4-slide2.png" alt="Slide">
-						<div class="caption-group">
-							<h2 class="caption title">
-								 <span class="primary"> <strong></strong></span>
-							</h2>
-							<h4 class="caption subtitle"></h4>
-							<a class="caption button-radius" href="#"><span class="icon"></span>Adotar</a>
-						</div>
-					</li>
-					<li><img src="/res/site/img/h4-slide3.png" alt="Slide">
-						<div class="caption-group">
-							<h2 class="caption title">
-								 <span class="primary"> <strong></strong></span>
-							</h2>
-							<h4 class="caption subtitle"></h4>
-							<a class="caption button-radius" href="#"><span class="icon"></span>Adotar</a>
-						</div>
-					</li>
-					<li><img src="/res/site/img/h4-slide4.png" alt="Slide">
-						<div class="caption-group">
-						  <h2 class="caption title">
-								 <span class="primary"> <strong></strong></span>
-							</h2>
-							<h4 class="caption subtitle"></h4>
-							<a class="caption button-radius" href="#"><span class="icon"></span>Adotar</a>
-						</div>
-					</li>
+                    <?php } ?>
 				</ul>
 			</div>
 			<!-- ./Slider -->
@@ -48,30 +20,14 @@
         <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
+                <?php $counter1=-1;  if( isset($ongs) && ( is_array($ongs) || $ongs instanceof Traversable ) && sizeof($ongs) ) foreach( $ongs as $key1 => $value1 ){ $counter1++; ?>
                 <div class="col-md-3 col-sm-6">
                     <div class="single-promo promo1">
                         <i class="fa fa-users"></i>
-                        <p>ONGs</p>
+                        <p><a href="<?php echo htmlspecialchars( $value1["url"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" style="color:#D3D3D3"><?php echo htmlspecialchars( $value1["ong"], ENT_COMPAT, 'UTF-8', FALSE ); ?></a></p>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-promo promo2">
-                        <i class="fa fa-users"></i>
-                        <p>ONGs</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-promo promo3">
-                        <i class="fa fa-users"></i>
-                        <p>ONGs</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-promo promo4">
-                        <i class="fa fa-users"></i>
-                        <p>ONGs</p>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </div> <!-- End promo area -->
@@ -98,7 +54,7 @@
                                 
                                 <div class="product-carousel-price">
                                     <p><?php echo htmlspecialchars( $value1["rc"], ENT_COMPAT, 'UTF-8', FALSE ); ?></p>
-                                </div> 
+                                </div>
                             </div>
                             <?php } ?>
                         </div>

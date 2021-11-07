@@ -12,12 +12,15 @@ use \Mypets\Model\Category;
 // O usuario previamente cadastrado como administrador, que gerencia "certa" parte do sistema tem acesso, contem os metodos listAll, save, get, delete....
 // Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/Model/Category.php.
 use \Mypets\Model\Pet;
-use \Mypets\Model\User;
+
+use \Mypets\Model\Ong;
 
 // Nossa rota inicial '/', todos os usuarios assim que acessam o sistema são direcionados para a homepage do sistema.
 $app->get('/', function(){
 
 	$pets = Pet::listAll();
+
+	$ongs = Ong::listAll();
 
 	// Iniciamos o objeto $page, que recebe a classe Page.
 	// Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/Page.php.
@@ -26,7 +29,8 @@ $app->get('/', function(){
 	// Chamamos o metodo setTpl() contido em Page.php, e chamamos o template index.html.
 	// Para mais detalhes verificar o template em views/index.html.
 	$page->setTpl("index", array(
-		"pets"=>Pet::checkList($pets)
+		"pets"=>Pet::checkList($pets),
+		"ongs"=>$ongs
 	));
 
 });
