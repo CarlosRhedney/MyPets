@@ -35,33 +35,14 @@
 <div class="header-area">
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
-                <div class="user-menu">
-                    <ul>
-                        <li><a href="#"><i class="fa fa-user"></i> Minha Conta</a></li>
-                        <li><a href="#"><i class="fa fa-heart"></i> Lista de Desejos</a></li>
-                        <li><a href="#"><i class="fa fa-lock"></i> Login</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="col-md-4">
+            <div class="col-md-12">
                 <div class="header-right">
                     <ul class="list-unstyled list-inline">
                         <li class="dropdown dropdown-small">
-                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">Menu</span><b class="caret"></b></a>
+                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span><i class="fa fa-user"></i> Minha Conta</span><b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Link</a></li>
-                                <li><a href="#">Link</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="dropdown dropdown-small">
-                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">Idioma :</span><span class="value">Português </span><b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Português</a></li>
-                                <li><a href="#">Inglês</a></li>
-                                <li><a href="#">Espanhol</a></li>
+                                <li><a href="#">Login</a></li>
+                                <li><a href="#">Criar Conta</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -81,8 +62,7 @@
             </div>
             
             <div class="col-sm-6">
-                <div class="shopping-item">
-                    <a href="#"><i class="fa fa-home"></i> <span class="product-count">5</span></a>
+                <div class="">
                 </div>
             </div>
         </div>
