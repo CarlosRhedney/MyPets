@@ -14,6 +14,18 @@ class Pet extends Model
 
 	}
 
+	public static function PetOnglistAll()
+	{
+		$idperson = (int)$_SESSION[User::SESSION]["idperson"];
+
+		$sql = new Sql();
+
+		return $sql->select("SELECT * FROM tb_pets WHERE idperson = :idperson ORDER BY pet", array(
+			":idperson"=>$idperson
+		));
+
+	}
+
 	public static function checkList($list)
 	{
 		foreach($list as &$row)
@@ -172,6 +184,7 @@ class Pet extends Model
 
 	public function getPersonOng()
 	{
+		//(int)session_id();
 		$idperson = (int)$_SESSION[User::SESSION]["idperson"];
 		
 		$sql = new Sql();

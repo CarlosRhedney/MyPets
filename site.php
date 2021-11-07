@@ -82,4 +82,21 @@ $app->get('/pets/:url', function($url){
 
 });
 
+$app->get('/ongs/:url', function($url){
+
+	$ong = new Ong();
+
+	$ong->getFromUrl($url);
+
+	$page = new Page();
+
+	$page->setTpl("ong-detail", array(
+
+		"ong"=>$ong->getValues(),
+		"person"=>$ong->getPerson(),
+		"ongperson"=>$ong->getPersonOng()
+	));
+
+});
+
 ?>

@@ -1,0 +1,99 @@
+<div class="product-big-title-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-bit-title text-center">
+                    <h2>{$ong.ong}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="single-product-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-content-right">
+                    <div class="product-breadcroumb">
+                        <a href="/">Home</a>
+                        <a href="">{$ong.ong}</a>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="product-images">
+                                <div class="product-main-img">
+                                    <img src="/{$ong.photo}">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-6">
+                            <div class="product-inner">
+                                <h2 class="product-name">{$ong.ong}</h2>
+                                
+                                <div role="tabpanel">
+                                    <ul class="product-tab" role="tablist">
+                                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Descrição</a></li>
+                                        <li role="presentation"><a href="#profile2" aria-controls="profile" role="tab" data-toggle="tab">Tutor</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane fade in active" id="home">
+                                            <h2>Descrição da Ong</h2>
+                                            {loop="$ongperson"}
+                                            <div class="box-body no-padding">
+                                              <table class="table table-striped table-bordered table-condensed">
+                                                <thead>
+                                                  <tr>
+                                                    <th>Nome da Ong</th>
+                                                    <th>Logradouro</th>
+                                                    <th>Cidade</th>
+                                                    <th>Número</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td>{$value.ong}</td>
+                                                    <td>{$value.logradouro}</td>
+                                                    <td>{$value.city}</td>
+                                                    <td>{$value.number}</td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                            {/loop}
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane fade" id="profile2">
+                                            <h2>Informações do Tutor</h2>
+                                            <div class="box-body no-padding">
+                                              <table class="table table-striped table-bordered table-condensed">
+                                                <thead>
+                                                  <tr>
+                                                    <th>Nome do Tutor</th>
+                                                    <th>Email</th>
+                                                    <th>Tel</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {loop="$person"}
+                                                  <tr>
+                                                    <td>{$value.person}</td>
+                                                    <td>{$value.mail}</td>
+                                                    <td>{$value.nrphone}</td>
+                                                  </tr>
+                                                  {/loop}
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>      
+                            </div>
+                        </div>
+                    </div>
+                </div>                    
+            </div>
+        </div>
+    </div>
+</div>

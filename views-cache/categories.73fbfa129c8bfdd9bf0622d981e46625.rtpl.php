@@ -17,18 +17,13 @@
   <div class="row">
   	<div class="col-md-12">
   		<div class="box box-primary">
-            
-            <div class="box-header">
-              <a href="/ong/categories/create" class="btn btn-success">Cadastrar Categoria</a>
-            </div>
-
             <div class="box-body no-padding">
               <table class="table table-striped">
                 <thead>
                   <tr>
                     <th style="width: 10px">#</th>
                     <th>Nome da Categoria</th>
-                    <th style="width: 240px">&nbsp;</th>
+                    <th style="width: 140px">&nbsp;</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -38,9 +33,7 @@
                     <td><?php echo htmlspecialchars( $value1["idcategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                     <td><?php echo htmlspecialchars( $value1["category"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                     <td>
-                      <a href="/ong/categories/<?php echo htmlspecialchars( $value1["idcategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/pets" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Animais</a>
-                      <a href="/ong/categories/<?php echo htmlspecialchars( $value1["idcategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
-                      <a href="/ong/categories/<?php echo htmlspecialchars( $value1["idcategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+                      <a href="/ong/categories/<?php echo htmlspecialchars( $value1["idcategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/pets" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Animais</a>
                     </td>
                   </tr>
                   <?php } ?>

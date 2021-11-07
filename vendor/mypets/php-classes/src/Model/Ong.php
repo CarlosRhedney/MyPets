@@ -132,5 +132,38 @@ class Ong extends Model
 		$this->checkPhoto();
 
 	}
+
+	public function getFromUrl($url)
+	{
+		$sql = new Sql();
+
+		$rows = $sql->select("SELECT * FROM tb_ongs WHERE url = :url LIMIT 1", array(
+			":url"=>$url
+		));
+
+		$this->setData($rows[0]);
+	}
+
+	public function getPerson()
+	{
+		$sql = new Sql();
+
+		return $sql->select("SELECT * FROM tb_persons a INNER JOIN tb_ongs b ON a.iduser = b.iduser WHERE b.idong = :idong", array(
+			":idong"=>$this->getidong()
+		));
+	}
+
+	public function getPersonOng()
+	{
+		//(int)session_id();
+		$idperson = (int)$_SESSION[User::SESSION]["idperson"];
+		
+		$sql = new Sql();
+
+		return $sql->select("SELECT * FROM tb_persons a INNER JOIN tb_ongs b ON a.idperson = b.idperson WHERE b.idperson = :idperson", array(
+			":idperson"=>$idperson
+		));
+	}
+
 }
 ?>
