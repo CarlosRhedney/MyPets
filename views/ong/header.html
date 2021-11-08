@@ -51,7 +51,7 @@ desired effect
   <!-- Main Header -->
   <header class="main-header">
 
-    <a href="/admin" class="logo">
+    <a href="/ong" class="logo">
       <span class="logo-mini"><b>M</b>Ps</span>
       <span class="logo-lg"><b>My</b>Pets</span>
     </a>
