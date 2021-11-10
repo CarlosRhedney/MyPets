@@ -41,8 +41,7 @@
                         <li class="dropdown dropdown-small">
                             <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span><i class="fa fa-user"></i> Minha Conta</span><b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Login</a></li>
-                                <li><a href="#">Criar Conta</a></li>
+                                <li><a href="/login">Login</a></li>
                             </ul>
                         </li>
                     </ul>

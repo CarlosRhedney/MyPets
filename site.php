@@ -15,6 +15,8 @@ use \Mypets\Model\Pet;
 
 use \Mypets\Model\Ong;
 
+use \Mypets\Model\User;
+
 // Nossa rota inicial '/', todos os usuarios assim que acessam o sistema são direcionados para a homepage do sistema.
 $app->get('/', function(){
 
@@ -96,6 +98,24 @@ $app->get('/ongs/:url', function($url){
 		"person"=>$ong->getPerson(),
 		"ongperson"=>$ong->getPersonOng()
 	));
+
+});
+
+$app->get('/login', function(){
+
+	$page = new Page();
+
+	$page->setTpl("login");
+
+});
+
+$app->post('/login', function(){
+
+	User::login($_POST["login"], $_POST["password"]);
+
+	header("Location: /");
+
+	exit;
 
 });
 
