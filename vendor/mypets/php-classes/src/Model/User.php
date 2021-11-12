@@ -8,6 +8,7 @@ use \Mypets\Mailer;
 class User extends Model
 {
 	const SESSION = "User";
+	const ERROR = "UserError";
 	const SECRET = "TccMypets_Secret";
 	const SECRET_IV = "TccMypets_Secret_IV";
 
@@ -158,7 +159,7 @@ class User extends Model
 	{
 		$user = new User();
 
-		if(isset($_SESSION[User::SESSION]) && (int)$_SESSION(User::SESSION)["iduser"] > 0)
+		if(isset($_SESSION[User::SESSION]) && (int)$_SESSION[User::SESSION]["iduser"] > 0)
 		{
 			$user->setData($_SESSION[User::SESSION]);
 		}
@@ -256,5 +257,33 @@ class User extends Model
 			":iduser"=>$this->getiduser()
 		));
 	}
+
+	public static function setError($msg)
+	{
+		return $_SESSION[User::ERROR] = $msg;
+	}
+
+	public static function getError()
+	{
+		$msg = (isset($_SESSION[User::ERROR]) && $_SESSION[User::ERROR]) ? $_SESSION[User::ERROR] : "";
+
+		User::clearError();
+
+		return $msg;
+
+	}
+
+	public static function clearError()
+	{
+		$_SESSION[User::ERROR] = NULL;
+	}
+
+	public static function getPasswordHash($password)
+	{
+		return password_hash($password, PASSWORD_DEFAULT, [
+			"cost"=>12
+		]);
+	}
+
 }
 ?>
