@@ -106,7 +106,9 @@ $app->get('/login', function(){
 	$page = new Page();
 
 	$page->setTpl("login", array(
-		"error"=>User::getError()
+		"error"=>User::getError(),
+		"errorRegister"=>User::getErrorRegister(),
+		"registerValues"=>(isset($_SESSION["registerValues"])) ? $_SESSION["registerValues"] : ["name"=>"", "mail"=>"", "nrphone"=>""]
 	));
 
 });
@@ -137,6 +139,80 @@ $app->get('/logout', function(){
 
 	exit;
 	
+});
+
+$app->post('/register', function(){
+
+	$_SESSION["registerValues"] = $_POST;
+
+	if(!isset($_POST["name"]) || $_POST["name"] == "")
+	{
+		User::setErrorRegister("Insira o seu nome!");
+
+		header("Location: /login");
+
+		exit;
+
+	}
+
+	if(!isset($_POST["mail"]) || $_POST["mail"] == "")
+	{
+		User::setErrorRegister("Insira o seu e-mail!");
+
+		header("Location: /login");
+
+		exit;
+		
+	}
+
+	if(!isset($_POST["nrphone"]) || $_POST["nrphone"] == "")
+	{
+		User::setErrorRegister("Insira o seu telefone!");
+
+		header("Location: /login");
+
+		exit;
+		
+	}
+
+	if(!isset($_POST["password"]) || $_POST["password"] == "")
+	{
+		User::setErrorRegister("Insira a sua senha!");
+
+		header("Location: /login");
+
+		exit;
+		
+	}
+
+	if(User::checkLoginExist($_POST["mail"]) === true)
+	{
+		User::setErrorRegister("E-mail já cadastrado!");
+
+		header("Location: /login");
+
+		exit;
+	}
+
+	$user = new User();
+
+	$user->setData(array(
+		"inadmin"=>0,
+		"login"=>$_POST["mail"],
+		"person"=>$_POST["name"],
+		"mail"=>$_POST["mail"],
+		"despassword"=>$_POST["password"],
+		"nrphone"=>$_POST["nrphone"]
+	));
+
+	$user->save();
+
+	User::login($_POST["mail"], $_POST["password"]);
+
+	header("Location: /");
+
+	exit;
+
 });
 
 ?>

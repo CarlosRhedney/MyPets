@@ -22,7 +22,7 @@ $app->get('/ong', function(){
 
 	// Metodo estatico veryfyLogin criado na classe User
 	// Metodo verifica se a seção foi iniciada, se ela existe, se id do usuario daquela seção é maior que 0 e se o mesmo faz parte da administração do sistema.
-	//User::verifyLoginOng();
+	User::verifyLogin(false);
 
 	// Iniciamos o objeto $page com a classe Ong.
 	// Ong é herança de Page.
@@ -38,7 +38,7 @@ $app->get('/ong', function(){
 
 $app->get('/ong/pets', function(){
 
-	//User::verifyLoginOng();
+	User::verifyLogin(false);
 
 	$pets = Pet::PetOnglistAll();
 
@@ -52,7 +52,7 @@ $app->get('/ong/pets', function(){
 
 $app->get('/ong/pets/create', function(){
 
-	//User::verifyLoginOng();
+	User::verifyLogin(false);
 
 	$page = new Ong();
 
@@ -62,7 +62,7 @@ $app->get('/ong/pets/create', function(){
 
 $app->post('/ong/pets/create', function(){
 
-	//User::verifyLoginOng();
+	User::verifyLogin(false);
 
 	$pet = new Pet();
 
@@ -80,7 +80,7 @@ $app->post('/ong/pets/create', function(){
 
 $app->get('/ong/pets/:idpet', function($idpet){
 
-	//User::verifyLoginOng();
+	User::verifyLogin(false);
 
 	$pet = new Pet();
 
@@ -95,7 +95,7 @@ $app->get('/ong/pets/:idpet', function($idpet){
 
 $app->post('/ong/pets/:idpet', function($idpet){
 
-	//User::verifyLoginOng();
+	User::verifyLogin(false);
 
 	$pet = new Pet();
 
@@ -115,7 +115,7 @@ $app->post('/ong/pets/:idpet', function($idpet){
 
 $app->get('/ong/pets/:idpet/delete', function($idpet){
 
-	//User::verifyLoginOng();
+	User::verifyLogin(false);
 
 	$pet = new Pet();
 
@@ -131,7 +131,7 @@ $app->get('/ong/pets/:idpet/delete', function($idpet){
 
 $app->get('/ong/categories', function(){
 
-	//User::verifyLoginOng();
+	User::verifyLogin(false);
 
 	$categories = Category::listAll();
 
@@ -145,7 +145,7 @@ $app->get('/ong/categories', function(){
 
 $app->get('/ong/categories/:idcategory/pets', function($idcategory){
 
-	//User::verifyLoginOng();
+	User::verifyLogin(false);
 
 	$category = new Category();
 
@@ -163,7 +163,7 @@ $app->get('/ong/categories/:idcategory/pets', function($idcategory){
 
 $app->get('/ong/categories/:idcategory/pets/:idpet/add', function($idcategory, $idpet){
 
-	//User::verifyLoginOng();
+	User::verifyLogin(false);
 
 	$category = new Category();
 
@@ -183,7 +183,7 @@ $app->get('/ong/categories/:idcategory/pets/:idpet/add', function($idcategory, $
 
 $app->get('/ong/categories/:idcategory/pets/:idpet/remove', function($idcategory, $idpet){
 
-	//User::verifyLoginOng();
+	User::verifyLogin(false);
 
 	$category = new Category();
 

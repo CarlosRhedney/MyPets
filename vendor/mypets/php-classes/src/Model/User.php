@@ -9,6 +9,7 @@ class User extends Model
 {
 	const SESSION = "User";
 	const ERROR = "UserError";
+	const ERROR_REGISTER = "UserErrorRegister";
 	const SECRET = "TccMypets_Secret";
 	const SECRET_IV = "TccMypets_Secret_IV";
 
@@ -108,7 +109,7 @@ class User extends Model
 		$results = $sql->select("CALL sp_users_save(:person, :login, :despassword, :mail, :nrphone, :inadmin)", array(
 				":person"=>$this->getperson(),
 				":login"=>$this->getlogin(),
-				":despassword"=>$this->getdespassword(),
+				":despassword"=>User::getPasswordHash($this->getdespassword()),
 				":mail"=>$this->getmail(),
 				":nrphone"=>$this->getnrphone(),
 				":inadmin"=>$this->getinadmin()
@@ -136,7 +137,7 @@ class User extends Model
 			":iduser"=>$this->getiduser(),
 			":person"=>$this->getperson(),
 			":login"=>$this->getlogin(),
-			":despassword"=>$this->getdespassword(),
+			":despassword"=>User::getPasswordHash($this->getdespassword()),
 			":mail"=>$this->getmail(),
 			":nrphone"=>$this->getnrphone(),
 			":inadmin"=>$this->getinadmin()
@@ -278,11 +279,43 @@ class User extends Model
 		$_SESSION[User::ERROR] = NULL;
 	}
 
+	public static function setErrorRegister($msg)
+	{
+		return $_SESSION[User::ERROR_REGISTER] = $msg;
+	}
+
+	public static function getErrorRegister()
+	{
+		$msg = (isset($_SESSION[User::ERROR_REGISTER]) && $_SESSION[User::ERROR_REGISTER]) ? $_SESSION[User::ERROR_REGISTER] : "";
+
+		User::clearErrorRegister();
+
+		return $msg;
+
+	}
+
+	public static function clearErrorRegister()
+	{
+		$_SESSION[User::ERROR_REGISTER] = NULL;
+	}
+
 	public static function getPasswordHash($password)
 	{
 		return password_hash($password, PASSWORD_DEFAULT, [
 			"cost"=>12
 		]);
+	}
+
+	public static function checkLoginExist($login)
+	{
+		$sql = new Sql();
+
+		$results = $sql->select("SELECT * FROM tb_users WHERE login = :login", array(
+			":login"=>$login
+		));
+
+		return (count($results) > 0);
+
 	}
 
 }
