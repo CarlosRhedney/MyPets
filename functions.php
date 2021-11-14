@@ -10,7 +10,7 @@ function getUserName()
 {
 	$user = User::getFromSession();
 
-	return $user->getidperson();
+	return $user->getlogin();
 
 }
 

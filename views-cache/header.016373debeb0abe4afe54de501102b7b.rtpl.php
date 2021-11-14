@@ -42,7 +42,7 @@
                             <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span><i class="fa fa-user"></i> Minha Conta</span><b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <?php if( checkLogin(false) ){ ?>
-                                <li><a href="/profile"><i class="fa fa-user"></i><?php echo getUserName(); ?></a></li>
+                                <li><a href="/profile"><i class="fa fa-user"></i> <?php echo getUserName(); ?></a></li>
                                 <li><a href="/ong"><i class="fa fa-users"></i> Ong</a></li>
                                 <li><a href="/logout"><i class="fa fa-close"></i> Sair</a></li>
                                 <?php }else{ ?>

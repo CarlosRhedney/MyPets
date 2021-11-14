@@ -23,6 +23,11 @@ class User extends Model
 
 		if(count($results) === 0)
 		{
+			/*
+			header("Location: /login");
+			exit;
+			throw new \Exception("Usuário e ou senha inválido(s)!");
+			*/
 			throw new \Exception("Usuário e ou senha inválido(s)!");
 		}
 
@@ -40,6 +45,11 @@ class User extends Model
 
 		}else
 		{
+			/*
+			header("Location: /login");
+			exit;
+			throw new \Exception("Usuário e ou senha inválido(s)!");
+			*/
 			throw new \Exception("Usuário e ou senha inválido(s)!");
 		}
 	}
@@ -168,7 +178,7 @@ class User extends Model
 		return $user;
 	}
 
-	public static function getForgot($mail)
+	public static function getForgot($mail, $inadmin = true)
 	{
 		$sql = new Sql();
 
@@ -203,7 +213,14 @@ class User extends Model
 
 				$code = base64_encode($cde);
 
-				$link = "http://www.mypets.com.br/admin/forgot/reset?code=$code";
+				if($inadmin === true)
+				{
+					$link = "http://www.mypets.com.br/admin/forgot/reset?code=$code";
+					
+				}else
+				{
+					$link = "http://www.mypets.com.br/forgot/reset?code=$code";
+				}
 
 				$mailer = new Mailer($data["mail"], $data["person"], "Redefinir senha MyPets", "mail", array(
 					"name"=>$data["person"],
