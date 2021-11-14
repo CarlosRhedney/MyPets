@@ -4,11 +4,11 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-about-us">
                         <h2>MyPets</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
+                        <p>Plataforma web desenvolvida por universitários, para a adoção de animais em colaboração com ONGs e pessoas que tenham um animal para adoção.</p>
                         <div class="footer-social">
-                            <a href="https://www.facebook.com/hcodebr" target="_blank"><i class="fa fa-facebook"></i></a>
-                            <a href="https://twitter.com/hcodebr" target="_blank"><i class="fa fa-twitter"></i></a>
-                            <a href="https://www.youtube.com/channel/UCjWENuSH2gX55-y7QSZiWxA" target="_blank"><i class="fa fa-youtube"></i></a>
+                            <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
@@ -18,8 +18,6 @@
                         <h2 class="footer-wid-title">Navegação </h2>
                         <ul>
                             <li><a href="#">Minha Conta</a></li>
-                            <li><a href="#">Meus Pets</a></li>
-                            <li><a href="#">Lista de Desejos</a></li>
                         </ul>                        
                     </div>
                 </div>
@@ -36,11 +34,11 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-newsletter">
                         <h2 class="footer-wid-title">Newsletter</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus!</p>
+                        <p>Envie-nos seu email para cadastro e receba nossas dicas de bem estar dos pets!</p>
                         <div class="newsletter-form">
                             <form action="#">
-                                <input type="email" placeholder="Type your email">
-                                <input type="submit" value="Subscribe">
+                                <input type="email" placeholder="Digite seu email">
+                                <input type="submit" value="Inscreva-se">
                             </form>
                         </div>
                     </div>
@@ -49,21 +47,12 @@
         </div>
     </div> <!-- End footer top area -->
     
-    <div class="footer-bottom-area">
+    <div class="footer-bottom-area" style="text-align: center">
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <div class="copyright">
                         <p>&copy; 2021 MyPets | All Rights Reserved.</p>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="footer-card-icon">
-                        <i class="fa fa-cc-discover"></i>
-                        <i class="fa fa-cc-mastercard"></i>
-                        <i class="fa fa-cc-paypal"></i>
-                        <i class="fa fa-cc-visa"></i>
                     </div>
                 </div>
             </div>
