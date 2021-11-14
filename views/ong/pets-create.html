@@ -7,7 +7,7 @@
   </h1>
   <ol class="breadcrumb">
     <li><a href="/ong"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li><a href="/ong/pets">Categorias</a></li>
+    <li><a href="/ong/pets">Animais</a></li>
     <li class="active"><a href="/ong/pets/create">Cadastrar</a></li>
   </ol>
 </section>
