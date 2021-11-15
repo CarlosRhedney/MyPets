@@ -335,5 +335,39 @@ class User extends Model
 
 	}
 
+	public static function createRelatory()
+	{
+		$sql = new Sql();
+
+		$persons = $sql->select("SELECT * FROM tb_persons ORDER BY idperson");
+
+		$headers = array();
+
+		foreach($persons[0] as $key => $value)
+		{
+			array_push($headers, $key);
+		}
+
+		$file = fopen("relatories/persons.csv", "w+");
+
+		fwrite($file, implode(",", $headers)."\r\n");
+
+		foreach($persons as $row)
+		{
+			$data = array();
+
+			foreach($row as $key => $value)
+			{
+				array_push($data, $value);
+			}
+
+			fwrite($file, implode(",", $data)."\r\n");
+
+		}
+
+		fclose($file);
+		
+	}
+
 }
 ?>
