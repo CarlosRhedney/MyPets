@@ -44,7 +44,25 @@ $app->get('/admin/users/relatory', function(){
 	// Lista todos os usuarios contidos no Banco de Dados.
 	// $relatory é um array vindo do Banco de Dados com todas as informações de todos os usuarios cadastrados no sistema.
 	// Setamos $relatory no template relatory.html, para a listagem dos usuarios na parte administrativa do sistema.
-	$relatory = User::createRelatory();
+	User::createRelatory();
+
+	header("Location: /admin/users");
+
+	exit;
+
+});
+
+$app->get('/admin/relatory', function(){
+
+	// Metodo estatico veryfyLogin criado na classe User.
+	// Metodo verifica se a seção foi iniciada, se ela existe, se id do usuario daquela seção é maior que 0 e se o mesmo faz parte da administração do sistema.
+	User::verifyLogin();
+
+	// Metodo estatico createRelatory criado na classe User.
+	// Lista todos os usuarios contidos no Banco de Dados.
+	// $relatory é um array vindo do Banco de Dados com todas as informações de todos os usuarios cadastrados no sistema.
+	// Setamos $relatory no template relatory.html, para a listagem dos usuarios na parte administrativa do sistema.
+	$relatory = User::getRelatory();
 
 	// Iniciamos o objeto $page com a classe PageAdmin.
 	// Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/PageAdmin.php.

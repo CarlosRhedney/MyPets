@@ -212,13 +212,13 @@ desired effect
         <li><a href="/admin/ongs"><i class="fa fa-cubes"></i> <span>Ongs</span></a></li>
         <li><a href="/admin/pets"><i class="fa fa-paw"></i> <span>Animais</span></a></li>
         <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
+          <a href="#"><i class="fa fa-link"></i> <span>Relatórios</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#">Link in level 2</a></li>
+            <li><a href="/admin/relatory">Usuários</a></li>
             <li><a href="#">Link in level 2</a></li>
           </ul>
         </li>
