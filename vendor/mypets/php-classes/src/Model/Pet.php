@@ -183,14 +183,11 @@ class Pet extends Model
 	}
 
 	public function getPersonOng()
-	{
-		//(int)session_id();
-		$idperson = (int)$_SESSION[User::SESSION]["idperson"];
-		
+	{		
 		$sql = new Sql();
 
 		return $sql->select("SELECT * FROM tb_persons a INNER JOIN tb_ongs b ON a.idperson = b.idperson WHERE b.idperson = :idperson", array(
-			":idperson"=>$idperson
+			":idperson"=>$this->getidperson()
 		));
 	}
 
