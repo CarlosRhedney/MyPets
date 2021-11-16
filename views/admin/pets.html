@@ -20,6 +20,7 @@
             
             <div class="box-header">
               <a href="/admin/pets/create" class="btn btn-success">Cadastrar Animal</a>
+              <a href="/admin/pets/relatory" class="btn btn-info">Relatório</a>
             </div>
 
             <div class="box-body no-padding">

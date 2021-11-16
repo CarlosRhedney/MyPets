@@ -52,7 +52,7 @@ $app->get('/admin/users/relatory', function(){
 
 });
 
-$app->get('/admin/relatory', function(){
+$app->get('/admin/user/relatory', function(){
 
 	// Metodo estatico veryfyLogin criado na classe User.
 	// Metodo verifica se a seção foi iniciada, se ela existe, se id do usuario daquela seção é maior que 0 e se o mesmo faz parte da administração do sistema.

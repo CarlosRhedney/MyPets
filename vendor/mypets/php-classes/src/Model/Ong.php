@@ -162,5 +162,77 @@ class Ong extends Model
 		));
 	}
 
+	public static function createRelatory()
+	{
+		$sql = new Sql();
+
+		$persons = $sql->select("SELECT * FROM tb_ongs ORDER BY idong");
+
+		$headers = array();
+
+		foreach($persons[0] as $key => $value)
+		{
+			array_push($headers, $key);
+		}
+
+		$file = fopen("relatories/ongs.csv", "w+");
+
+		fwrite($file, implode(",", $headers)."\r\n");
+
+		foreach($persons as $row)
+		{
+			$data = array();
+
+			foreach($row as $key => $value)
+			{
+				array_push($data, $value);
+			}
+
+			fwrite($file, implode(",", $data)."\r\n");
+
+		}
+
+		fclose($file);		
+		
+	}
+
+	public static function getRelatory()
+	{
+		$filename = "relatories/ongs.csv";
+
+		if(file_exists($filename))
+		{
+			$file = fopen($filename, "r");
+
+			$headers = explode(",", fgets($file));
+
+			$data = array();
+
+			while($row = fgets($file))
+			{
+				$rowData = explode(",", $row);
+
+				$newRow = array();
+
+				for($i = 0; $i < count($headers); $i++)
+				{
+					$newRow[$headers[$i]] = $rowData[$i];
+				}
+
+				array_push($data, $newRow);
+
+			}
+
+			fclose($file);
+
+			foreach($data as $dt)
+			{
+				return implode(" ", $dt);
+			}
+
+		}
+		
+	}
+
 }
 ?>

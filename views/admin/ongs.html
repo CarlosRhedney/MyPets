@@ -20,6 +20,7 @@
             
             <div class="box-header">
               <a href="/admin/ongs/create" class="btn btn-success">Cadastrar ONG</a>
+              <a href="/admin/ongs/relatory" class="btn btn-info">Relatório</a>
             </div>
 
             <div class="box-body no-padding">

@@ -1,13 +1,13 @@
-<?php if(!class_exists('Rain\Tpl')){exit;}?><!-- Content Wrapper. Contains page content -->
+<!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    Relatório de Usuários
+    Relatório de Animais
   </h1>
   <ol class="breadcrumb">
     <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active"><a href="/admin/users">Usuários</a></li>
+    <li class="active"><a href="/admin/pets">Animais</a></li>
   </ol>
 </section>
 
@@ -31,7 +31,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><?php echo htmlspecialchars( $relatory, ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                    <td>{$relatory}</td>
                     <td>
                     </td>
                   </tr>

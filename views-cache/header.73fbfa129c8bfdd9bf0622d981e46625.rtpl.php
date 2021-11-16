@@ -90,9 +90,7 @@
     </nav>
   </header>
   <aside class="main-sidebar">
-
     <section class="sidebar">
-
       <div class="user-panel">
         <div class="pull-left image">
           <img src="/res/admin/dist/img/photo4.jpg" class="img-circle" alt="User Image">
@@ -102,8 +100,8 @@
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
-
       <ul class="sidebar-menu">
+        <li class="header"></li>
         <li><a href="/ong/pets"><i class="fa fa-paw"></i> <span>Animais</span></a></li>
         <li><a href="/ong/categories"><i class="fa fa-cubes"></i> <span>Categorias</span></a></li>
       </ul>
