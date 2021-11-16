@@ -70,9 +70,8 @@
                         <input type="email" id="email" name="mail" class="input-text" value="<?php echo htmlspecialchars( $registerValues["mail"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                     </p>
                     <p class="form-row form-row-first">
-                        <label for="phone">Telefone
-                        </label>
-                        <input type="text" id="phone" name="nrphone" class="input-text" value="<?php echo htmlspecialchars( $registerValues["nrphone"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+                        <label for="phone">Telefone <span class="required">*</span></label>
+                        <input type="text" id="phone" name="nrphone" class="input-text" maxlength="11" value="<?php echo htmlspecialchars( $registerValues["nrphone"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                     </p>
                     <p class="form-row form-row-last">
                         <label for="senha">Senha <span class="required">*</span>

@@ -34,7 +34,7 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-newsletter">
                         <h2 class="footer-wid-title">Newsletter</h2>
-                        <p>Envie-nos seu email para cadastro e receba nossas dicas de bem estar dos pets!</p>
+                        <p>Envie-nos seu email e receba nossas dicas de bem estar dos pets!</p>
                         <div class="newsletter-form">
                             <form action="#">
                                 <input type="email" placeholder="Digite seu email">

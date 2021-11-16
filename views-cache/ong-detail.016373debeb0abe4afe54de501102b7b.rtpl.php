@@ -36,7 +36,7 @@
                                 <div role="tabpanel">
                                     <ul class="product-tab" role="tablist">
                                         <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Descrição</a></li>
-                                        <li role="presentation"><a href="#profile2" aria-controls="profile" role="tab" data-toggle="tab">Tutor</a></li>
+                                        <li role="presentation"><a href="#profile2" aria-controls="profile" role="tab" data-toggle="tab">Administrador</a></li>
                                     </ul>
                                     <div class="tab-content">
                                         <div role="tabpanel" class="tab-pane fade in active" id="home">
@@ -65,12 +65,12 @@
                                             <?php } ?>
                                         </div>
                                         <div role="tabpanel" class="tab-pane fade" id="profile2">
-                                            <h2>Informações do Tutor</h2>
+                                            <h2>Informações do Administrador</h2>
                                             <div class="box-body no-padding">
                                               <table class="table table-striped table-bordered table-condensed">
                                                 <thead>
                                                   <tr>
-                                                    <th>Nome do Tutor</th>
+                                                    <th>Administrador</th>
                                                     <th>Email</th>
                                                     <th>Tel</th>
                                                   </tr>

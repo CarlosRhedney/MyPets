@@ -9,7 +9,7 @@
   <ol class="breadcrumb">
     <li><a href="/ong"><i class="fa fa-dashboard"></i> Home</a></li>
     <li><a href="/ong/categories">Categorias</a></li>
-    <li><a href="/ong/categories/<?php echo htmlspecialchars( $category["idcategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/<?php echo htmlspecialchars( $category["category"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><?php echo htmlspecialchars( $category["category"], ENT_COMPAT, 'UTF-8', FALSE ); ?></a></li>
+    <li><a href="/ong/categories/<?php echo htmlspecialchars( $category["idcategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><?php echo htmlspecialchars( $category["category"], ENT_COMPAT, 'UTF-8', FALSE ); ?></a></li>
     <li class="active"><a href="/ong/categories/<?php echo htmlspecialchars( $category["idcategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/pets">Animais</a></li>
   </ol>
 </section>
