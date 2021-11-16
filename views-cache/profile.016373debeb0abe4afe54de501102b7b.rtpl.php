@@ -39,15 +39,15 @@
                 <form method="post" action="/profile">
                     <div class="form-group">
                     <label for="person">Nome completo</label>
-                    <input type="text" class="form-control" id="person" name="person" placeholder="Digite o nome aqui" value="<?php echo htmlspecialchars( $user["idperson"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+                    <input type="text" class="form-control" id="person" name="person" placeholder="Digite o nome aqui" value="<?php echo htmlspecialchars( $user["person"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                     </div>
                     <div class="form-group">
                     <label for="mail">E-mail</label>
-                    <input type="email" class="form-control" id="mail" name="mail" placeholder="Digite o e-mail aqui" value="<?php echo htmlspecialchars( $user["login"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+                    <input type="email" class="form-control" id="mail" name="mail" placeholder="Digite o e-mail aqui" value="<?php echo htmlspecialchars( $user["mail"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                     </div>
                     <div class="form-group">
                     <label for="nrphone">Telefone</label>
-                    <input type="tel" class="form-control" id="nrphone" name="nrphone" placeholder="Digite o telefone aqui" value="<?php echo htmlspecialchars( $user["dtregister"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+                    <input type="text" class="form-control" id="nrphone" name="nrphone" placeholder="Digite o telefone aqui" value="<?php echo htmlspecialchars( $user["nrphone"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                     </div>
                     <button type="submit" class="btn btn-primary">Salvar</button>
                 </form>

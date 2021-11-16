@@ -168,14 +168,20 @@ class User extends Model
 
 	public static function getFromSession()
 	{
+		$idperson = (int)$_SESSION[User::SESSION]["idperson"];
+
 		$user = new User();
 
-		if(isset($_SESSION[User::SESSION]) && (int)$_SESSION[User::SESSION]["iduser"] > 0)
-		{
-			$user->setData($_SESSION[User::SESSION]);
-		}
+		$sql = new Sql();
+
+		$results = $sql->select("SELECT * FROM tb_persons a INNER JOIN tb_users b USING(idperson) WHERE a.idperson = :idperson", array(
+			":idperson"=>$idperson
+		));
+
+		$user->setData($results[0]);
 
 		return $user;
+		
 	}
 
 	public static function getForgot($mail, $inadmin = true)

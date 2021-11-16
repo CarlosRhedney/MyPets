@@ -373,7 +373,7 @@ $app->post('/profile', function(){
 
 	if(!isset($_POST["person"]) || $_POST["person"] === "")
 	{
-		User::setError("Preencha seu nome");
+		User::setError("Preencha o seu nome");
 
 		header("Location: /profile");
 
@@ -383,13 +383,25 @@ $app->post('/profile', function(){
 
 	if(!isset($_POST["mail"]) || $_POST["mail"] === "")
 	{
-		User::setError("Preencha seu email");
+		User::setError("Preencha o seu email");
 
 		header("Location: /profile");
 
 		exit;
 		
 	}
+
+	if(!isset($_POST["nrphone"]) || $_POST["nrphone"] === "")
+	{
+		User::setError("Preencha o seu telefone");
+
+		header("Location: /profile");
+
+		exit;
+		
+	}
+
+	$user = User::getFromSession();
 
 	if(!isset($_POST["mail"]) !== $user->getmail())
 	{
@@ -402,8 +414,6 @@ $app->post('/profile', function(){
 			exit;
 		}
 	}
-
-	$user = User::getFromSession();
 
 	$_POST["inadmin"] = $user->getinadmin();
 
