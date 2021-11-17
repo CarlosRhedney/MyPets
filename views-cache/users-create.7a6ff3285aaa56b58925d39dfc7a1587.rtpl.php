@@ -35,7 +35,7 @@
             </div>
             <div class="form-group">
               <label for="nrphone">Telefone</label>
-              <input type="tel" class="form-control" id="nrphone" name="nrphone" placeholder="Digite o telefone" required >
+              <input type="tel" class="form-control" id="nrphone" name="nrphone" maxlength="11" placeholder="Digite o telefone" required >
             </div>
             <div class="form-group">
               <label for="mail">E-mail</label>

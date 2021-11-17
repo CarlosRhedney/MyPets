@@ -9,6 +9,7 @@ class User extends Model
 {
 	const SESSION = "User";
 	const ERROR = "UserError";
+	const SUCCESS = "UserSuccess";
 	const ERROR_REGISTER = "UserErrorRegister";
 	const SECRET = "TccMypets_Secret";
 	const SECRET_IV = "TccMypets_Secret_IV";
@@ -280,6 +281,26 @@ class User extends Model
 			":password"=>$password,
 			":iduser"=>$this->getiduser()
 		));
+	}
+
+	public static function setSuccess($msg)
+	{
+		return $_SESSION[User::SUCCESS] = $msg;
+	}
+
+	public static function getSuccess()
+	{
+		$msg = (isset($_SESSION[User::SUCCESS]) && $_SESSION[User::SUCCESS]) ? $_SESSION[User::SUCCESS] : "";
+
+		User::clearSuccess();
+
+		return $msg;
+
+	}
+
+	public static function clearSuccess()
+	{
+		$_SESSION[User::SUCCESS] = NULL;
 	}
 
 	public static function setError($msg)
