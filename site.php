@@ -509,4 +509,31 @@ $app->post('/profile/change-password', function(){
 
 });
 
+$app->get('/contract', function(){
+
+	User::verifyLogin(false);
+
+	$page = new Page();
+
+	$page->setTpl("contract");
+
+});
+
+$app->get('/terms', function(){
+
+	User::verifyLogin(false);
+
+	$user = User::getFromSession();
+
+	$page = new Page([
+		"header"=>false,
+		"footer"=>false
+	]);
+
+	$page->setTpl("terms", array(
+		"user"=>$user
+	));
+
+});
+
 ?>
