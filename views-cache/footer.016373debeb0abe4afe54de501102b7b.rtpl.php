@@ -17,7 +17,7 @@
                     <div class="footer-menu">
                         <h2 class="footer-wid-title">Navegação </h2>
                         <ul>
-                            <li><a href="#">Minha Conta</a></li>
+                            <li><a href="/profile">Minha Conta</a></li>
                         </ul>                        
                     </div>
                 </div>

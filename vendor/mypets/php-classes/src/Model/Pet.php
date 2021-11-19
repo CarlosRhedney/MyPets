@@ -263,5 +263,23 @@ class Pet extends Model
 		
 	}
 
+	public static function getPetsPage($page = 1, $itensPerPage = 3)
+	{
+		$start = ($page - 1) * $itensPerPage;
+
+		$sql = new Sql();
+
+		$results = $sql->select("SELECT SQL_CALC_FOUND_ROWS * FROM tb_pets ORDER BY pet LIMIT $start, $itensPerPage");
+
+		$resultTotal = $sql->select("SELECT FOUND_ROWS() AS nrtotal");
+
+		return array(
+			"data"=>Pet::checkList($results),
+			"total"=>(int)$resultTotal[0]["nrtotal"],
+			"pages"=>ceil($resultTotal[0]["nrtotal"] / $itensPerPage)
+		);
+
+	}
+
 }
 ?>

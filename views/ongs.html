@@ -1,0 +1,50 @@
+<div class="product-big-title-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-bit-title text-center">
+                    <h2>ONGs</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="single-product-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+            {loop="$ongs"}
+            <div class="col-md-3 col-sm-6">
+                <div class="single-shop-product">
+                    <div class="product-upper">
+                        <!-- / é necessario para encontrar o caminho da imagem.
+                            No banco de dados o caminho salvo é res/site/img/pets/ . $this->getpet() . $this->getidphoto() . $this->getidpet() . ".jpg" , então o retorno é o mesmo, como se trata de um diretorio / para encontrar.
+                         -->
+                        <img src="/{$value.photo}" alt="Imagem do animal">
+                    </div>
+                    <h2><a href="/ongs/{$value.url}">{$value.ong}</a></h2>
+                    
+                    <div class="product-option-shop">
+                        <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/ongs/{$value.url}">Visitar</a>
+                    </div>                       
+                </div>
+            </div>
+            {/loop}
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-pagination text-center">
+                    <nav>
+                        <ul class="pagination">
+                        {loop="$pages"}
+                        <li><a href="">{$value.page}</a></li>
+                        {/loop}
+                        </ul>
+                    </nav>                        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

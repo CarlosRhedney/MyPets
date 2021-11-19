@@ -88,8 +88,8 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="/">Home</a></li>
-                    <li><a href="#">Ongs</a></li>
-                    <li><a href="#">Animais</a></li>
+                    <li><a href="/ongs">Ongs</a></li>
+                    <li><a href="/pets">Animais</a></li>
                 </ul>
             </div>  
         </div>

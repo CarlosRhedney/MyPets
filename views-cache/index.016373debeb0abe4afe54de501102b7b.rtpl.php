@@ -45,7 +45,7 @@
                                 <div class="product-f-image">
                                     <img src="<?php echo htmlspecialchars( $value1["photo"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" alt="Imagem do animal">
                                     <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-paw"></i> Adotar</a>
+                                        <a href="/contract/<?php echo htmlspecialchars( $value1["idpet"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="add-to-cart-link"><i class="fa fa-paw"></i> Adotar</a>
                                         <a href="/pets/<?php echo htmlspecialchars( $value1["url"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="view-details-link"><i class="fa fa-eye"></i>ver detalhes</a>
                                     </div>
                                 </div>

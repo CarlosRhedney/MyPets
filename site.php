@@ -66,6 +66,54 @@ $app->get('/categories/:idcategory', function($idcategory){
 
 });
 
+$app->get('/pets', function(){
+
+	$page = (isset($_GET["page"])) ? (int)$_GET["page"] : 1;
+
+	$pagination = Pet::getPetsPage($page);
+
+	$pages = array();
+
+	for ($i=1; $i <= $pagination["pages"] ; $i++) { 
+		array_push($pages, array(
+			"link"=>"/pets/" . $i,
+			"page"=>$i
+		));
+	}
+
+	$page = new Page();
+
+	$page->setTpl("pets", array(
+		"pets"=>$pagination["data"],
+		"pages"=>$pages
+	));
+
+});
+
+$app->get('/ongs', function(){
+
+	$page = (isset($_GET["page"])) ? (int)$_GET["page"] : 1;
+
+	$pagination = Ong::getPetsPage($page);
+
+	$pages = array();
+
+	for ($i=1; $i <= $pagination["pages"] ; $i++) { 
+		array_push($pages, array(
+			"link"=>"/pets/" . $i,
+			"page"=>$i
+		));
+	}
+
+	$page = new Page();
+
+	$page->setTpl("ongs", array(
+		"ongs"=>$pagination["data"],
+		"pages"=>$pages
+	));
+
+});
+
 $app->get('/pets/:url', function($url){
 
 	$pet = new Pet();
