@@ -36,7 +36,7 @@
                                     <ins><?php echo htmlspecialchars( $pet["rc"], ENT_COMPAT, 'UTF-8', FALSE ); ?></ins>
                                 </div>    
                                 
-                                <form action="/contract" class="cart">
+                                <form action="/contract/<?php echo htmlspecialchars( $pet["idpet"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="cart">
                                     <button class="add_to_cart_button" type="submit">Adotar</button>
                                 </form>   
                                 

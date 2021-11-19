@@ -413,39 +413,86 @@
                         <table class="body-text">
                           <tr>
                             <td class="body-text-cell">
-                            ADOTANTE<br>
+                            <strong>ANIMAL</strong><br>
+
+                            Espécie: {$pet.rc}<br>
+
+                            Raça: {$pet.rc}, Cor da pelagem: {$pet.rc}<br>
+
+                            Altura: {$pet.vlheight}<br>
+
+                            Comprimento: {$pet.vllength}<br>
+
+                            Peso: {$pet.vlweight}<br>
+
+                            Nome como o adotante chamará o animal: {$pet.pet}
+                            <br><br>
+                            <strong>ADOTANTE</strong><br>
 
                             Nome:  {function="getUserName()"},
 
-                            RG ou CNH nº:  ___________________________, expedido pela(o) ___________/SP
+                            RG ou CNH nº:  ___________________________,
 
-                            CPF: __________________________
-
-                            Endereço residencial: ______________________________________________________________
-
-                            Cidade/UF: _________________________________. Profissão: _____________________
-
-                            Fone: ___________________ Whatsapp: _____________________, 
-
-                            E-mail: ____________________________ Nome no facebook: ______________________________<br><br>
-
-                            DOADOR(A):O animal estava sob responsabilidade de 
-
-                            Nome:  _________________________________________________________________________
-
-                            RG ou CNH nº: ___________________________, expedido pela(o) ___________/SP
-
-                            CPF: __________________________
+                            CPF: __________________________<br>
 
                             Endereço residencial: ______________________________________________________________
 
-                            Cidade/UF: _________________________________. Profissão: _____________________
+                            Cidade/UF: _________________________________,<br>
 
-                            Fone: ___________________ Whatsapp: _____________________, 
+                            Fone: {$user.nrphone} Whatsapp: {$user.nrphone},<br>
 
-                            E-mail: ____________________________ Nome no facebook: ______________________________
+                            E-mail: {$user.mail}<br>
 
-                            Desde ____/____/________ Até ____/____/________ quando foi entregue à(ao) adotante acima indicado.
+                            Nome no facebook: {$user.person}
+                            <br><br>
+
+                            <strong>DOADOR(A)</strong>:O animal estava sob responsabilidade de: <br>
+
+                            {loop="$ongperson"}
+
+                            Nome:  {$value.ong},<br>
+
+                            CNPJ: {$value.cnpj}<br>
+
+                            Endereço: {$value.logradouro} - {$value.number},
+
+                            Cidade/UF: {$value.city},<br>
+
+                             Nome no facebook: {$value.ong}<br>
+
+                            {/loop}
+
+                            {loop="$person"}
+
+                            Tutor: {$value.person}<br>
+
+                            Fone: {$value.nrphone}, Whatsapp: {$value.nrphone},<br>
+
+                            E-mail: {$value.mail}<br>
+
+                            Desde {$value.dtregister} até o presente momento, quando foi entregue à(ao) adotante acima indicado.
+
+                            {/loop}
+
+                            <br><br>
+                            DECLARAÇÃO DO(A) ADOTANTE:<br>
+                            Ao adotar o animal acima descrito declaro-me apto para assumir a guarda e a responsabilidade sobre o mesmo, eximindo o doador de toda e qualquer responsabilidade por quaisquer atos praticados pelo e com o animal a partir desta data, exceto quanto à castração se assim foi pactuado.
+
+                            Declaro ainda, estar ciente de todos os cuidados que este animal exige no que se refere à sua guarda e manutenção, além de conhecer todos os riscos inerentes à espécie com o convívio com humanos, estando apto a guardá-lo e vigiá-lo, comprometendo-me a proporcionar-lhe boas condições de alojamento, alimentação, higiene, conforto térmico, assim como espaço físico que possibilite ao animal se exercitar; e, ainda, ambiente que lhe proporcione afeto e distância de qualquer risco, crueldade, incluindo isolamento e abandono. Responsabilizo-me por preservar a saúde e integridade do animal e a submetê-lo aos cuidados médico-veterinários sempre que necessário para este fim.
+
+                            Comprometo-me a não transmitir a posse deste animal a outrem sem o conhecimento do doador, bem como a informá-lo de qualquer situação de risco ou doença que o animal venha a se encontrar. 
+
+                            Comprometo-me, também, a permitir o acesso do doador, e a quem com ele se encontrar, ao local de residência do animal, para averiguação de suas condições. 
+
+                            Tenho conhecimento de que, caso seja constatado, por parte do doador ou qualquer pessoa ou órgão, que o animal se encontra em situação inadequada para seu bem-estar, perderei a sua guarda, sem prejuízo das penalidades legais, administrativas, cíveis e criminais. 
+
+                            Comprometo-me a cumprir toda a legislação vigente, municipal, estadual e federal, relativa à posse de animais.
+
+                            Declaro-me, assim, ciente das normas acima, as quais aceito, assinando o presente Termo de Adoção Responsável, assumindo plenamente os deveres que dele constam, bem como outros relacionados à posse responsável e que não estejam incluídos neste Termo. 
+
+                            Estando, assim, justos e contratados, adotante e doador assim o presente em duas vias de igual teor e forma, elegendo o Fôro da Comarca de Pelotas/RS para dirimir quaisquer controvérsias oriundas do mesmo.<br><br>
+                                         Abandonar ou maltratar animais é crime!<br>
+                                       Pena: 3 meses a 1 ano de detenção e multa (Lei 9605/98)
                             </td>
                           </tr>
                         </table>
@@ -458,7 +505,7 @@
                           <tr>
                             <td class="body-signature-cell">
                               <p>Obrigado!</p>
-                              <p class="body-signature"><img src="res/site/img/logo.png" alt="Company Name"></p>
+                              <p class="body-signature"><img src="/res/site/img/logo.png" alt="MyPets"></p>
                             </td>
                           </tr>
                         </table>

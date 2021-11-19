@@ -509,21 +509,31 @@ $app->post('/profile/change-password', function(){
 
 });
 
-$app->get('/contract', function(){
+$app->get('/contract/:idpet', function($idpet){
 
 	User::verifyLogin(false);
+
+	$pet = new Pet();
+
+	$pet->get((int)$idpet);
 
 	$page = new Page();
 
-	$page->setTpl("contract");
+	$page->setTpl("contract", array(
+		"pet"=>$pet->getValues()
+	));
 
 });
 
-$app->get('/terms', function(){
+$app->get('/terms/:idpet', function($idpet){
 
 	User::verifyLogin(false);
 
+	$pet = new Pet();
+
 	$user = User::getFromSession();
+
+	$pet->get((int)$idpet);
 
 	$page = new Page([
 		"header"=>false,
@@ -531,7 +541,10 @@ $app->get('/terms', function(){
 	]);
 
 	$page->setTpl("terms", array(
-		"user"=>$user
+		"pet"=>$pet->getValues(),
+		"person"=>$pet->getPerson(),
+		"ongperson"=>$pet->getPersonOng(),
+		"user"=>$user->getValues()
 	));
 
 });
