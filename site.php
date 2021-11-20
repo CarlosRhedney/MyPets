@@ -76,7 +76,9 @@ $app->get('/pets', function(){
 
 	for ($i=1; $i <= $pagination["pages"] ; $i++) { 
 		array_push($pages, array(
-			"link"=>"/pets/" . $i,
+			"link"=>"/pets?" . http_build_query([
+				"page"=>$i
+			]),
 			"page"=>$i
 		));
 	}
@@ -96,11 +98,13 @@ $app->get('/ongs', function(){
 
 	$pagination = Ong::getPetsPage($page);
 
-	$pages = array();
+	$pageOng = array();
 
 	for ($i=1; $i <= $pagination["pages"] ; $i++) { 
-		array_push($pages, array(
-			"link"=>"/pets/" . $i,
+		array_push($pageOng, array(
+			"link"=>"/ongs?" . http_build_query([
+				"page"=>$i
+			]),
 			"page"=>$i
 		));
 	}
@@ -109,7 +113,7 @@ $app->get('/ongs', function(){
 
 	$page->setTpl("ongs", array(
 		"ongs"=>$pagination["data"],
-		"pages"=>$pages
+		"pages"=>$pageOng
 	));
 
 });

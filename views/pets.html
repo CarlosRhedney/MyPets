@@ -29,7 +29,8 @@
                     </div>  
                     
                     <div class="product-option-shop">
-                        <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="#">Adotar</a>
+                        <!-- Aqui o verdadeiro pulo do gato, mando o $value.idpet pois a rota necessita do id do animal para o contrato, o que em outros templates foi passado $value.url para o acesso a pagina -->
+                        <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/contract/{$value.idpet}">Adotar</a>
                     </div>                       
                 </div>
             </div>
@@ -42,7 +43,7 @@
                     <nav>
                         <ul class="pagination">
                         {loop="$pages"}
-                        <li><a href="">{$value.page}</a></li>
+                        <li><a href="{$value.link}">{$value.page}</a></li>
                         {/loop}
                         </ul>
                     </nav>                        
