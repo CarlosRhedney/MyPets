@@ -17,6 +17,8 @@ use \Mypets\Model\Ong;
 
 use \Mypets\Model\User;
 
+use \Mypets\Model\Address;
+
 // Nossa rota inicial '/', todos os usuarios assim que acessam o sistema são direcionados para a homepage do sistema.
 $app->get('/', function(){
 
@@ -96,7 +98,7 @@ $app->get('/ongs', function(){
 
 	$page = (isset($_GET["page"])) ? (int)$_GET["page"] : 1;
 
-	$pagination = Ong::getPetsPage($page);
+	$pagination = Ong::getOngsPage($page);
 
 	$pageOng = array();
 
@@ -159,6 +161,7 @@ $app->get('/login', function(){
 
 	$page->setTpl("login", array(
 		"error"=>User::getError(),
+		"loginSuccess"=>User::getSuccess(),
 		"errorRegister"=>User::getErrorRegister(),
 		"registerValues"=>(isset($_SESSION["registerValues"])) ? $_SESSION["registerValues"] : ["name"=>"", "mail"=>"", "nrphone"=>""]
 	));
@@ -170,6 +173,9 @@ $app->post('/login', function(){
 	try{
 
 		User::login($_POST["login"], $_POST["password"]);
+
+		User::setSuccess("Usuário logado com sucesso!");
+		
 
 	}catch(Exception $e){
 
@@ -197,7 +203,7 @@ $app->post('/login', function(){
 
 	}
 
-	header("Location: /");
+	header("Location: /login");
 
 	exit;
 
@@ -583,6 +589,8 @@ $app->get('/terms/:idpet', function($idpet){
 
 	$pet = new Pet();
 
+	$userPerson = User::getAddress();
+
 	$user = User::getFromSession();
 
 	$pet->get((int)$idpet);
@@ -596,8 +604,108 @@ $app->get('/terms/:idpet', function($idpet){
 		"pet"=>$pet->getValues(),
 		"person"=>$pet->getPerson(),
 		"ongperson"=>$pet->getPersonOng(),
-		"user"=>$user->getValues()
+		"user"=>$user->getValues(),
+		"userPerson"=>$userPerson
 	));
+
+});
+
+$app->get('/profile-address', function(){
+
+	User::verifyLogin(false);
+
+	$adress = new Address();
+
+	if(isset($_GET["zipcode"]))
+	{
+		$adress->loadFromCep($_GET["zipcode"]);
+	}
+
+	$page = new Page();
+
+	$page->setTpl("profile-address", array(
+		"address"=>($adress->getValues()) ? $adress->getValues() : ["address"=>"", "complement"=>"", "district"=>"", "city"=>"", "state"=>"", "country"=>"", "zipcode"=>""],
+		"error"=>Address::getMsgError()
+	));
+
+});
+
+$app->post("/profile-address", function(){
+
+	User::verifyLogin(false);
+
+	$address = new Address();
+
+	$address->setData($_POST);
+
+	if (!isset($_POST['zipcode']) || $_POST['zipcode'] === '') {
+
+		Address::setMsgError("Informe o CEP.");
+
+		header('Location: /profile-address');
+
+		exit;
+	}
+
+	if (!isset($_POST['address']) || $_POST['address'] === '') {
+
+		Address::setMsgError("Informe o endereço.");
+
+		header('Location: /profile-address');
+
+		exit;
+	}
+
+	if (!isset($_POST['number']) || $_POST['number'] === '') {
+
+		Address::setMsgError("Informe o número.");
+
+		header('Location: /profile-address');
+
+		exit;
+	}
+
+	if (!isset($_POST['district']) || $_POST['district'] === '') {
+
+		Address::setMsgError("Informe o bairro.");
+
+		header('Location: /profile-address');
+
+		exit;
+	}
+
+	if (!isset($_POST['city']) || $_POST['city'] === '') {
+
+		Address::setMsgError("Informe a cidade.");
+
+		header('Location: /profile-address');
+
+		exit;
+	}
+
+	if (!isset($_POST['state']) || $_POST['state'] === '') {
+
+		Address::setMsgError("Informe o estado.");
+
+		header('Location: /profile-address');
+
+		exit;
+	}
+
+	if (!isset($_POST['country']) || $_POST['country'] === '') {
+
+		Address::setMsgError("Informe o país.");
+
+		header('Location: /profile-address');
+
+		exit;
+	}
+
+	$address->save();
+
+	header("Location: /profile");
+
+	exit;
 
 });
 

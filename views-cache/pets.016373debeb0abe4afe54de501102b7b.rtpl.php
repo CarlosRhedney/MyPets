@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row">
             <?php $counter1=-1;  if( isset($pets) && ( is_array($pets) || $pets instanceof Traversable ) && sizeof($pets) ) foreach( $pets as $key1 => $value1 ){ $counter1++; ?>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-xs-6 col-md-3 col-sm-6">
                 <div class="single-shop-product">
                     <div class="product-upper">
                         <!-- / é necessario para encontrar o caminho da imagem.
@@ -29,6 +29,7 @@
                     </div>  
                     
                     <div class="product-option-shop">
+                        <!-- Aqui o verdadeiro pulo do gato, mando o $value.idpet pois a rota necessita do id do animal para o contrato, o que em outros templates foi passado $value.url para o acesso a pagina -->
                         <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/contract/<?php echo htmlspecialchars( $value1["idpet"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">Adotar</a>
                     </div>                       
                 </div>

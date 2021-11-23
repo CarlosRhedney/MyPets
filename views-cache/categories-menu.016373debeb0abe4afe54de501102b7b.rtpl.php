@@ -1,1 +1,1 @@
-<?php if(!class_exists('Rain\Tpl')){exit;}?><li><a href="/categories/1">Animais de Pequeno Porte</a></li>
+<?php if(!class_exists('Rain\Tpl')){exit;}?><li><a href="/categories/2">Animais de Médio Porte</a></li><li><a href="/categories/1">Animais de Pequeno Porte</a></li>

@@ -234,7 +234,7 @@ class Ong extends Model
 		
 	}
 
-	public static function getPetsPage($page = 1, $itensPerPage = 3)
+	public static function getOngsPage($page = 1, $itensPerPage = 3)
 	{
 		$start = ($page - 1) * $itensPerPage;
 

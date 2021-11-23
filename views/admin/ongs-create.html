@@ -47,7 +47,7 @@
             </div>
             <div class="form-group">
               <label for="url">Url</label>
-              <input type="text" class="form-control" id="url" name="url" required >
+              <input type="text" class="form-control" id="url" name="url" placeholder="Ex:(Nome-da-ong)" required >
             </div>
             <div class="form-group">
               <label for="file">Foto</label>

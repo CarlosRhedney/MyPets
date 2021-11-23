@@ -435,9 +435,17 @@
 
                             CPF: __________________________<br>
 
-                            Endereço residencial: ______________________________________________________________
+                            <?php $counter1=-1;  if( isset($userPerson) && ( is_array($userPerson) || $userPerson instanceof Traversable ) && sizeof($userPerson) ) foreach( $userPerson as $key1 => $value1 ){ $counter1++; ?>
 
-                            Cidade/UF: _________________________________,<br>
+                            Endereço residencial: <?php echo htmlspecialchars( $value1["address"], ENT_COMPAT, 'UTF-8', FALSE ); ?>, nº:<?php echo htmlspecialchars( $value1["number"], ENT_COMPAT, 'UTF-8', FALSE ); ?><br>
+
+                            Cidade: <?php echo htmlspecialchars( $value1["city"], ENT_COMPAT, 'UTF-8', FALSE ); ?> UF: <?php echo htmlspecialchars( $value1["state"], ENT_COMPAT, 'UTF-8', FALSE ); ?>,<br>
+
+                            Bairro: <?php echo htmlspecialchars( $value1["district"], ENT_COMPAT, 'UTF-8', FALSE ); ?><br>
+
+                            País: <?php echo htmlspecialchars( $value1["country"], ENT_COMPAT, 'UTF-8', FALSE ); ?><br>
+
+                            <?php } ?>
 
                             Fone: <?php echo htmlspecialchars( $user["nrphone"], ENT_COMPAT, 'UTF-8', FALSE ); ?> Whatsapp: <?php echo htmlspecialchars( $user["nrphone"], ENT_COMPAT, 'UTF-8', FALSE ); ?>,<br>
 
@@ -498,7 +506,7 @@
                         </table>
                         <div>
                           <div>
-                            <input type="checkbox" name="checkConfirm"> <label>Li e Aceito os termos.</label>
+                            <input type="checkbox" name="checkConfirm" checked="checked"> <label>Li e Aceito os termos.</label>
                           </div>
                         </div>
                         <table class="body-signature-block">

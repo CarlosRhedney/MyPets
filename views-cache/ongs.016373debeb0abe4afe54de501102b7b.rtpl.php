@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row">
             <?php $counter1=-1;  if( isset($ongs) && ( is_array($ongs) || $ongs instanceof Traversable ) && sizeof($ongs) ) foreach( $ongs as $key1 => $value1 ){ $counter1++; ?>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-xs-6 col-md-3 col-sm-6">
                 <div class="single-shop-product">
                     <div class="product-upper">
                         <!-- / é necessario para encontrar o caminho da imagem.

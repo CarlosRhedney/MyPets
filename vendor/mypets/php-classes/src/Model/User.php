@@ -434,5 +434,16 @@ class User extends Model
 		
 	}
 
+	public static function getAddress()
+	{
+		$idperson = (int)$_SESSION[User::SESSION]["idperson"];
+
+		$sql = new Sql();
+
+		return $sql->select("SELECT * FROM tb_addresses WHERE idperson = :idperson", array(
+			"idperson"=>$idperson
+		));
+	}
+
 }
 ?>

@@ -24,6 +24,14 @@
                 </div>
                 <?php } ?>
 
+                <?php if( $loginSuccess != '' ){ ?>
+
+                <div class="alert alert-danger">
+                    <?php echo htmlspecialchars( $loginSuccess, ENT_COMPAT, 'UTF-8', FALSE ); ?>
+
+                </div>
+                <?php } ?>
+
                 <form action="/login" id="login-form-wrap" class="login" method="post">
                     <h2>Acessar</h2>
                     <p class="form-row form-row-first">
