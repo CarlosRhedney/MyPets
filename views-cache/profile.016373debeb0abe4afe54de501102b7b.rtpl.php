@@ -21,6 +21,14 @@
 
             </div>
             <div class="col-md-9">
+                <?php if( $addressSuccess != '' ){ ?>
+
+                <div class="alert alert-success">
+                    <?php echo htmlspecialchars( $addressSuccess, ENT_COMPAT, 'UTF-8', FALSE ); ?>
+
+                </div>
+                <?php } ?>
+
                 <?php if( $profileMsg != '' ){ ?>
 
                 <div class="alert alert-success">
@@ -35,7 +43,11 @@
                     <?php echo htmlspecialchars( $profileError, ENT_COMPAT, 'UTF-8', FALSE ); ?>
 
                 </div>
-                <?php } ?>                
+                <?php } ?>
+
+                <div class="cart-collaterals">
+                    <h2>Editar Dados</h2>
+                </div>   
                 <form method="post" action="/profile">
                     <div class="form-group">
                     <label for="person">Nome completo</label>

@@ -19,34 +19,30 @@
                 {include="profile-menu"}
             </div>
             <div class="col-md-9">
-                {if="$changePassError != ''"}
+                {if="$dataError != ''"}
                 <div class="alert alert-danger">
-                    {$changePassError}
+                    {$dataError}
                 </div>
                 {/if}
 
-                {if="$changePassSuccess != ''"}
+                {if="$dataSuccess != ''"}
                 <div class="alert alert-success">
-                    {$changePassSuccess}
+                    {$dataSuccess}
                 </div>
                 {/if}
                 <div class="cart-collaterals">
-                    <h2>Alterar Senha</h2>
+                    <h2>Dados Pessoais</h2>
                 </div>
                 
-                <form action="/profile/change-password" method="post">
+                <form action="/profile-data" method="post">
                     <div class="form-group">
-                    <label for="current_pass">Senha Atual</label>
-                    <input type="password" class="form-control" id="current_pass" name="current_pass">
+                    <label for="current_pass">RG:</label>
+                    <input type="text" class="form-control" id="" name="rg" placeholder="Digite o seu RG">
                     </div>
                     <hr>
                     <div class="form-group">
-                    <label for="new_pass">Nova Senha</label>
-                    <input type="password" class="form-control" id="new_pass" name="new_pass">
-                    </div>
-                    <div class="form-group">
-                    <label for="new_pass_confirm">Confirme a Nova Senha</label>
-                    <input type="password" class="form-control" id="new_pass_confirm" name="new_pass_confirm">
+                    <label for="new_pass">CPF:</label>
+                    <input type="text" class="form-control" id="" name="cpf" placeholder="Digite o seu CPF">
                     </div>
                     <button type="submit" class="btn btn-primary">Salvar</button>
                 </form>

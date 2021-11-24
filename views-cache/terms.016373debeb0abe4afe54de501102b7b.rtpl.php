@@ -429,17 +429,17 @@
                             <br><br>
                             <strong>ADOTANTE</strong><br>
 
-                            Nome:  <?php echo getUserName(); ?>,
-
-                            RG ou CNH nº:  ___________________________,
-
-                            CPF: __________________________<br>
+                            Nome:  <?php echo getUserName(); ?><br>
 
                             <?php $counter1=-1;  if( isset($userPerson) && ( is_array($userPerson) || $userPerson instanceof Traversable ) && sizeof($userPerson) ) foreach( $userPerson as $key1 => $value1 ){ $counter1++; ?>
 
+                            RG:  <?php echo htmlspecialchars( $value1["rg"], ENT_COMPAT, 'UTF-8', FALSE ); ?><br>
+
+                            CPF: <?php echo htmlspecialchars( $value1["cpf"], ENT_COMPAT, 'UTF-8', FALSE ); ?><br>
+
                             Endereço residencial: <?php echo htmlspecialchars( $value1["address"], ENT_COMPAT, 'UTF-8', FALSE ); ?>, nº:<?php echo htmlspecialchars( $value1["number"], ENT_COMPAT, 'UTF-8', FALSE ); ?><br>
 
-                            Cidade: <?php echo htmlspecialchars( $value1["city"], ENT_COMPAT, 'UTF-8', FALSE ); ?> UF: <?php echo htmlspecialchars( $value1["state"], ENT_COMPAT, 'UTF-8', FALSE ); ?>,<br>
+                            Cidade: <?php echo htmlspecialchars( $value1["city"], ENT_COMPAT, 'UTF-8', FALSE ); ?> - UF: <?php echo htmlspecialchars( $value1["state"], ENT_COMPAT, 'UTF-8', FALSE ); ?><br>
 
                             Bairro: <?php echo htmlspecialchars( $value1["district"], ENT_COMPAT, 'UTF-8', FALSE ); ?><br>
 
@@ -447,7 +447,7 @@
 
                             <?php } ?>
 
-                            Fone: <?php echo htmlspecialchars( $user["nrphone"], ENT_COMPAT, 'UTF-8', FALSE ); ?> Whatsapp: <?php echo htmlspecialchars( $user["nrphone"], ENT_COMPAT, 'UTF-8', FALSE ); ?>,<br>
+                            Fone: <?php echo htmlspecialchars( $user["nrphone"], ENT_COMPAT, 'UTF-8', FALSE ); ?> - Whatsapp: <?php echo htmlspecialchars( $user["nrphone"], ENT_COMPAT, 'UTF-8', FALSE ); ?><br>
 
                             E-mail: <?php echo htmlspecialchars( $user["mail"], ENT_COMPAT, 'UTF-8', FALSE ); ?><br>
 

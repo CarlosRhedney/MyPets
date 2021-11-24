@@ -10,7 +10,7 @@ class Category extends Model
 	{
 		$sql = new Sql();
 
-		return $sql->select("SELECT * FROM tb_categories ORDER BY category");
+		return $sql->select("SELECT * FROM tb_categories ORDER BY idcategory");
 
 	}
 

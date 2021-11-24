@@ -8,6 +8,7 @@ use \Mypets\Model;
 class Address extends Model {
 
 	const SESSION_ERROR = "AddressError";
+	const SUCCESS = "AddressSuccess";
 
 	public static function getCEP($nrcep)
 	{
@@ -60,7 +61,7 @@ class Address extends Model {
 			':address'=>utf8_decode($this->getaddress()),
 			':number'=>$this->getnumber(),
 			':complement'=>utf8_decode($this->getcomplement()),
-			':city'=>utf8_decode($this->getcity()),
+			':city'=>$this->getcity(),
 			':state'=>utf8_decode($this->getstate()),
 			':country'=>utf8_decode($this->getcountry()),
 			':zipcode'=>$this->getzipcode(),
@@ -96,6 +97,26 @@ class Address extends Model {
 
 		$_SESSION[Address::SESSION_ERROR] = NULL;
 
+	}
+
+	public static function setSuccess($msg)
+	{
+		return $_SESSION[Address::SUCCESS] = $msg;
+	}
+
+	public static function getSuccess()
+	{
+		$msg = (isset($_SESSION[Address::SUCCESS]) && $_SESSION[Address::SUCCESS]) ? $_SESSION[Address::SUCCESS] : "";
+
+		Address::clearSuccess();
+
+		return $msg;
+
+	}
+
+	public static function clearSuccess()
+	{
+		$_SESSION[Address::SUCCESS] = NULL;
 	}
 
 }

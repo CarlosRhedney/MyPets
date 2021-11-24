@@ -440,7 +440,7 @@ class User extends Model
 
 		$sql = new Sql();
 
-		return $sql->select("SELECT * FROM tb_addresses WHERE idperson = :idperson", array(
+		return $sql->select("SELECT * FROM tb_addresses a INNER JOIN tb_data b USING(idperson) WHERE idperson = :idperson", array(
 			"idperson"=>$idperson
 		));
 	}

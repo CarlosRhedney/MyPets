@@ -19,6 +19,8 @@ use \Mypets\Model\User;
 
 use \Mypets\Model\Address;
 
+use \Mypets\Model\Data;
+
 // Nossa rota inicial '/', todos os usuarios assim que acessam o sistema são direcionados para a homepage do sistema.
 $app->get('/', function(){
 
@@ -421,7 +423,8 @@ $app->get('/profile', function(){
 	$page->setTpl("profile", array(
 		"user"=>$user->getValues(),
 		"profileMsg"=>User::getSuccess(),
-		"profileError"=>User::getError()
+		"profileError"=>User::getError(),
+		"addressSuccess"=>Address::getSuccess()
 	));
 });
 
@@ -703,7 +706,58 @@ $app->post("/profile-address", function(){
 
 	$address->save();
 
+	Address::setSuccess("Endereço cadastrado com sucesso!");
+
 	header("Location: /profile");
+
+	exit;
+
+});
+
+$app->get('/profile-data', function(){
+
+	User::verifyLogin(false);
+
+	$page = new Page();
+
+	$page->setTpl("profile-data", array(
+		"dataError"=>Data::getDataError(),
+		"dataSuccess"=>Data::getSuccess()
+	));
+
+});
+
+$app->post('/profile-data', function(){
+
+	User::verifyLogin(false);
+
+	$data = new Data();
+
+	$data->setData($_POST);
+
+	if (!isset($_POST['rg']) || $_POST['rg'] === '') {
+
+		Data::setDataError("Informe o seu RG.");
+
+		header('Location: /profile-data');
+
+		exit;
+	}
+
+	if (!isset($_POST['cpf']) || $_POST['cpf'] === '') {
+
+		Data::setDataError("Informe o seu CPF.");
+
+		header('Location: /profile-data');
+
+		exit;
+	}
+
+	$data->save();
+
+	Data::setSuccess("Dados salvos com sucesso!");
+
+	header("Location: /profile-data");
 
 	exit;
 

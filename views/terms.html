@@ -429,17 +429,17 @@
                             <br><br>
                             <strong>ADOTANTE</strong><br>
 
-                            Nome:  {function="getUserName()"},
-
-                            RG ou CNH nº:  ___________________________,
-
-                            CPF: __________________________<br>
+                            Nome:  {function="getUserName()"}<br>
 
                             {loop="$userPerson"}
 
+                            RG:  {$value.rg}<br>
+
+                            CPF: {$value.cpf}<br>
+
                             Endereço residencial: {$value.address}, nº:{$value.number}<br>
 
-                            Cidade: {$value.city} UF: {$value.state},<br>
+                            Cidade: {$value.city} - UF: {$value.state}<br>
 
                             Bairro: {$value.district}<br>
 
@@ -447,7 +447,7 @@
 
                             {/loop}
 
-                            Fone: {$user.nrphone} Whatsapp: {$user.nrphone},<br>
+                            Fone: {$user.nrphone} - Whatsapp: {$user.nrphone}<br>
 
                             E-mail: {$user.mail}<br>
 
