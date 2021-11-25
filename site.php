@@ -21,6 +21,8 @@ use \Mypets\Model\Address;
 
 use \Mypets\Model\Data;
 
+use \Mypets\PageAdmin;
+
 // Nossa rota inicial '/', todos os usuarios assim que acessam o sistema são direcionados para a homepage do sistema.
 $app->get('/', function(){
 
@@ -760,6 +762,53 @@ $app->post('/profile-data', function(){
 	header("Location: /profile-data");
 
 	exit;
+
+});
+
+$app->get('/profile-delete', function(){
+
+	User::verifyLogin(false);
+
+	$user = User::getFromSession();
+
+	$page = new Page();
+
+	$page->setTpl("profile-delete", array(
+		"user"=>$user->getValues()
+	));
+
+});
+
+$app->post('/profile-delete/:idperson', function($idperson){
+
+	User::verifyLogin(false);
+
+	$user = new User();
+
+	$user->get((int)$idperson);
+
+	$user->delete();
+
+	header("Location: /user/feedback");
+
+	exit;
+
+});
+
+$app->get('/user/feedback', function(){
+
+	$page = new PageAdmin([
+		"header"=>false,
+		"footer"=>false
+	]);
+
+	$page->setTpl("feedback");
+
+});
+
+$app->post('/user/feedback', function(){
+
+	
 
 });
 
