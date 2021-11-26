@@ -23,6 +23,8 @@ use \Mypets\Model\Data;
 
 use \Mypets\PageAdmin;
 
+use \Mypets\Model\Feedback;
+
 // Nossa rota inicial '/', todos os usuarios assim que acessam o sistema são direcionados para a homepage do sistema.
 $app->get('/', function(){
 
@@ -789,6 +791,8 @@ $app->post('/profile-delete/:idperson', function($idperson){
 
 	$user->delete();
 
+	Feedback::setSuccess("Conta excluída com sucesso!");
+
 	header("Location: /user/feedback");
 
 	exit;
@@ -802,13 +806,34 @@ $app->get('/user/feedback', function(){
 		"footer"=>false
 	]);
 
-	$page->setTpl("feedback");
+	$page->setTpl("feedback", array(
+		"deleteSuccess"=>Feedback::getSuccess()
+	));
 
 });
 
 $app->post('/user/feedback', function(){
 
-	
+	$feed = new Feedback();
+
+	$feed->setData($_POST);
+
+	$feed->save();
+
+	header("Location: /user/thanks");
+
+	exit;
+
+});
+
+$app->get('/user/thanks', function(){
+
+	$page = new PageAdmin([
+		"header"=>false,
+		"footer"=>false
+	]);
+
+	$page->setTpl("thanks");
 
 });
 

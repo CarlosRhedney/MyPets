@@ -166,14 +166,6 @@ $app->post('/admin/users/create', function(){
 	// Caso venha marcado o usuario tambel é administrador do sistema.
 	// Caso não venha marcado o usuario não é administrador do sistema.
 	$_POST["inadmin"] = (isset($_POST["inadmin"])) ? 1 : 0;
-
-	// Pegamos a senha digitada pelo usuario e transformamos num hash.
-	// O mesmo hash é enviado para o Banco de Dados.
-	$_POST['despassword'] = password_hash($_POST["despassword"], PASSWORD_DEFAULT, [
-
- 		"cost"=>12
-
- 	]);
 	
 	// Setamos tudo que o usuario preencheu na criação de um novo usuario.
 	// Chamamos o metodo setData() contido na classe Model.php, metodo utilizado para a criação dinamica dos getters and setters no sistema.

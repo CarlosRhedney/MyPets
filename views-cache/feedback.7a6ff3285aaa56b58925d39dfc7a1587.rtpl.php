@@ -26,36 +26,41 @@
 <body class="hold-transition lockscreen">
 <div class="lockscreen-wrapper">
   <div class="lockscreen-logo">
-    <a href="/"><b>My</b>Pets</a>
+    <a href="#"><b>My</b>Pets</a>
   </div>
+  <?php if( $deleteSuccess != '' ){ ?>
+  <div class="alert alert-success">
+      <?php echo htmlspecialchars( $deleteSuccess, ENT_COMPAT, 'UTF-8', FALSE ); ?>
+  </div>
+  <?php } ?>
   <div class="text-center">
     Qual o motivo da exclusão da sua conta?
   </div>
   <div class="lockscreen-item">
-    <form  action="/user/thanks" method="post">
+    <form  action="/user/feedback" method="post">
       <div class="input-group">
         <div class="form-check" style="display:inline-block;">
-          <input class="form-check-input" type="radio" name="sexo" id="cod1" value="cod1" required />
+          <input class="form-check-input" type="radio" name="cod" id="cod1" value="cod1" required />
           <label class="form-check-label" for="cod1">Não sei como utilizar.</label>
         </div>
         <div class="form-check" style="display:inline-block;">
-          <input class="form-check-input" type="radio" name="sexo" id="cod2" value="cod2" required />
+          <input class="form-check-input" type="radio" name="cod" id="cod2" value="cod2" required />
           <label class="form-check-label" for="cod2">Não me sinto seguro.</label>
         </div>
         <div class="form-check" style="display:inline-block;">
-          <input class="form-check-input" type="radio" name="sexo" id="cod3" value="cod3" required />
+          <input class="form-check-input" type="radio" name="cod" id="cod3" value="cod3" required />
           <label class="form-check-label" for="cod3">Plataforma muito complicado.</label>
         </div>
         <div class="form-check" style="display:inline-block;">
-          <input class="form-check-input" type="radio" name="sexo" id="cod4" value="cod4" required />
+          <input class="form-check-input" type="radio" name="cod" id="cod4" value="cod4" required />
           <label class="form-check-label" for="cod4">Perco muito tempo na plataforma.</label>
         </div>
         <div class="form-check" style="display:inline-block;">
-          <input class="form-check-input" type="radio" name="sexo" id="cod5" value="cod5" required />
+          <input class="form-check-input" type="radio" name="cod" id="cod5" value="cod5" required />
           <label class="form-check-label" for="cod5">Adotei um animal.</label>
         </div>
       </div>
-      <div align="center"><button type="button" class="btn btn-primary">Enviar</button></div>
+      <div align="center"><button type="submit" class="btn btn-primary">Enviar</button></div>
     </form>
   </div>
   <div class="lockscreen-footer text-center">

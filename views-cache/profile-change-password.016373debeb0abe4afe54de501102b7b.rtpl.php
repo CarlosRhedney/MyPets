@@ -21,10 +21,6 @@
 
             </div>
             <div class="col-md-9">
-                <div class="cart-collaterals">
-                    <h2>Alterar Senha</h2>
-                </div>
-
                 <?php if( $changePassError != '' ){ ?>
 
                 <div class="alert alert-danger">
@@ -42,6 +38,9 @@
                 </div>
                 <?php } ?>
 
+                <div class="cart-collaterals">
+                    <h2>Alterar Senha</h2>
+                </div>
                 
                 <form action="/profile/change-password" method="post">
                     <div class="form-group">
