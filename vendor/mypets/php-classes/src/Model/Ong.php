@@ -166,7 +166,7 @@ class Ong extends Model
 	{
 		$sql = new Sql();
 
-		return $sql->select("SELECT * FROM tb_pets a INNER JOIN tb_ongs b ON a.idperson = b.idperson WHERE b.idperson = :idperson", array(
+		return $sql->select("SELECT a.url, a.pet, a.idpet, a.rc FROM tb_pets a INNER JOIN tb_ongs b ON a.idperson = b.idperson WHERE b.idperson = :idperson", array(
 			":idperson"=>$this->getidperson()
 		));
 	}
