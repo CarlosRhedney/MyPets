@@ -104,12 +104,11 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="latest-product">
-                        <h2 class="section-title">Animais</h2>
                         <div class="product-carousel">
                             <?php $counter1=-1;  if( isset($petsong) && ( is_array($petsong) || $petsong instanceof Traversable ) && sizeof($petsong) ) foreach( $petsong as $key1 => $value1 ){ $counter1++; ?>
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="/<?php echo htmlspecialchars( $ong["photo"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" alt="Imagem do animal">
+                                    <img src="/res/site/img/pets/<?php echo htmlspecialchars( $value1["pet"], ENT_COMPAT, 'UTF-8', FALSE ); ?><?php echo htmlspecialchars( $value1["idpet"], ENT_COMPAT, 'UTF-8', FALSE ); ?>.jpg" alt="Imagem do animal">
                                     <div class="product-hover">
                                         <a href="/contract/<?php echo htmlspecialchars( $value1["idpet"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="add-to-cart-link"><i class="fa fa-paw"></i> Adotar</a>
                                         <a href="/pets/<?php echo htmlspecialchars( $value1["pet"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="view-details-link"><i class="fa fa-eye"></i>ver detalhes</a>

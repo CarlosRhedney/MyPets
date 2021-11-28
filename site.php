@@ -150,6 +150,8 @@ $app->get('/ongs/:url', function($url){
 
 	$ong->getFromUrl($url);
 
+	$pets = Pet::listAll();
+
 	$page = new Page();
 
 	$page->setTpl("ong-detail", array(
@@ -157,7 +159,8 @@ $app->get('/ongs/:url', function($url){
 		"ong"=>$ong->getValues(),
 		"person"=>$ong->getPerson(),
 		"ongperson"=>$ong->getPersonOng(),
-		"petsong"=>$ong->getPetsOng()
+		"petsong"=>$ong->getPetsOng(),
+		"pets"=>Pet::checkList($pets)
 	));
 
 });

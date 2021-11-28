@@ -104,12 +104,11 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="latest-product">
-                        <h2 class="section-title">Animais</h2>
                         <div class="product-carousel">
                             {loop="$petsong"}
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="/{$ong.photo}" alt="Imagem do animal">
+                                    <img src="/res/site/img/pets/{$value.pet}{$value.idpet}.jpg" alt="Imagem do animal">
                                     <div class="product-hover">
                                         <a href="/contract/{$value.idpet}" class="add-to-cart-link"><i class="fa fa-paw"></i> Adotar</a>
                                         <a href="/pets/{$value.pet}" class="view-details-link"><i class="fa fa-eye"></i>ver detalhes</a>
