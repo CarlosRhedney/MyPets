@@ -156,7 +156,8 @@ $app->get('/ongs/:url', function($url){
 
 		"ong"=>$ong->getValues(),
 		"person"=>$ong->getPerson(),
-		"ongperson"=>$ong->getPersonOng()
+		"ongperson"=>$ong->getPersonOng(),
+		"petsong"=>$ong->getPetsOng()
 	));
 
 });

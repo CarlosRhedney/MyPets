@@ -36,13 +36,13 @@
                 
                 <form action="/profile-data" method="post">
                     <div class="form-group">
-                    <label for="current_pass">RG:</label>
-                    <input type="text" class="form-control" id="" name="rg" placeholder="Digite o seu RG">
+                    <label for="rg">RG:</label>
+                    <input type="text" class="form-control" id="rg" name="rg" placeholder="Ex:(324355676)" maxlength="9">
                     </div>
                     <hr>
                     <div class="form-group">
-                    <label for="new_pass">CPF:</label>
-                    <input type="text" class="form-control" id="" name="cpf" placeholder="Digite o seu CPF">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" class="form-control" id="cpf" name="cpf" placeholder="Ex:(98734562713)" maxlength="11">
                     </div>
                     <button type="submit" class="btn btn-primary">Salvar</button>
                 </form>

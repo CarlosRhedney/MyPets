@@ -162,6 +162,15 @@ class Ong extends Model
 		));
 	}
 
+	public function getPetsOng()
+	{
+		$sql = new Sql();
+
+		return $sql->select("SELECT * FROM tb_pets a INNER JOIN tb_ongs b ON a.idperson = b.idperson WHERE b.idperson = :idperson", array(
+			":idperson"=>$this->getidperson()
+		));
+	}
+
 	public static function createRelatory()
 	{
 		$sql = new Sql();

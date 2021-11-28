@@ -37,7 +37,7 @@
                     <p class="form-row form-row-first">
                         <label for="login">E-mail <span class="required">*</span>
                         </label>
-                        <input type="text" id="login" name="login" class="input-text">
+                        <input type="text" id="login" name="login" class="input-text" placeholder="Ex:(seu-email@hotmail.com)">
                     </p>
                     <p class="form-row form-row-last">
                         <label for="senha">Senha <span class="required">*</span>
@@ -70,16 +70,16 @@
                     <p class="form-row form-row-first">
                         <label for="nome">Nome Completo <span class="required">*</span>
                         </label>
-                        <input type="text" id="nome" name="name" class="input-text" value="<?php echo htmlspecialchars( $registerValues["name"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+                        <input type="text" id="nome" name="name" class="input-text" value="<?php echo htmlspecialchars( $registerValues["name"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" placeholder="Ex:(João da Silva)">
                     </p>
                     <p class="form-row form-row-first">
                         <label for="email">E-mail <span class="required">*</span>
                         </label>
-                        <input type="email" id="email" name="mail" class="input-text" value="<?php echo htmlspecialchars( $registerValues["mail"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+                        <input type="email" id="email" name="mail" class="input-text" value="<?php echo htmlspecialchars( $registerValues["mail"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" placeholder="Ex:(seu-email@hotmail.com)">
                     </p>
                     <p class="form-row form-row-first">
                         <label for="phone">Telefone <span class="required">*</span></label>
-                        <input type="text" id="phone" name="nrphone" class="input-text" maxlength="11" value="<?php echo htmlspecialchars( $registerValues["nrphone"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+                        <input type="text" id="phone" name="nrphone" class="input-text" maxlength="11" value="<?php echo htmlspecialchars( $registerValues["nrphone"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" placeholder="Ex:(11932145432)">
                     </p>
                     <p class="form-row form-row-last">
                         <label for="senha">Senha <span class="required">*</span>
