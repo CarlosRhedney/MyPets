@@ -129,6 +129,11 @@
                                                 </tbody>
                                               </table>
                                             </div>
+                                            <?php $counter1=-1;  if( isset($person) && ( is_array($person) || $person instanceof Traversable ) && sizeof($person) ) foreach( $person as $key1 => $value1 ){ $counter1++; ?>
+
+                                            <a href="http://api.whatsapp.com/send?phone=55<?php echo htmlspecialchars( $value1["nrphone"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" target="_blank"><img src="/res/site/img/zap.svg"></a>
+                                            <?php } ?>
+
                                         </div>
                                     </div>
                                 </div>      

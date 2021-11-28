@@ -81,11 +81,15 @@
                                                     <td>{$value.person}</td>
                                                     <td>{$value.mail}</td>
                                                     <td>{$value.nrphone}</td>
+                                                    <td>{$value.nrphone}</td>
                                                   </tr>
                                                   {/loop}
                                                 </tbody>
                                               </table>
                                             </div>
+                                            {loop="$person"}
+                                            <a href="http://api.whatsapp.com/send?phone=55{$value.nrphone}" target="_blank"><img src="/res/site/img/zap.svg"></a>
+                                            {/loop}
                                         </div>
                                     </div>
                                 </div>      
