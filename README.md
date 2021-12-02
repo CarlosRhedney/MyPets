@@ -1,4 +1,5 @@
 https://img.shields.io/static/v1?label=<LABEL>=Plataforma Web&message=MyPets<MESSAGE>&color=7159c1<COLOR>&style=for-the-badge<STYLE>&logo=ghost<LOGO>
+<img src="https://img.shields.io/static/v1?label=Plataforma Web&message=MyPets&color=7159c1&style=for-the-badge&logo=ghost"/>
 
 
 Introdução
