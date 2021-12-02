@@ -1,9 +1,9 @@
 <img src="https://img.shields.io/static/v1?label=Plataforma Web&message=MyPets&color=7159c1&style=for-the-badge&logo=ghost"/>
-<img src="https://img.shields.io/static/v1?label=Apache&message=Apache&color=7159c1&style=plastic&logo=ghost"/>
-<img src="https://img.shields.io/static/v1?label=Slim Framework&message=Slim Framework&color=7159c1&style=flat&logo=ghost"/>
-<img src="https://img.shields.io/static/v1?label=RainTpl&message=RainTpl&color=7159c1&style=social&logo=ghost"/>
-<img src="https://img.shields.io/static/v1?label=PHPMailer&message=PHPMailer&color=7159c1&style=flat-square&logo=ghost"/>
-<img src="https://img.shields.io/static/v1?label=Composer&message=Composer&color=7159c1&style=flat-square&logo=ghost"/>
+<img src="https://img.shields.io/static/v1?label=Apache&message=Apache&color=7159c1&style=plastic&logo=APACHE"/>
+<img src="https://img.shields.io/static/v1?label=Slim Framework&message=Slim Framework&color=7159c1&style=flat&logo=SLIM"/>
+<img src="https://img.shields.io/static/v1?label=RainTpl&message=RainTpl&color=7159c1&style=social&logo=RAINTPL"/>
+<img src="https://img.shields.io/static/v1?label=PHPMailer&message=PHPMailer&color=7159c1&style=flat-square&logo=PHPMAILER"/>
+<img src="https://img.shields.io/static/v1?label=Composer&message=Composer&color=7159c1&style=flat-square&logo=COMPOSER"/>
 
 
 Introdução
