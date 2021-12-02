@@ -5,16 +5,18 @@
 <img src="https://img.shields.io/static/v1?label=RainTpl&message=RainTpl&color=7159c1&style=plastic&logo=RAINTPL"/>
 <img src="https://img.shields.io/static/v1?label=PHPMailer&message=PHPMailer&color=7159c1&style=flat-square&logo=PHPMAILER"/>
 <img src="https://img.shields.io/static/v1?label=Composer&message=Composer&color=7159c1&style=flat-square&logo=COMPOSER"/>
-<img src="https://img.shields.io/static/v1?label=Sublime Text&message=Sublime Text&color=7159c1&style=flat-square&logo=SUBLIME"/>
+<img src="https://img.shields.io/static/v1?label=Sublime Text&message=Sublime Text&color=7159c1&style=flat-square&logo=SUBLIMETEXT"/>
 </div>
 
 
-Introdução
+Introdução<p id="sobre"></p>
 ============
+<h1 align="center">
 
 ![logo_MyPets](https://user-images.githubusercontent.com/49602892/144502788-90837adb-6ca4-4a1b-a29d-1a836f612913.png)
+</h1>
 
-<p align="center" id="sobre">🚀 Plataforma web desenvolvida por universitários em colaboração com ONGs e pessoas que tenham um animal para adoção.</p>
+<p align="center">🚀 Plataforma web desenvolvida por universitários em colaboração com ONGs e pessoas que tenham um animal para adoção.</p>
 
 Tabela de conteúdos
 =================
@@ -22,37 +24,39 @@ Tabela de conteúdos
    * [Sobre](#Sobre)
    * [Download](#download)
    * [Instalação](#instalacao)
+   * [Documentação](#documentacao)
+   * [Tecnologias](#tecnologias)
    * [Como usar](#como-usar)
       * [Pre Requisitos](#pre-requisitos)
       * [Navegadores Suportados](#navegadores)
       * [Features](#features)
-   * [Tecnologias](#tecnologias)
    * [Licença](#license)
 <!--te-->
 
-
-**MyPets** -- .
-
-**Download & Preview on MyPets**
 
 
 ------------------------------
 **MyPets**
 
+Download<p id="download"></p>
+-------------
 
-Instalação
+
+
+Instalação<p id="instalação"></p>
 ------------
-<p id="instalação"></p>
-
-
-####Download:
 
 
 
-####Using The Command Line:
 
-**Github**
-<p id="tecnologias"></p>
+Documentação<p id="documentacao"></p>
+-------------
+
+
+
+
+Tecnologias<p id="tecnologias"></p>
+------------
 
 **Composer**
 
@@ -78,8 +82,16 @@ version :"5.2.22"
 version":"2.0"
 ```
 
-Documentação
--------------
+Como Usar<p id="como-usar"></p>
+--------------
+
+
+
+
+Pré-Requisitos<p id="pre-requisitos"></p>
+--------------
+
+
 
 
 Navegadores Suportados<p id="navegadores"></p>
@@ -105,5 +117,7 @@ Navegadores Suportados<p id="navegadores"></p>
 
 License
 -------
-<p>MyPets é um projeto de código aberto licenciado por [MIT](http://opensource.org/licenses/MIT).</p>
+<p>MyPets é um projeto de código aberto licenciado por </p>
+
+![MIT](http://opensource.org/licenses/MIT).
 <p>MyPets reserva-se o direito de alterar a licença de versões futuras.</p>
