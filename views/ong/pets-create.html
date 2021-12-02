@@ -3,7 +3,7 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    Lista de Animais
+    Cadastrar Novo Animal
   </h1>
   <ol class="breadcrumb">
     <li><a href="/ong"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -47,7 +47,7 @@
             </div>
             <div class="form-group">
               <label for="url">Url</label>
-              <input type="text" class="form-control" id="url" name="url" required >
+              <input type="text" class="form-control" id="url" name="url" placeholder="Ex:(Nome-do-animal)" required >
             </div>
             <div class="form-group">
               <label for="descr">Descrição do Animal</label>
@@ -55,7 +55,9 @@
             </div>
             <div class="form-group">
               <label for="file">Foto</label>
-              <input type="file" class="form-control" id="file" name="file" required >
+              <span class="input-group-btn">
+                <button type="button" class="glyphicon glyphicon-camera btn btn-warning" style="font-size:15px"><input title=" " type="file" name="file" id="file" required style="position: absolute; left: 0; top: 0; opacity: 0;" /></button>
+              </span>
               <div class="box box-widget">
                 <div class="box-body">
                   <img class="img-responsive" id="image-preview" alt="Photo">

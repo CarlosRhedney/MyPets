@@ -43,6 +43,9 @@
             <div class="form-group">
               <label for="file">Foto</label>
               <input type="file" class="form-control" id="file" name="file" value="<?php echo htmlspecialchars( $ong["photo"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required >
+              <span class="input-group-btn">
+                <button type="button" class="glyphicon glyphicon-camera btn btn-warning" style="font-size:15px"><input title=" " type="file" name="file" id="file" value="<?php echo htmlspecialchars( $ong["photo"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" required style="position: absolute; left: 0; top: 0; opacity: 0;" /></button>
+              </span>
               <div class="box box-widget">
                 <div class="box-body">
                   <!-- / é necessario para encontrar o caminho da imagem.

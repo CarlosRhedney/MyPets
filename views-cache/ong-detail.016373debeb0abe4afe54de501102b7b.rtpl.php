@@ -81,7 +81,6 @@
                                                     <td><?php echo htmlspecialchars( $value1["person"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                                                     <td><?php echo htmlspecialchars( $value1["mail"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                                                     <td><?php echo htmlspecialchars( $value1["nrphone"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
-                                                    <td><?php echo htmlspecialchars( $value1["nrphone"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                                                   </tr>
                                                   <?php } ?>
                                                 </tbody>

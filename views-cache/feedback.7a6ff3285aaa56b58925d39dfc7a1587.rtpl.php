@@ -35,31 +35,31 @@
   <?php } ?>
   <div class="text-center">
     Qual o motivo da exclusão da sua conta?
-  </div>
-  <div class="lockscreen-item">
+  </div><br>
+  <div>
     <form  action="/user/feedback" method="post">
-      <div class="input-group">
+      <div class="input-group" style="margin-left:80px">
         <div class="form-check" style="display:inline-block;">
           <input class="form-check-input" type="radio" name="cod" id="cod1" value="cod1" required />
           <label class="form-check-label" for="cod1">Não sei como utilizar.</label>
-        </div>
+        </div><br>
         <div class="form-check" style="display:inline-block;">
           <input class="form-check-input" type="radio" name="cod" id="cod2" value="cod2" required />
           <label class="form-check-label" for="cod2">Não me sinto seguro.</label>
-        </div>
+        </div><br>
         <div class="form-check" style="display:inline-block;">
           <input class="form-check-input" type="radio" name="cod" id="cod3" value="cod3" required />
-          <label class="form-check-label" for="cod3">Plataforma muito complicado.</label>
-        </div>
+          <label class="form-check-label" for="cod3">Plataforma muito complicada.</label>
+        </div><br>
         <div class="form-check" style="display:inline-block;">
           <input class="form-check-input" type="radio" name="cod" id="cod4" value="cod4" required />
           <label class="form-check-label" for="cod4">Perco muito tempo na plataforma.</label>
-        </div>
+        </div><br>
         <div class="form-check" style="display:inline-block;">
           <input class="form-check-input" type="radio" name="cod" id="cod5" value="cod5" required />
           <label class="form-check-label" for="cod5">Adotei um animal.</label>
         </div>
-      </div>
+      </div><br>
       <div align="center"><button type="submit" class="btn btn-primary">Enviar</button></div>
     </form>
   </div>

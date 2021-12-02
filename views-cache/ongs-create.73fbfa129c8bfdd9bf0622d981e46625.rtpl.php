@@ -3,12 +3,12 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    Cadastrar nova ONG
+    Cadastrar Minha ONG
   </h1>
   <ol class="breadcrumb">
-    <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li><a href="/admin/ongs">Ongs</a></li>
-    <li class="active"><a href="/admin/ongs/create">Cadastrar</a></li>
+    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li><a href="/ong">Ongs</a></li>
+    <li class="active"><a href="/ong/create">Cadastrar</a></li>
   </ol>
 </section>
 
@@ -23,7 +23,7 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form role="form" action="/admin/ongs/create" method="post" enctype="multipart/form-data">
+        <form role="form" action="/ong/create" method="post" enctype="multipart/form-data">
           <div class="box-body">
             <div class="form-group">
               <label for="ong">Nome da ONG</label>

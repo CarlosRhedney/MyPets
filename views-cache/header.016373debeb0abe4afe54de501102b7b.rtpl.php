@@ -12,6 +12,9 @@
 <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
 
+<!-- Theme style -->
+<link rel="stylesheet" href="/res/admin/dist/css/AdminLTE.min.css">
+
 <!-- Bootstrap -->
 <link rel="stylesheet" href="/res/site/css/bootstrap.min.css">
 
@@ -87,7 +90,7 @@
             </div> 
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="/ongs">Ongs</a></li>
                     <li><a href="/pets">Animais</a></li>
                 </ul>

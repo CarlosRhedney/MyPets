@@ -384,7 +384,7 @@
           <div class="content">
             <span class="brand">
               <a href="#">
-                Mypets
+                MyPets
               </a>
             </span>
           </div>
@@ -474,7 +474,7 @@
 
                             Tutor: <?php echo htmlspecialchars( $value1["person"], ENT_COMPAT, 'UTF-8', FALSE ); ?><br>
 
-                            Fone: <?php echo htmlspecialchars( $value1["nrphone"], ENT_COMPAT, 'UTF-8', FALSE ); ?>, Whatsapp: <?php echo htmlspecialchars( $value1["nrphone"], ENT_COMPAT, 'UTF-8', FALSE ); ?>,<br>
+                            Fone: <?php echo htmlspecialchars( $value1["nrphone"], ENT_COMPAT, 'UTF-8', FALSE ); ?> - Whatsapp: <?php echo htmlspecialchars( $value1["nrphone"], ENT_COMPAT, 'UTF-8', FALSE ); ?>,<br>
 
                             E-mail: <?php echo htmlspecialchars( $value1["mail"], ENT_COMPAT, 'UTF-8', FALSE ); ?><br>
 

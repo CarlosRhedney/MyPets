@@ -26,7 +26,7 @@
 
                 <?php if( $loginSuccess != '' ){ ?>
 
-                <div class="alert alert-danger">
+                <div class="alert alert-success">
                     <?php echo htmlspecialchars( $loginSuccess, ENT_COMPAT, 'UTF-8', FALSE ); ?>
 
                 </div>
