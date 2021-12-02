@@ -12,9 +12,7 @@
 Introdução
 ============
 
-<h1 align="center">
-   ![logo_MyPets](https://user-images.githubusercontent.com/49602892/144502788-90837adb-6ca4-4a1b-a29d-1a836f612913.png)
-</h1>
+![logo_MyPets](https://user-images.githubusercontent.com/49602892/144502788-90837adb-6ca4-4a1b-a29d-1a836f612913.png)
 
 <p align="center" id="sobre">🚀 Plataforma web desenvolvida por universitários em colaboração com ONGs e pessoas que tenham um animal para adoção.</p>
 
@@ -107,5 +105,5 @@ Navegadores Suportados<p id="navegadores"></p>
 
 License
 -------
-MyPets é um projeto de código aberto licenciado por [MIT](http://opensource.org/licenses/MIT).
-MyPets reserva-se o direito de alterar a licença de versões futuras.
+<p>MyPets é um projeto de código aberto licenciado por [MIT](http://opensource.org/licenses/MIT).</p>
+<p>MyPets reserva-se o direito de alterar a licença de versões futuras.</p>
