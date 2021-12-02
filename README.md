@@ -5,31 +5,31 @@
 <img src="https://img.shields.io/static/v1?label=RainTpl&message=RainTpl&color=7159c1&style=plastic&logo=RAINTPL"/>
 <img src="https://img.shields.io/static/v1?label=PHPMailer&message=PHPMailer&color=7159c1&style=flat-square&logo=PHPMAILER"/>
 <img src="https://img.shields.io/static/v1?label=Composer&message=Composer&color=7159c1&style=flat-square&logo=COMPOSER"/>
-<img src="https://img.shields.io/static/v1?label=Sublime Text&message=Sublime Text&color=7159c1&style=flat-square&logo=#FF9800"/>
+<img src="https://img.shields.io/static/v1?label=Sublime Text&message=Sublime Text&color=7159c1&style=flat-square&logo=SUBLIME"/>
 </div>
 
 
 Introdução
 ============
 
-![logo_MyPets](https://user-images.githubusercontent.com/49602892/144502788-90837adb-6ca4-4a1b-a29d-1a836f612913.png)
+<h1 align="center">
+   ![logo_MyPets](https://user-images.githubusercontent.com/49602892/144502788-90837adb-6ca4-4a1b-a29d-1a836f612913.png)
+</h1>
 
-<p align="center" id="sobre">🚀 Plataforma web desenvolvida por universitários em colaboração com ONGs e pessoas que tenham um animal para adoção</p>
+<p align="center" id="sobre">🚀 Plataforma web desenvolvida por universitários em colaboração com ONGs e pessoas que tenham um animal para adoção.</p>
 
 Tabela de conteúdos
 =================
 <!--ts-->
    * [Sobre](#Sobre)
-   * [Tabela de Conteudo](#tabela-de-conteudo)
+   * [Download](#download)
    * [Instalação](#instalacao)
    * [Como usar](#como-usar)
       * [Pre Requisitos](#pre-requisitos)
-      * [Local files](#local-files)
-      * [Remote files](#remote-files)
-      * [Multiple files](#multiple-files)
-      * [Combo](#combo)
-   * [Tests](#testes)
+      * [Navegadores Suportados](#navegadores)
+      * [Features](#features)
    * [Tecnologias](#tecnologias)
+   * [Licença](#license)
 <!--te-->
 
 
@@ -55,10 +55,11 @@ Instalação
 
 **Github**
 <p id="tecnologias"></p>
-- Fork the repository.
-- Clone to your machine
+
+**Composer**
+
 ```
-git clone 
+composer
 ```
 
 **raintpl**
@@ -79,17 +80,11 @@ version :"5.2.22"
 version":"2.0"
 ```
 
-**Composer**
-
-```
-composer require
-```
-
 Documentação
 -------------
 
 
-Browser Support
+Navegadores Suportados<p id="navegadores"></p>
 ---------------
 - IE 9+
 - Firefox
@@ -98,6 +93,7 @@ Browser Support
 - Opera
 
 ### Features
+<p id="features"></p>
 
 - [x] Cadastro de usuários
 - [x] Cadastro de Animais
@@ -111,5 +107,5 @@ Browser Support
 
 License
 -------
-MyPets is an open source project by that is licensed under [MIT](http://opensource.org/licenses/MIT).
-MyPets reserves the right to change the license of future releases.
+MyPets é um projeto de código aberto licenciado por [MIT](http://opensource.org/licenses/MIT).
+MyPets reserva-se o direito de alterar a licença de versões futuras.
