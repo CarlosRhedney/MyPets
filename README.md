@@ -40,16 +40,21 @@ Tabela de conteúdos
 
 Download<p id="download"></p>
 -------------
-Faça o download do projeto em HTTPS ![aqui](https://github.com/CarlosRhedney/MyPets.git)
-
-Faça o download do projeto em SSH ![aqui](git@github.com:CarlosRhedney/MyPets.git)
+Faça o download do projeto em ZIP [aqui](https://github.com/CarlosRhedney/MyPets/archive/refs/heads/master.zip)
 
 
 Instalação<p id="instalação"></p>
 ------------
-Para que o pleno funcionamento do sistema faz-se necessário a instalação do XAMPP.
+<p>Para o pleno funcionamento do sistema faz-se necessário a instalação do XAMPP.</p>
+<p>O mesmo foi utilizado como servidor web junto com o Mariadb.</p>
+<p>faça o download [aqui](https://www.apachefriends.org/pt_br/download.html) de acordo com seu sistema operacional.</p>
+
 ![download](https://user-images.githubusercontent.com/49602892/144521977-a75d21c3-5518-4020-b9c9-96269d59340d.png)
-faça o download ![aqui](https://www.apachefriends.org/pt_br/download.html) de acordo com seu sistema operacional.
+<p>Após o download, é necessário a instalaçaõ do XAMPP</p>
+<p>Clique 2 vezes o arquivo baixado e siga com a instalação normalmente, quando chega na tela a seguir basta selecionar os itens pré selecinados na imagem, não sendo necessário instalar todos os componentes.</p>
+
+![xampp-select-component](https://user-images.githubusercontent.com/49602892/144548080-dfae533e-518d-4158-bb0b-115b1c51fa6e.png)
+<p>após esta selecionar os componentes necessários, serão apenas simples etapas de next, next, finish.</p>
 
 
 
