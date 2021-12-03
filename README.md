@@ -54,7 +54,18 @@ Instalação<p id="instalação"></p>
 <p>Clique 2 vezes o arquivo baixado e siga com a instalação normalmente, quando chega na tela a seguir basta selecionar os itens pré selecinados na imagem, não sendo necessário instalar todos os componentes.</p>
 
 ![xampp-select-component](https://user-images.githubusercontent.com/49602892/144548080-dfae533e-518d-4158-bb0b-115b1c51fa6e.png)
-<p>após esta selecionar os componentes necessários, serão apenas simples etapas de next, next, finish.</p>
+<p>após ter selecionado todos os componentes necessários, serão apenas simples etapas de next, next, finish.</p>
+<p>Após a instalação é necessário iniciar o servidor XAMPP</p>
+<p>Para iniciar os serviços basta startar o Apache e o MySQL, como na imagem a seguir</p>
+
+![xampp-2](https://user-images.githubusercontent.com/49602892/144549711-9c273884-d912-4472-aad1-b375e310cbc8.png)
+
+<p>Feito os passos anteriores, agora abra o navegador de sua prefencia e digite localhost na url.</p>
+<p>Uma tela como essa será apresentada.</p>
+
+![hRW85](https://user-images.githubusercontent.com/49602892/144550191-a5126dbd-67da-48db-8be9-ca170feb81d7.png)
+
+<p>Caso não apresente uma tela como esta, ou em caso de erros, retorne aos passos de instalação.</p>
 
 
 
