@@ -75,14 +75,32 @@ Instalação<p id="instalação"></p>
 
 **Iniciando com a instalação do repositório MyPets**
 <p>Primeiramente faça o download do projeto.</p>
-<p>ZIP 
 
-[aqui](https://github.com/CarlosRhedney/MyPets/archive/refs/heads/master.zip)</p>
+[aqui](https://github.com/CarlosRhedney/MyPets/archive/refs/heads/master.zip)
+
 ![Captura de tela 2021-12-03 031900](https://user-images.githubusercontent.com/49602892/144555185-b95779ed-973c-4e58-a757-61d7afd3a74a.png)
+
 <p>Após fazer o download do zip descompacte o projeto</p>
 <p>O diretório MyPets-master será extraído, dentro dele temos os arquivos do projeto</p>
 
 ![1](https://user-images.githubusercontent.com/49602892/144555482-d7f55dbc-072c-4e1d-b04f-bd7e25e95263.png)
+
+<p>Selecione todos os arquivos do diretório pressionando Ctrl + a, e copie pressionando Ctrl + c.</p>
+<p>Abra o seu Disco C:, como na imagem a seguir.</p>
+
+![2](https://user-images.githubusercontent.com/49602892/144558059-eea68083-5334-4c39-9131-6a4151fa91c7.png)
+<p>xampp</p>
+
+![3](https://user-images.githubusercontent.com/49602892/144558263-db905660-a35c-49bb-a962-387e3cbfa6a6.png)
+
+<p>htdocs</p>
+
+![4](https://user-images.githubusercontent.com/49602892/144558382-b4f2ca0e-02b2-4dc7-aa30-43ad2da868d3.png)
+
+<p>Dentro do diretório htdocs remova todos os arquivos contidos no diretório e pressione Ctrl + v.</p>
+<p>Agora com todos os arquivos do projeto contido no diretório htdocs, atualize o navegador, a página inicial já tem que estar funcionando.</p>
+
+![5](https://user-images.githubusercontent.com/49602892/144559450-e2e2021f-1536-496d-81d3-1368fe235da1.png)
 
 
 
