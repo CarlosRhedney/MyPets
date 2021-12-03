@@ -65,7 +65,7 @@ faça o download  de acordo com seu sistema operacional [aqui](https://www.apach
 <p>Após a instalação é necessário iniciar o servidor XAMPP</p>
 <p>Para iniciar os serviços basta startar o Apache e o MySQL, como na imagem a seguir</p>
 
-![xampp-2](https://user-images.githubusercontent.com/49602892/144549711-9c273884-d912-4472-aad1-b375e310cbc8.png)
+![6](https://user-images.githubusercontent.com/49602892/144673935-d611528a-cf5d-4808-9ff5-0445d2639cc3.png)
 
 <p>Feito os passos anteriores, agora abra o navegador de sua preferencia e digite localhost na url.</p>
 <p>Uma tela como essa será apresentada.</p>
@@ -79,7 +79,7 @@ faça o download  de acordo com seu sistema operacional [aqui](https://www.apach
 
 Link para o download do Git [aqui](https://git-scm.com/).
 
-**Iniciando com a instalação do repositório MyPets**
+**Iniciando com a instalação do repositório MyPets**<br>
 Primeiramente faça o download do projeto [aqui](https://github.com/CarlosRhedney/MyPets/archive/refs/heads/master.zip).
 
 ![Captura de tela 2021-12-03 031900](https://user-images.githubusercontent.com/49602892/144555185-b95779ed-973c-4e58-a757-61d7afd3a74a.png)
@@ -131,13 +131,13 @@ Documentação<p id="documentacao"></p>
 
 
 
-Tecnologias<p id="tecnologias"></p>
+🛠 Tecnologias<p id="tecnologias"></p>
 ------------
 
 **Composer**
 
 ```
-composer
+composer faz-se necessário para o gerenciamento das dependências a seguir e para o gerenciamento das nossas próprias classes contidas em vendor/mypets/php-classes/src/.
 ```
 
 **raintpl**
@@ -182,18 +182,18 @@ Navegadores Suportados<p id="navegadores"></p>
 
 
 ------------------------------
-### Features
+### ⚙️ Funcionalidades
 <p id="features"></p>
 
 - [x] Cadastro de usuários
 - [x] Cadastro de Animais
 - [x] Cadastro de ONGs
-- [x] Adoção
+- [x] Adoção de Animais
 - [x] Relatórios
 
 
 ------------------------------
 Licença<p id="license"></p>
 -------
-<p>MyPets é um projeto de código aberto licenciado por [MIT](http://opensource.org/licenses/MIT).</p>
+MyPets é um projeto de código aberto licenciado por [MIT](http://opensource.org/licenses/MIT).
 <p>MyPets reserva-se o direito de alterar a licença de versões futuras.</p>
