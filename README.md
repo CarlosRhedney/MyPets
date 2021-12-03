@@ -11,12 +11,12 @@
 
 Introdução<p id="sobre"></p>
 ============
-<p align="center">
+<div align="center">
 
 ![logo_MyPets](https://user-images.githubusercontent.com/49602892/144502788-90837adb-6ca4-4a1b-a29d-1a836f612913.png)
-</p>
+<p>🚀 Plataforma web desenvolvida por universitários em colaboração com ONGs e pessoas que tenham um animal para adoção.</p>
+</div>
 
-<p align="center">🚀 Plataforma web desenvolvida por universitários em colaboração com ONGs e pessoas que tenham um animal para adoção.</p>
 
 Tabela de conteúdos
 =================
@@ -46,12 +46,14 @@ Faça o download do projeto em ZIP [aqui](https://github.com/CarlosRhedney/MyPet
 Instalação<p id="instalação"></p>
 ------------
 <p>Para o pleno funcionamento do sistema faz-se necessário a instalação do XAMPP.</p>
-<p>O mesmo foi utilizado como servidor web junto com o Mariadb.</p>
-<p>faça o download [aqui](https://www.apachefriends.org/pt_br/download.html) de acordo com seu sistema operacional.</p>
+<p>O mesmo foi utilizado com o Apache como servidor web junto com o MySQL com o Mariadb.</p>
+<p>faça o download  de acordo com seu sistema operacional.</p>
+
+[aqui](https://www.apachefriends.org/pt_br/download.html)
 
 ![download](https://user-images.githubusercontent.com/49602892/144521977-a75d21c3-5518-4020-b9c9-96269d59340d.png)
 <p>Após o download, é necessário a instalaçaõ do XAMPP</p>
-<p>Clique 2 vezes o arquivo baixado e siga com a instalação normalmente, quando chega na tela a seguir basta selecionar os itens pré selecinados na imagem, não sendo necessário instalar todos os componentes.</p>
+<p>Clique 2 vezes no arquivo baixado e siga com a instalação normalmente, quando chegar na tela a seguir basta selecionar os itens pré selecinados na imagem, não sendo necessário instalar todos os componentes.</p>
 
 ![xampp-select-component](https://user-images.githubusercontent.com/49602892/144548080-dfae533e-518d-4158-bb0b-115b1c51fa6e.png)
 <p>após ter selecionado todos os componentes necessários, serão apenas simples etapas de next, next, finish.</p>
@@ -66,6 +68,21 @@ Instalação<p id="instalação"></p>
 ![hRW85](https://user-images.githubusercontent.com/49602892/144550191-a5126dbd-67da-48db-8be9-ca170feb81d7.png)
 
 <p>Caso não apresente uma tela como esta, ou em caso de erros, retorne aos passos de instalação.</p>
+
+<p>Também faz-se necessário a instalação do Git, Sistema de Controle de Versões Distruibuído.</p>
+<p>Baixe de acordo com seu sistema operacional, instale e configure o mesmo de acordo com seu usuário do github.</p>
+<p>Link para o download do Git aqui[](https://git-scm.com/)</p>
+
+**Iniciando com a instalação do repositório MyPets**
+<p>Primeiramente faça o download do projeto.</p>
+<p>ZIP 
+
+[aqui](https://github.com/CarlosRhedney/MyPets/archive/refs/heads/master.zip)</p>
+![Captura de tela 2021-12-03 031900](https://user-images.githubusercontent.com/49602892/144555185-b95779ed-973c-4e58-a757-61d7afd3a74a.png)
+<p>Após fazer o download do zip descompacte o projeto</p>
+<p>O diretório MyPets-master será extraído, dentro dele temos os arquivos do projeto</p>
+
+![1](https://user-images.githubusercontent.com/49602892/144555482-d7f55dbc-072c-4e1d-b04f-bd7e25e95263.png)
 
 
 
