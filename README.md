@@ -11,10 +11,10 @@
 
 Introdução<p id="sobre"></p>
 ============
-<h1 align="center">
+<p align="center">
 
 ![logo_MyPets](https://user-images.githubusercontent.com/49602892/144502788-90837adb-6ca4-4a1b-a29d-1a836f612913.png)
-</h1>
+</p>
 
 <p align="center">🚀 Plataforma web desenvolvida por universitários em colaboração com ONGs e pessoas que tenham um animal para adoção.</p>
 
@@ -30,7 +30,7 @@ Tabela de conteúdos
       * [Pre Requisitos](#pre-requisitos)
       * [Navegadores Suportados](#navegadores)
       * [Features](#features)
-   * [Licença](#license)
+   * [License](#license)
 <!--te-->
 
 
@@ -40,11 +40,16 @@ Tabela de conteúdos
 
 Download<p id="download"></p>
 -------------
+Faça o download do projeto em HTTPS ![aqui](https://github.com/CarlosRhedney/MyPets.git)
 
+Faça o download do projeto em SSH ![aqui](git@github.com:CarlosRhedney/MyPets.git)
 
 
 Instalação<p id="instalação"></p>
 ------------
+Para que o pleno funcionamento do sistema faz-se necessário a instalação do XAMPP.
+![download](https://user-images.githubusercontent.com/49602892/144521977-a75d21c3-5518-4020-b9c9-96269d59340d.png)
+faça o download ![aqui](https://www.apachefriends.org/pt_br/download.html) de acordo com seu sistema operacional.
 
 
 
@@ -115,9 +120,7 @@ Navegadores Suportados<p id="navegadores"></p>
 	🚧  MyPets 🚀 Em construção...  🚧
 </h4>
 
-License
+License<p id="license"></p>
 -------
-<p>MyPets é um projeto de código aberto licenciado por </p>
-
-![MIT](http://opensource.org/licenses/MIT).
+<p>MyPets é um projeto de código aberto licenciado por [MIT](http://opensource.org/licenses/MIT).</p>
 <p>MyPets reserva-se o direito de alterar a licença de versões futuras.</p>
