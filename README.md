@@ -1,11 +1,11 @@
 <div style="display: inline-block;">
-<img src="https://img.shields.io/static/v1?label=Plataforma Web&message=MyPets&color=7159c1&style=for-the-badge&logo=ghost"/>
+<img src="https://img.shields.io/static/v1?label=Plataforma Web&message=MyPets&color=7159c1&style=plastic&logo=ghost"/>
 <img src="https://img.shields.io/static/v1?label=Apache&message=Apache&color=7159c1&style=plastic&logo=APACHE"/>
-<img src="https://img.shields.io/static/v1?label=Slim Framework&message=Slim Framework&color=7159c1&style=flat&logo=SLIM"/>
+<img src="https://img.shields.io/static/v1?label=Slim Framework&message=Slim Framework&color=7159c1&style=plastic&logo=SLIMFRAMEWORK"/>
 <img src="https://img.shields.io/static/v1?label=RainTpl&message=RainTpl&color=7159c1&style=plastic&logo=RAINTPL"/>
-<img src="https://img.shields.io/static/v1?label=PHPMailer&message=PHPMailer&color=7159c1&style=flat-square&logo=PHPMAILER"/>
-<img src="https://img.shields.io/static/v1?label=Composer&message=Composer&color=7159c1&style=flat-square&logo=COMPOSER"/>
-<img src="https://img.shields.io/static/v1?label=Sublime Text&message=Sublime Text&color=7159c1&style=flat-square&logo=SUBLIMETEXT"/>
+<img src="https://img.shields.io/static/v1?label=PHPMailer&message=PHPMailer&color=7159c1&style=plastic&logo=PHPMAILER"/>
+<img src="https://img.shields.io/static/v1?label=Composer&message=Composer&color=7159c1&style=plastic&logo=COMPOSER"/>
+<img src="https://img.shields.io/static/v1?label=Sublime Text&message=Sublime Text&color=7159c1&style=plastic&logo=SUBLIMETEXT"/>
 </div>
 
 
@@ -31,10 +31,10 @@ Tabela de conteúdos
    * [Documentação](#documentacao)
    * [Tecnologias](#tecnologias)
    * [Como usar](#como-usar)
-      * [Pre Requisitos](#pre-requisitos)
+      * [Pré-requisitos](#pre-requisitos)
       * [Navegadores Suportados](#navegadores)
-      * [Features](#features)
-   * [License](#license)
+      * [Funcionalidades](#features)
+   * [Licença](#license)
 <!--te-->
 
 
@@ -162,8 +162,41 @@ composer faz-se necessário para o gerenciamento das dependências a seguir e pa
 
 Como Usar<p id="como-usar"></p>
 --------------
+<p>Abra o navegador de sua preferência, na url digite: localhost</p>
+<p>Esta página será apresentada</p>
 
+![5](https://user-images.githubusercontent.com/49602892/144559450-e2e2021f-1536-496d-81d3-1368fe235da1.png)
 
+<p>Para acessar a parte administrativa da aplicação, basta inserir na url um /admin, e você será redirecionado para a página de login da administração, como ilustrado na imagem a seguir, o ideal é que o usuário comum nem saiba desta parte administrativa.</p>
+
+![10](https://user-images.githubusercontent.com/49602892/144687678-3bbd127e-55c8-4028-a423-1c243838f3b1.png)
+
+<p>No banco de dados já existe um usuário cadastrado, cujo login e senha são:</p>
+<p>Login: IronMan</p>
+<p>Senha: admin</p>
+<p>Tela inicial da administração</p>
+
+![11](https://user-images.githubusercontent.com/49602892/144687973-a0a403fd-5c77-490e-adc5-c6b2c5b5339e.png)
+
+<p>Usuários</p>
+
+![12](https://user-images.githubusercontent.com/49602892/144688699-ea96d29b-b5d7-4b8d-9ede-701695fe760f.png)
+
+![13](https://user-images.githubusercontent.com/49602892/144689266-b2426524-25e7-4d40-8185-3fb3779d6d34.png)
+
+![14](https://user-images.githubusercontent.com/49602892/144689269-4b5e8625-e0c2-4b1f-9ddf-4a20ca18f1cb.png)
+
+![15](https://user-images.githubusercontent.com/49602892/144689295-2b6e2873-0701-4fd6-9ae9-9bd30c7a02d1.png)
+
+![16](https://user-images.githubusercontent.com/49602892/144689296-2b6255bc-19d7-408f-ae74-ccf034daf5c3.png)
+
+![17](https://user-images.githubusercontent.com/49602892/144689297-a5c1d5f8-372c-4e88-be7d-4ed6f7475556.png)
+
+![18](https://user-images.githubusercontent.com/49602892/144689298-b1e61906-9ad9-445d-acdb-c87306f3b013.png)
+
+![19](https://user-images.githubusercontent.com/49602892/144689299-29520cf6-06a2-4263-b5cc-cbc9394bbc2c.png)
+
+![20](https://user-images.githubusercontent.com/49602892/144689300-b2ee5eb1-8595-47b2-a9e0-4a42b17ef234.png)
 
 
 Pré-requisitos<p id="pre-requisitos"></p>
