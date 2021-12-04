@@ -182,19 +182,40 @@ Como Usar<p id="como-usar"></p>
 
 ![12](https://user-images.githubusercontent.com/49602892/144688699-ea96d29b-b5d7-4b8d-9ede-701695fe760f.png)
 
+<p>Cadastrar Usuário</p>
+
 ![13](https://user-images.githubusercontent.com/49602892/144689266-b2426524-25e7-4d40-8185-3fb3779d6d34.png)
+
+<p>Editar Usuário</p>
 
 ![14](https://user-images.githubusercontent.com/49602892/144689269-4b5e8625-e0c2-4b1f-9ddf-4a20ca18f1cb.png)
 
+<p>Excluir</p>
+
 ![15](https://user-images.githubusercontent.com/49602892/144689295-2b6e2873-0701-4fd6-9ae9-9bd30c7a02d1.png)
+
+<p>Categorias</p>
 
 ![16](https://user-images.githubusercontent.com/49602892/144689296-2b6255bc-19d7-408f-ae74-ccf034daf5c3.png)
 
+<p>Clicando em animais, somos redirecionados a categoria em si onde aparecem os animais, clicando em adicionar o animal é inserido na categoria em questão.</p>
+<p>Quando inserido, o animal também pode ser removido, bastando clicar em remover.</p>
+
 ![17](https://user-images.githubusercontent.com/49602892/144689297-a5c1d5f8-372c-4e88-be7d-4ed6f7475556.png)
+
+<p>ONGs</p>
+<p>Onde listamos todas as ongs cadastradas no sistema.</p>
 
 ![18](https://user-images.githubusercontent.com/49602892/144689298-b1e61906-9ad9-445d-acdb-c87306f3b013.png)
 
+<p>Animais</p>
+<p>Onde listamos todos os animais cadastrados no sistema.</p>
+
 ![19](https://user-images.githubusercontent.com/49602892/144689299-29520cf6-06a2-4263-b5cc-cbc9394bbc2c.png)
+
+<p>Relatórios e Painel do Usuário.</p>
+<p>Relatórios faz referência aos relatórios gerados no sistema.</p>
+<p>Painel do usuário com botão Sair e Minha Conta.</p>
 
 ![20](https://user-images.githubusercontent.com/49602892/144689300-b2ee5eb1-8595-47b2-a9e0-4a42b17ef234.png)
 
