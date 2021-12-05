@@ -182,6 +182,10 @@ $app->post('/login', function(){
 		User::login($_POST["login"], $_POST["password"]);
 
 		User::setSuccess("Usuário logado com sucesso!");
+
+		header("Location: /");
+
+		exit;
 		
 
 	}catch(Exception $e){
@@ -208,11 +212,69 @@ $app->post('/login', function(){
 
 		}
 
+		header("Location: /login");
+
+		exit;
+
 	}
 
-	header("Location: /login");
+});
 
-	exit;
+$app->get('/login-adotion', function(){
+
+	$page = new Page();
+
+	$page->setTpl("login-adotion", array(
+		"error"=>User::getError(),
+		"loginSuccess"=>User::getSuccess(),
+		"errorRegister"=>User::getErrorRegister(),
+		"registerValues"=>(isset($_SESSION["registerValues"])) ? $_SESSION["registerValues"] : ["name"=>"", "mail"=>"", "nrphone"=>""]
+	));
+
+});
+
+$app->post('/login-adotion', function(){
+
+	try{
+
+		User::login($_POST["login"], $_POST["password"]);
+
+		User::setSuccess("Usuário logado com sucesso!");
+
+		header("Location: /contract/1");
+
+		exit;
+		
+
+	}catch(Exception $e){
+
+		User::setError($e->getMessage());
+
+		if(!isset($_POST["login"]) || $_POST["login"] == "")
+		{
+			User::setError("Insira o seu e-mail!");
+
+			header("Location: /login-adotion");
+
+			exit;
+
+		}
+
+		if(!isset($_POST["password"]) || $_POST["password"] == "")
+		{
+			User::setError("Insira a sua senha!");
+
+			header("Location: /login-adotion");
+
+			exit;
+
+		}
+
+		header("Location: /login-adotion");
+
+		exit;
+
+	}
 
 });
 
@@ -577,7 +639,7 @@ $app->post('/profile/change-password', function(){
 
 $app->get('/contract/:idpet', function($idpet){
 
-	User::verifyLogin(false);
+	User::loginAdotion(false);
 
 	$pet = new Pet();
 
