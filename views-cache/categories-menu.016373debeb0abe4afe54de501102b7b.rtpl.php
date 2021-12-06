@@ -1,1 +1,0 @@
-<?php if(!class_exists('Rain\Tpl')){exit;}?><li><a href="/categories/1">Animais de Pequeno Porte</a></li>

@@ -40,6 +40,7 @@ $app->get('/', function(){
 	// Para mais detalhes verificar o template em views/index.html.
 	$page->setTpl("index", array(
 		"pets"=>Pet::checkList($pets),
+		"loginSuccess"=>User::getSuccess(),
 		"ongs"=>$ongs
 	));
 
@@ -168,7 +169,6 @@ $app->get('/login', function(){
 
 	$page->setTpl("login", array(
 		"error"=>User::getError(),
-		"loginSuccess"=>User::getSuccess(),
 		"errorRegister"=>User::getErrorRegister(),
 		"registerValues"=>(isset($_SESSION["registerValues"])) ? $_SESSION["registerValues"] : ["name"=>"", "mail"=>"", "nrphone"=>""]
 	));
@@ -648,7 +648,8 @@ $app->get('/contract/:idpet', function($idpet){
 	$page = new Page();
 
 	$page->setTpl("contract", array(
-		"pet"=>$pet->getValues()
+		"pet"=>$pet->getValues(),
+		"loginSuccess"=>User::getSuccess()
 	));
 
 });
