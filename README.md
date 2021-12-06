@@ -111,7 +111,7 @@ Primeiramente faça o download do projeto [aqui](https://github.com/CarlosRhedne
 
 ![7](https://user-images.githubusercontent.com/49602892/144667033-c387e5ea-bf86-4eff-a39f-b6396fc242b0.png)
 
-<p>O arquivo .sql encontra-se disponivel junto com os arquivos do sistema, baixe-o e instale.</p>
+<p>O arquivo mypets.sql encontra-se disponivel junto com os arquivos do sistema, baixe-o e instale.</p>
 <p>Para a instalação clique em New como na imagem a seguir.</p>
 
 ![8](https://user-images.githubusercontent.com/49602892/144667918-131343de-5f7d-4374-9ddd-d0c4d0d2e7e4.png)
@@ -120,7 +120,7 @@ Primeiramente faça o download do projeto [aqui](https://github.com/CarlosRhedne
 
 ![9](https://user-images.githubusercontent.com/49602892/144668291-78673d6e-b23c-4904-a9b4-69f46b38bc35.png)
 
-<p>Escolha o .sql que faz referencia ao banco de dados mypets, feito todos os passos descritos acima, o banco de dados será criado.</p>
+<p>Escolha o mypets.sql que faz referência ao banco de dados mypets, feito todos os passos descritos acima, o banco de dados será criado.</p>
 
 
 ------------------------------
