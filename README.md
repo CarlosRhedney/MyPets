@@ -127,7 +127,26 @@ Primeiramente faça o download do projeto [aqui](https://github.com/CarlosRhedne
 
 Documentação<p id="documentacao"></p>
 -------------
-
+<p>1.1 Apresentação</p>
+<p>1.2 Os objetivos do site</p>
+<p>1.3 O público-alvo do website</p>
+<p>1.4 Objetivos quantitativos</p>
+<p>1.5 Escopo do projeto</p>
+<p>1.6 Descrição dos elementos existentes</p>
+<p>2.1 Identidade visual</p>
+<p>2.2 Projeto</p>
+<p>2.3 Esquemas</p>
+<p>3.1 Mapa do site</p>
+<p>3.2 Descrição funcional</p>
+<p>3.3 Informações sobre o conteúdo</p>
+<p>3.4 Restrições técnicas</p>
+<p>4.1 Benefícios contemplados</p>
+<p>4.2 Calendário</p>
+<p>4.3 Metodologia de acompanhamento</p>
+<p>casos de uso</p>
+<p>requisitos funcionais</p>
+<p>requisitos não funcionais</p>
+<p>diagrama de contexto</p>
 
 
 
