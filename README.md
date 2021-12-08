@@ -57,17 +57,17 @@ Instalação<p id="instalacao"></p>
 faça o download  de acordo com seu sistema operacional [aqui](https://www.apachefriends.org/pt_br/download.html).
 
 ![download](https://user-images.githubusercontent.com/49602892/144521977-a75d21c3-5518-4020-b9c9-96269d59340d.png)
-<p>Após o download, é necessário a instalaçaõ do XAMPP</p>
+<p>Após o download, é necessário a instalaçaõ do XAMPP.</p>
 <p>Clique 2 vezes no arquivo baixado e siga com a instalação normalmente, quando chegar na tela a seguir basta selecionar os itens pré selecinados na imagem, não sendo necessário instalar todos os componentes.</p>
 
 ![xampp-select-component](https://user-images.githubusercontent.com/49602892/144548080-dfae533e-518d-4158-bb0b-115b1c51fa6e.png)
 <p>após ter selecionado todos os componentes necessários, serão apenas simples etapas de next, next, finish.</p>
-<p>Após a instalação é necessário iniciar o servidor XAMPP</p>
-<p>Para iniciar os serviços basta startar o Apache e o MySQL, como na imagem a seguir</p>
+<p>Após a instalação é necessário iniciar o servidor XAMPP.</p>
+<p>Para iniciar os serviços basta startar o Apache e o MySQL, como na imagem a seguir:</p>
 
 ![6](https://user-images.githubusercontent.com/49602892/144673935-d611528a-cf5d-4808-9ff5-0445d2639cc3.png)
 
-<p>Feito os passos anteriores, agora abra o navegador de sua preferencia e digite localhost na url.</p>
+<p>Feito os passos anteriores, agora abra o navegador de sua preferência e digite localhost na url.</p>
 <p>Uma tela como essa será apresentada.</p>
 
 ![hRW85](https://user-images.githubusercontent.com/49602892/144550191-a5126dbd-67da-48db-8be9-ca170feb81d7.png)
@@ -84,8 +84,8 @@ Primeiramente faça o download do projeto [aqui](https://github.com/CarlosRhedne
 
 ![Captura de tela 2021-12-03 031900](https://user-images.githubusercontent.com/49602892/144555185-b95779ed-973c-4e58-a757-61d7afd3a74a.png)
 
-<p>Após fazer o download do zip descompacte o projeto</p>
-<p>O diretório MyPets-master será extraído, dentro dele temos os arquivos do projeto</p>
+<p>Após fazer o download do zip descompacte o projeto.</p>
+<p>O diretório MyPets-master será extraído, dentro dele temos os arquivos do projeto.</p>
 
 ![1](https://user-images.githubusercontent.com/49602892/144555482-d7f55dbc-072c-4e1d-b04f-bd7e25e95263.png)
 
@@ -128,25 +128,17 @@ Primeiramente faça o download do projeto [aqui](https://github.com/CarlosRhedne
 Documentação<p id="documentacao"></p>
 -------------
 <p>1.1 Apresentação</p>
-<p>1.2 Os objetivos do site</p>
-<p>1.3 O público-alvo do website</p>
-<p>1.4 Objetivos quantitativos</p>
-<p>1.5 Escopo do projeto</p>
-<p>1.6 Descrição dos elementos existentes</p>
+<p>1.2 Os objetivos da plataforma</p>
+<p>1.3 O público-alvo da plataforma</p>
+<p>1.4 Escopo do projeto</p>
+<p>1.5 Descrição dos elementos existentes</p>
 <p>2.1 Identidade visual</p>
 <p>2.2 Projeto</p>
-<p>2.3 Esquemas</p>
 <p>3.1 Mapa do site</p>
 <p>3.2 Descrição funcional</p>
 <p>3.3 Informações sobre o conteúdo</p>
 <p>3.4 Restrições técnicas</p>
 <p>4.1 Benefícios contemplados</p>
-<p>4.2 Calendário</p>
-<p>4.3 Metodologia de acompanhamento</p>
-<p>casos de uso</p>
-<p>requisitos funcionais</p>
-<p>requisitos não funcionais</p>
-<p>diagrama de contexto</p>
 
 
 
