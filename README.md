@@ -6,6 +6,10 @@
 <img src="https://img.shields.io/static/v1?label=PHPMailer&message=PHPMailer&color=7159c1&style=plastic&logo=PHPMAILER"/>
 <img src="https://img.shields.io/static/v1?label=Composer&message=Composer&color=7159c1&style=plastic&logo=COMPOSER"/>
 <img src="https://img.shields.io/static/v1?label=Sublime Text&message=Sublime Text&color=7159c1&style=plastic&logo=SUBLIMETEXT"/>
+<img src="https://img.shields.io/static/v1?label=PHP&message=PHP&color=7159c1&style=plastic&logo=PHP"/>
+<img src="https://img.shields.io/static/v1?label=JavaScript&message=JavaScript&color=7159c1&style=plastic&logo=JAVASCRIPT"/>
+<img src="https://img.shields.io/static/v1?label=CSS3&message=CSS3&color=7159c1&style=plastic&logo=CSS3"/>
+<img src="https://img.shields.io/static/v1?label=HTML5&message=HTML5&color=7159c1&style=plastic&logo=HTML5"/>
 </div>
 
 
@@ -127,18 +131,7 @@ Primeiramente faça o download do projeto [aqui](https://github.com/CarlosRhedne
 
 Documentação<p id="documentacao"></p>
 -------------
-<p>1.1 Apresentação</p>
-<p>1.2 Os objetivos da plataforma</p>
-<p>1.3 O público-alvo da plataforma</p>
-<p>1.4 Escopo do projeto</p>
-<p>1.5 Descrição dos elementos existentes</p>
-<p>2.1 Identidade visual</p>
-<p>2.2 Projeto</p>
-<p>3.1 Mapa do site</p>
-<p>3.2 Descrição funcional</p>
-<p>3.3 Informações sobre o conteúdo</p>
-<p>3.4 Restrições técnicas</p>
-<p>4.1 Benefícios contemplados</p>
+
 
 
 
