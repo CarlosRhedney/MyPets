@@ -255,6 +255,13 @@ Navegadores Suportados<p id="navegadores"></p>
 - [x] Cadastro de ONGs
 - [x] Adoção de Animais
 - [x] Relatórios
+- [x] Termo de Responsabilidade
+- [x] Categorias
+- [x] Login e Logout
+- [x] Exclusão de Conta
+- [x] Consumo de webservice com viacep
+- [x] Envio de email com PHPMailer
+- [x] Esqueci a senha
 
 
 ------------------------------
