@@ -138,7 +138,7 @@ Documentação<p id="documentacao"></p>
 **Relatories**
 <p>Diretório do sistema onde é armazenado os relatórios, na parte administrativa temos a opção de gerar relatórios dos usuários, ongs e animais.</p>
 
-![22](https://user-images.githubusercontent.com/49602892/145336235-1ec80f4a-ac95-456b-b486-8bc07453be86.png)
+![24](https://user-images.githubusercontent.com/49602892/145341550-075cadf7-b635-426c-82df-ef2e6ba4c71b.png)
 
 **Res**
 <p>Diretório res contém todos os arquivos css, js, img, fonts, bootstrap do site, ong e administração.</p>
@@ -147,9 +147,20 @@ Documentação<p id="documentacao"></p>
 
 **vendor**
 <p>Diretório gerado pelo composer no inicio do projeto, utilizamos o composer para o gerenciamento das dependências utilizadas na plataforma.</p>
-<p>Além das dependências, temos o nosso próprio vendor mypets que contém as classes do projeto, que, por sua vez, são gerenciadas pelo autoload.php do composer.</p>
+<p>Além das dependências, temos o nosso próprio vendor mypets que contém as classes do projeto, que por sua vez, são gerenciadas pelo autoload.php do composer.</p>
 
 ![23](https://user-images.githubusercontent.com/49602892/145337439-af9a7c8e-fc1e-4e83-ad2c-3fd075d5c639.png)
+
+**mypets**
+<p>Em mypets/php-classes/src estão algumas de nossas classes principais para a estrutura do projeto, diretório DB com o arquivo Sql.php com a conexão com o banco de dados e alguns paramêtros para carregar e trazer as informações, diretório Model com DAO necessário para cada parte do sistema.</p>
+
+![25](https://user-images.githubusercontent.com/49602892/145342848-6e0d8ac2-fb6c-487d-98bd-63f5795df165.png)
+
+<p>Começando por Page.php Classe principal que faz referência a HomePage da plataforma, como pode ser visto, nossa interface foi desenvolvida com os métodos mágicos php __construct e __destruct além dos métodos setTpl e setData.</p>
+
+![26](https://user-images.githubusercontent.com/49602892/145344530-25c16c8e-67b4-4461-aeb8-4d6ce1e0df9a.png)
+![27](https://user-images.githubusercontent.com/49602892/145344590-199085b6-5053-4f3e-a847-c3fdfd7c3821.png)
+
 
 
 
