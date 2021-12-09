@@ -161,6 +161,18 @@ Documentação<p id="documentacao"></p>
 ![26](https://user-images.githubusercontent.com/49602892/145344530-25c16c8e-67b4-4461-aeb8-4d6ce1e0df9a.png)
 ![27](https://user-images.githubusercontent.com/49602892/145344590-199085b6-5053-4f3e-a847-c3fdfd7c3821.png)
 
+<p>A lógica é simples, quando acessamos a página principal da plataforma, é chamado o método __construct que por sua vez traz o nosso header, quando passamos na rota $page = new Page() $page->setTpl(index), automaticamente chamamos o template html que será o corpo da página em sí, ao chegarmos na linha 46 como ilustra a imagem a seguir, o PHP não encontra mais nenhum comando e por sua vez executa o nosso método __destruct que traz o nosso footer da página na plataforma.</p>
+
+![28](https://user-images.githubusercontent.com/49602892/145486335-52dcbd93-6fc2-4958-a1c9-b39842b9900f.png)
+
+<p>Para um melhor reaproveitamento de código, separamos os arquivos header e footer, que são códigos que se repetem para outras páginas do sistema, então para não criar um header e footer para cada página, separamos em arquivos e os chamamos para as demais páginas do sistema.</p>
+<p>Você desenvolvedor deve se atentar na localização de todos os <strong>templates HTML do site</strong>, os mesmos se encontram no diretório <strong>views</strong> como passado no método __construct em Page.php, caso seja necessário alterar, modificar ou acrescentar favor mexer no diretório <strong>views</strong></p>
+<p>Diretórios admin, mail e ong fazem referência ao template HTML dos mesmos e serão explicados mais a frente.</p>
+
+![29](https://user-images.githubusercontent.com/49602892/145488160-d44b4c0e-4a9f-4857-9e5f-5020674b4bd3.png)
+
+
+
 
 
 
