@@ -157,6 +157,10 @@ Documentação<p id="documentacao"></p>
 ![25](https://user-images.githubusercontent.com/49602892/145342848-6e0d8ac2-fb6c-487d-98bd-63f5795df165.png)
 
 <p>Começando por Page.php Classe principal que faz referência a HomePage da plataforma, como pode ser visto, nossa interface foi desenvolvida com os métodos mágicos php __construct e __destruct além dos métodos setTpl e setData.</p>
+<p>Método __construct carrega o nosso header no template HTML.</p>
+<p>Método setTpl carrega o template informado como paramêtro.</p>
+<p>Método setData carrega os dados que são passados para o template HTML, em nossa página principal por exemplo, carregamos as informações dos pets, loginSuccess e ongs para serem apresentadas na interface do usuário.</p>
+<p>Método __destruct carrega o nosso footer no template HTML, o mesmo é chamado automaticamente após o metodo setTpl.</p>
 
 ![26](https://user-images.githubusercontent.com/49602892/145344530-25c16c8e-67b4-4461-aeb8-4d6ce1e0df9a.png)
 ![27](https://user-images.githubusercontent.com/49602892/145344590-199085b6-5053-4f3e-a847-c3fdfd7c3821.png)
