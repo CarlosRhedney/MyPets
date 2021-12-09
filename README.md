@@ -131,7 +131,25 @@ Primeiramente faça o download do projeto [aqui](https://github.com/CarlosRhedne
 
 Documentação<p id="documentacao"></p>
 -------------
+**Estrutura do Projeto**
 
+![21](https://user-images.githubusercontent.com/49602892/145334552-79d29eb1-7968-4859-aaee-dbcd59174f7a.png)
+
+**Relatories**
+<p>Diretório do sistema onde é armazenado os relatórios, na parte administrativa temos a opção de gerar relatórios dos usuários, ongs e animais.</p>
+
+![22](https://user-images.githubusercontent.com/49602892/145336235-1ec80f4a-ac95-456b-b486-8bc07453be86.png)
+
+**Res**
+<p>Diretório res contém todos os arquivos css, js, img, fonts, bootstrap do site, ong e administração.</p>
+
+![Captura de tela 2021-12-09 014957](https://user-images.githubusercontent.com/49602892/145336728-86a54aeb-559c-4518-b7a2-e87dadb0ac33.png)
+
+**vendor**
+<p>Diretório gerado pelo composer no inicio do projeto, utilizamos o composer para o gerenciamento das dependências utilizadas na plataforma.</p>
+<p>Além das dependências, temos o nosso próprio vendor mypets que contém as classes do projeto, que, por sua vez, são gerenciadas pelo autoload.php do composer.</p>
+
+![23](https://user-images.githubusercontent.com/49602892/145337439-af9a7c8e-fc1e-4e83-ad2c-3fd075d5c639.png)
 
 
 
