@@ -188,6 +188,16 @@ Documentação<p id="documentacao"></p>
 ![29](https://user-images.githubusercontent.com/49602892/145488160-d44b4c0e-4a9f-4857-9e5f-5020674b4bd3.png)
 
 
+**PageAdmin**
+<p>PageAdmin() Classe principal que faz referênica a parte administrativa sistema.</p>
+<p>PageAdmin() é herança de Page(), PageAdmin herda todos os atributos e métodos públicos e protegidos da classe pai Page.</p>
+
+![30](https://user-images.githubusercontent.com/49602892/145525579-c68ffdd7-8a6e-4b9c-aa55-597de8b3ff26.png)
+
+<p>Todos os templates referêntes a parte administrativa do sistema se encontram no diretório admin</p>
+
+![31](https://user-images.githubusercontent.com/49602892/145526486-fc409bff-0350-4492-ba5d-1d64d103d80d.png)
+
 
 
 
