@@ -157,15 +157,27 @@ Documentação<p id="documentacao"></p>
 ![25](https://user-images.githubusercontent.com/49602892/145342848-6e0d8ac2-fb6c-487d-98bd-63f5795df165.png)
 
 <p>Começando por Page.php Classe principal que faz referência a HomePage da plataforma, como pode ser visto, nossa interface foi desenvolvida com os métodos mágicos php __construct e __destruct além dos métodos setTpl e setData.</p>
-<p>Método __construct carrega o nosso header no template HTML.</p>
-<p>Método setTpl carrega o template informado como paramêtro.</p>
+<p>
+   Método __construct recebe dois paramêtros, $opts faz referência as informações passadas na rota do sistema.
+   $tpl_dir armazena o caminho dos templates HTML, para que sejam devidamente carregados quando informados.
+   $options a principio um array vazio recebe a mesclagem de dois arrays, prevalecendo as informações do segundo array passado como paramêtro $opts, caso este não tenha informações prevalece o primeiro array passado como paramêtro $default.
+</p>
+<p>
+   $config recebe um array com as informações relevantes da localização dos templates HTML e arquivos de cache e debug gerados pelo RainTpl, o mesmo $config é informado no método estático configure() da Classe Tpl().
+   Iniciamos um novo objeto $tpl, chamamos o método setData() com as informações carregadas, e renderizamos o template header na tela do usuário com o método draw() do RainTpl.
+</p>
+<p>
+   Método setTpl carrega o template informado como paramêtro $name, pois o nome do arquivo definitivo será informado na rota do sistema.
+   $data recebe um array que são as informações que serão passadas para o template HTML, o $returnHTML por padrão vem false.
+   chamamos o método setData() com as informações carregadas, e retornamos o template renderizado com o método draw() do RainTpl.
+</p>
 <p>Método setData carrega os dados que são passados para o template HTML, em nossa página principal por exemplo, carregamos as informações dos pets, loginSuccess e ongs para serem apresentadas na interface do usuário.</p>
 <p>Método __destruct carrega o nosso footer no template HTML, o mesmo é chamado automaticamente após o metodo setTpl.</p>
 
 ![26](https://user-images.githubusercontent.com/49602892/145344530-25c16c8e-67b4-4461-aeb8-4d6ce1e0df9a.png)
 ![27](https://user-images.githubusercontent.com/49602892/145344590-199085b6-5053-4f3e-a847-c3fdfd7c3821.png)
 
-<p>A lógica é simples, quando acessamos a página principal da plataforma, é chamado o método __construct que por sua vez traz o nosso header, quando passamos na rota $page = new Page() $page->setTpl(index), automaticamente chamamos o template html que será o corpo da página em sí, ao chegarmos na linha 46 como ilustra a imagem a seguir, o PHP não encontra mais nenhum comando e por sua vez executa o nosso método __destruct que traz o nosso footer da página na plataforma.</p>
+<p>A lógica é simples, quando iniciamos o objeto na rota $page = new Page(), por padrão é chamado o método __construct que por sua vez traz o nosso header, com o objeto carregado, chamamos o método setTpl $page->setTpl(index) e passamos como paramêtro o template HTML que irá ser carregado, nesse caso index.html, automaticamente chamamos o template html que será o corpo da página em sí, ao chegarmos na linha 46 como ilustra a imagem a seguir, o PHP não encontra mais nenhum comando e por sua vez executa o nosso método __destruct que traz o nosso footer da página na plataforma.</p>
 
 ![28](https://user-images.githubusercontent.com/49602892/145486335-52dcbd93-6fc2-4958-a1c9-b39842b9900f.png)
 
