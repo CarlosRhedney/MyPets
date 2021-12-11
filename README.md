@@ -201,7 +201,17 @@ Documentação<p id="documentacao"></p>
 **Ong**
 <p>Ong() Classe do sistema que faz referência a parte administrativa do usuário, seja ele representante de uma ong ou não, é nesta parte do sistema que o usuário faz as inserções dos animais que irão para adoção, tem as categorias disponíveis, onde o usuário consegue adicionar o animal a uma categoria.</p>
 <p>Frizando que a criação, alteração e exclusão destas categorias ficam a cargo do administrador da plataforma, os usuários sejam eles representantes de uma ong ou não, podem somente inserir o animal em determinada categoria.</p>
+<p>Administrativo</p>
+
+![35](https://user-images.githubusercontent.com/49602892/145665478-59ecc7ad-0240-4453-bd8f-40e816dd0f2c.png)
+
+<p>Usuário representando uma ong ou não.</p>
+
+![36](https://user-images.githubusercontent.com/49602892/145665572-5faccbb1-0ab1-4af1-8fd2-88b92ee89706.png)
+
 <p>Ong() é herança de Page(), Ong herda todos os atributos e métodos públicos e protegidos da classe pai Page.</p>
+
+![32](https://user-images.githubusercontent.com/49602892/145665371-9dfabe10-d8b2-4d08-9baa-52a691295a4c.png)
 
 ![33](https://user-images.githubusercontent.com/49602892/145664113-b1a3ffc3-c063-4250-8d20-320fb42f67ce.png)
 
