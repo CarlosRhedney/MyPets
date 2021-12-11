@@ -194,9 +194,20 @@ Documentação<p id="documentacao"></p>
 
 ![30](https://user-images.githubusercontent.com/49602892/145525579-c68ffdd7-8a6e-4b9c-aa55-597de8b3ff26.png)
 
-<p>Todos os templates referêntes a parte administrativa do sistema se encontram no diretório admin</p>
+<p>Todos os templates HTML referêntes a parte administrativa do sistema se encontram no diretório admin.</p>
 
-![31](https://user-images.githubusercontent.com/49602892/145526486-fc409bff-0350-4492-ba5d-1d64d103d80d.png)
+![31](https://user-images.githubusercontent.com/49602892/145663573-03cc9449-85ff-4cb2-9215-fb2b36164232.png)
+
+**Ong**
+<p>Ong() Classe do sistema que faz referência a parte administrativa do usuário, seja ele representante de uma ong ou não, é nesta parte do sistema que o usuário faz as inserções dos animais que irão para adoção, tem as categorias disponíveis, onde o usuário consegue adicionar o animal a uma categoria.</p>
+<p>Frizando que a criação, alteração e exclusão destas categorias ficam a cargo do administrador da plataforma, os usuários sejam eles representantes de uma ong ou não, podem somente inserir o animal em determinada categoria.</p>
+<p>Ong() é herança de Page(), Ong herda todos os atributos e métodos públicos e protegidos da classe pai Page.</p>
+
+![33](https://user-images.githubusercontent.com/49602892/145664113-b1a3ffc3-c063-4250-8d20-320fb42f67ce.png)
+
+<p>Todos os templates HTML referêntes a parte administrativa do usuário do sistema se encontram no diretório ong.</p>
+
+![34](https://user-images.githubusercontent.com/49602892/145664584-e328764e-1716-4f4d-a3d8-cebac2eef839.png)
 
 
 
