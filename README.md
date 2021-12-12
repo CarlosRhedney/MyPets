@@ -291,6 +291,21 @@ Documentação<p id="documentacao"></p>
 
 ![56](https://user-images.githubusercontent.com/49602892/145729423-b3a44e6a-ab2d-4d7f-ba14-6b97d0b3ac41.png)
 
+**Ong**
+<p>Classe do sistema administrativo faz referência ao DAO dos usuários seja ele representante de uma ong ou não.</p>
+
+![57](https://user-images.githubusercontent.com/49602892/145730391-76a731fd-eea5-42af-aa35-adb1dd0de16d.png)
+
+**Pet**
+<p>Classe do sistema que faz referência ao DAO dos animais inseridos na plataforma</p>
+
+![58](https://user-images.githubusercontent.com/49602892/145730575-c39aa501-55d1-422e-ab5e-ea63c31a6536.png)
+
+**User**
+<p>Classe do sistema que faz referência ao DAO do usuário.</p>
+
+![59](https://user-images.githubusercontent.com/49602892/145730692-594f3e35-6ac9-4fd2-8687-f68d66a8b450.png)
+
 
 
 
