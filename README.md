@@ -276,6 +276,21 @@ Documentação<p id="documentacao"></p>
 
 ![53](https://user-images.githubusercontent.com/49602892/145727936-c89c1260-9b7d-469b-8e9e-f33ebf7e8a8a.png)
 
+**Category**
+<p>Categorias</p>
+
+![54](https://user-images.githubusercontent.com/49602892/145729224-4bdacc43-08ef-4ae2-a8e5-c506d2dd6c54.png)
+
+**Data**
+<p>Dados sensiveis do usuário</p>
+
+![55](https://user-images.githubusercontent.com/49602892/145729341-715b6ecb-69f6-4190-9534-71e110e01cc2.png)
+
+**Feedback**
+<p>Classe criada para o feedback do usuário após a exclusão da conta.</p>
+
+![56](https://user-images.githubusercontent.com/49602892/145729423-b3a44e6a-ab2d-4d7f-ba14-6b97d0b3ac41.png)
+
 
 
 
