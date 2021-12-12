@@ -254,6 +254,7 @@ Documentação<p id="documentacao"></p>
 ![46](https://user-images.githubusercontent.com/49602892/145724648-9c440a2e-4a8e-4d3b-8234-bacc423e1af6.png)
 
 <p>Método estático getForgot() contido na classe User.php</p>
+<p>Método verifica se email existe no banco de dados, caso exista, criamos na tabela tb_userspasswordsrecoveries as informações do usuário, pegamos essas informações, encriptamos com o openssl_encript, verificamos se é um usuário da adminstração ou não, e então enviamos um email ao usuário.</p>
 
 ![47](https://user-images.githubusercontent.com/49602892/145724208-bea11be3-3009-4cb7-a76a-5ea8e3149257.png)
 
@@ -261,9 +262,19 @@ Documentação<p id="documentacao"></p>
 
 ![49](https://user-images.githubusercontent.com/49602892/145724279-54bd6a9c-2ea1-409d-b234-74dbe7822965.png)
 
-<p> o mesmo verifica se o email informado realmente existe em nosso banco de dados, caso exista, criamos na tabela tb_userspasswordsrecoveries as informações pertinentes do usuário que está tentando recuperar a senha.</p>
+<p>O mesmo verifica se o email informado realmente existe em nosso banco de dados, caso exista, criamos na tabela tb_userspasswordsrecoveries as informações pertinentes do usuário que está tentando recuperar a senha.</p>
 
 ![50](https://user-images.githubusercontent.com/49602892/145727028-9079ef5e-da6e-4c01-95cb-173c97d06b41.png)
+
+**Diretório Model**
+<p>Diretório Model contém os DAOs necessários para o pleno funcionamento da plataforma, como ilustra a imagem a seguir podemos ver a classe Address referênte ao endereço do usuário.</p>
+<p>Foi utilizado como recurso o <strong>webservice viacep</strong>, para requisição do cep informado na plataforma.</p>
+
+![51](https://user-images.githubusercontent.com/49602892/145727687-0d1d712e-349b-4010-b110-d6158e61f214.png)
+
+![52](https://user-images.githubusercontent.com/49602892/145727935-555e68fb-0b2d-4f67-bd4f-a9fdb5507193.png)
+
+![53](https://user-images.githubusercontent.com/49602892/145727936-c89c1260-9b7d-469b-8e9e-f33ebf7e8a8a.png)
 
 
 
