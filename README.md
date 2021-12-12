@@ -292,7 +292,7 @@ Documentação<p id="documentacao"></p>
 ![56](https://user-images.githubusercontent.com/49602892/145729423-b3a44e6a-ab2d-4d7f-ba14-6b97d0b3ac41.png)
 
 **Ong**
-<p>Classe do sistema administrativo faz referência ao DAO dos usuários seja ele representante de uma ong ou não.</p>
+<p>Classe do sistema administrativo do usuário, que faz referência ao DAO das ONGs que são cadastradas na plataforma</p>
 
 ![57](https://user-images.githubusercontent.com/49602892/145730391-76a731fd-eea5-42af-aa35-adb1dd0de16d.png)
 
