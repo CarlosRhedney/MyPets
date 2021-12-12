@@ -243,9 +243,13 @@ Documentação<p id="documentacao"></p>
 
 ![42](https://user-images.githubusercontent.com/49602892/145723730-a3b8f1ea-f334-4114-b044-3470cec7a263.png)
 
-<p>Para exemplificar o email enviado, dei um var_dump() no DAO User.php em </p>
+<p>Para exemplificar o email enviado, dei um var_dump() no DAO User.php contido em mypets/php-classes/src/Model/User.php</p>
 
 ![44](https://user-images.githubusercontent.com/49602892/145724040-6e5087ec-f2e9-4594-bbff-03bb58fe3164.png)
+
+![46](https://user-images.githubusercontent.com/49602892/145724648-9c440a2e-4a8e-4d3b-8234-bacc423e1af6.png)
+
+![45](https://user-images.githubusercontent.com/49602892/145724649-499bf322-e9ca-4057-b53e-4aaf911c8709.png)
 
 ![47](https://user-images.githubusercontent.com/49602892/145724208-bea11be3-3009-4cb7-a76a-5ea8e3149257.png)
 
