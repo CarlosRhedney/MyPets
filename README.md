@@ -219,6 +219,13 @@ Documentação<p id="documentacao"></p>
 
 ![34](https://user-images.githubusercontent.com/49602892/145664584-e328764e-1716-4f4d-a3d8-cebac2eef839.png)
 
+**Model**
+<p>Model() Classe Principal e sem dúvida a mais inteligênte do sistema, ela idêntifica qual o método enviado, se é <strong>get</strong> ou <strong>set</strong>, ambos tem comportamentos diferêntes, então no método mágico __call() verificamos com a váriavel $name o que foi enviado, $args são os argumentos que possam term vindo caso seja um <strong>set</strong>, o nosso <strong>get</strong> só retorna os valores para solicitados no front da aplicação, todos os DAOs contidos em mypets/php-classes/src/Model são herança de Model.</p>
+<p>setData() método contido em Model(), que cria dinâmicamente os nossos getters and setters, para que facilitasse na criação de cada DAO, sem a necessidade de ter getters and setters para cada um.</p>
+<p>Por fim e não menos importante o nosso getValues(), que nada mais faz do que retornar os valores, que não podem ser acessados diretamente por se tratar de um atributo privado da classe.</p>
+
+![37](https://user-images.githubusercontent.com/49602892/145721066-4d18a54e-b7fd-4622-ba64-96e1c65121ef.png)
+
 
 
 
