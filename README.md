@@ -220,11 +220,38 @@ Documentação<p id="documentacao"></p>
 ![34](https://user-images.githubusercontent.com/49602892/145664584-e328764e-1716-4f4d-a3d8-cebac2eef839.png)
 
 **Model**
-<p>Model() Classe Principal e sem dúvida a mais inteligênte do sistema, ela idêntifica qual o método enviado, se é <strong>get</strong> ou <strong>set</strong>, ambos tem comportamentos diferêntes, então no método mágico __call() verificamos com a váriavel $name o que foi enviado, $args são os argumentos que possam term vindo caso seja um <strong>set</strong>, o nosso <strong>get</strong> só retorna os valores para solicitados no front da aplicação, todos os DAOs contidos em mypets/php-classes/src/Model são herança de Model.</p>
+<p>Model() Classe Principal e sem dúvida a mais inteligênte do sistema, ela idêntifica qual o método enviado, se é <strong>get</strong> ou <strong>set</strong>, ambos tem comportamentos diferêntes, então no método mágico __call() verificamos com a váriavel $name o que foi enviado, $args são os argumentos que possam ter vindo caso seja um <strong>set</strong>, o nosso <strong>get</strong> só retorna os valores que foram solicitados no front da aplicação, todos os DAOs contidos em mypets/php-classes/src/Model são herança de Model.</p>
 <p>setData() método contido em Model(), que cria dinâmicamente os nossos getters and setters, para que facilitasse na criação de cada DAO, sem a necessidade de ter getters and setters para cada um.</p>
 <p>Por fim e não menos importante o nosso getValues(), que nada mais faz do que retornar os valores, que não podem ser acessados diretamente por se tratar de um atributo privado da classe.</p>
 
 ![37](https://user-images.githubusercontent.com/49602892/145721066-4d18a54e-b7fd-4622-ba64-96e1c65121ef.png)
+
+**Mailer**
+<p>Mailer() Classe do sistema que faz referência ao envio de emails na plataforma, caso o usuário esqueça a senha ele tem a opção de redefinir uma nova senha, para isso o email do mesmo precisa estar devidamente cadastrado na plataforma, informando este email é disparado um link para redefinir a senha.</p>
+
+![38](https://user-images.githubusercontent.com/49602892/145723115-1eade456-c299-4ad7-ae06-ea89bc7695dc.png)
+
+<p>O template HTML referênte ao email enviado se encontra no diretório mail.</p>
+
+![39](https://user-images.githubusercontent.com/49602892/145723249-88a7e772-fa7a-45e1-9828-3a2163e19b60.png)
+
+![40](https://user-images.githubusercontent.com/49602892/145723589-e5f8306b-d621-4a01-a49b-ca8e6db02933.png)
+
+![41](https://user-images.githubusercontent.com/49602892/145723616-12b2c0ae-2254-4ef3-b088-a564fc5b28fd.png)
+
+![43](https://user-images.githubusercontent.com/49602892/145723711-a23de0ed-c340-4890-a763-6d9dc699ef67.png)
+
+![42](https://user-images.githubusercontent.com/49602892/145723730-a3b8f1ea-f334-4114-b044-3470cec7a263.png)
+
+<p>Para exemplificar o email enviado, dei um var_dump() no DAO User.php em </p>
+
+![44](https://user-images.githubusercontent.com/49602892/145724040-6e5087ec-f2e9-4594-bbff-03bb58fe3164.png)
+
+![47](https://user-images.githubusercontent.com/49602892/145724208-bea11be3-3009-4cb7-a76a-5ea8e3149257.png)
+
+![48](https://user-images.githubusercontent.com/49602892/145724210-6d2bf3ac-283e-4e39-b06a-aca2c853efff.png)
+
+![49](https://user-images.githubusercontent.com/49602892/145724279-54bd6a9c-2ea1-409d-b234-74dbe7822965.png)
 
 
 
