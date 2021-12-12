@@ -247,15 +247,23 @@ Documentação<p id="documentacao"></p>
 
 ![44](https://user-images.githubusercontent.com/49602892/145724040-6e5087ec-f2e9-4594-bbff-03bb58fe3164.png)
 
+<p>Clicando no link ou no botão Redefinir Senha como ilustra a imagem acima, somos redirecionados para esta página do sitema, onde o usário já consegue redefinir uma nova senha, como ilustra a imagem abaixo.</p>
+
 ![45](https://user-images.githubusercontent.com/49602892/145724649-499bf322-e9ca-4057-b53e-4aaf911c8709.png)
 
 ![46](https://user-images.githubusercontent.com/49602892/145724648-9c440a2e-4a8e-4d3b-8234-bacc423e1af6.png)
+
+<p>Método estático getForgot() contido na classe User.php</p>
 
 ![47](https://user-images.githubusercontent.com/49602892/145724208-bea11be3-3009-4cb7-a76a-5ea8e3149257.png)
 
 ![48](https://user-images.githubusercontent.com/49602892/145724210-6d2bf3ac-283e-4e39-b06a-aca2c853efff.png)
 
 ![49](https://user-images.githubusercontent.com/49602892/145724279-54bd6a9c-2ea1-409d-b234-74dbe7822965.png)
+
+<p> o mesmo verifica se o email informado realmente existe em nosso banco de dados, caso exista, criamos na tabela tb_userspasswordsrecoveries as informações pertinentes do usuário que está tentando recuperar a senha.</p>
+
+![50](https://user-images.githubusercontent.com/49602892/145727028-9079ef5e-da6e-4c01-95cb-173c97d06b41.png)
 
 
 
