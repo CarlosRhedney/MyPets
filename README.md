@@ -306,6 +306,11 @@ Documentação<p id="documentacao"></p>
 
 ![59](https://user-images.githubusercontent.com/49602892/145730692-594f3e35-6ac9-4fd2-8687-f68d66a8b450.png)
 
+**Diretório DB**
+<p>Diretório DB contém a conexão com o banco de dados.</p>
+
+![60](https://user-images.githubusercontent.com/49602892/145734435-b6aa590a-da2b-4f1b-95c1-13da7e9dfde1.png)
+
 
 
 
