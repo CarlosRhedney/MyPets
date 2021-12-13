@@ -311,6 +311,28 @@ Documentação<p id="documentacao"></p>
 
 ![60](https://user-images.githubusercontent.com/49602892/145734435-b6aa590a-da2b-4f1b-95c1-13da7e9dfde1.png)
 
+**views**
+<p>Como já mencionado, views contém os templates HTML do <strong>site</strong></p>
+
+![61](https://user-images.githubusercontent.com/49602892/145736406-0b37949a-2cf8-49ba-9ed1-4b5586ea832b.png)
+
+<p>Em <strong>views</strong>, diretório <strong>admin</strong>, contém os templates HTML da administração.</p>
+
+![62](https://user-images.githubusercontent.com/49602892/145736885-72391c50-e5f6-4108-a644-60609b40d757.png)
+
+<p>Em <strong>views</strong>, diretório <strong>mail</strong>, contém os template HTML do email.</p>
+
+![39](https://user-images.githubusercontent.com/49602892/145723249-88a7e772-fa7a-45e1-9828-3a2163e19b60.png)
+
+<p>Em <strong>views</strong>, diretório <strong>ong</strong>, contém os templates HTML das ongs cadastrads na plataforma.</p>
+
+![63](https://user-images.githubusercontent.com/49602892/145737091-1d7e6e90-0877-48c1-8abc-4a6b034a3c16.png)
+
+**views-cache**
+<p>Arquivos de log gerados pelo RainTpl</p>
+
+![64](https://user-images.githubusercontent.com/49602892/145737226-7b00aed1-b0fa-46cd-9083-09ce01de0a39.png)
+
 
 
 
