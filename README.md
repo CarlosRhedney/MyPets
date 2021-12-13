@@ -465,6 +465,27 @@ Como Usar<p id="como-usar"></p>
 
 ![20](https://user-images.githubusercontent.com/49602892/144689300-b2ee5eb1-8595-47b2-a9e0-4a42b17ef234.png)
 
+<p>Clicando em Minha Conta, somos redirecionados para a parte de administração do usuário.</p>
+<p>Editar Dados</p>
+
+![76](https://user-images.githubusercontent.com/49602892/145747576-9473f190-7e10-486d-bbce-06ac7e8c1c59.png)
+
+<p>Alterar Senha</p>
+
+![77](https://user-images.githubusercontent.com/49602892/145747735-fa8efae7-0c03-4e06-bda1-36865d05389f.png)
+
+<p>Dados Pessoais</p>
+
+![78](https://user-images.githubusercontent.com/49602892/145747876-9cd603ec-5f45-42b9-a8e8-007c9b329f78.png)
+
+<p>Endereço</p>
+
+![79](https://user-images.githubusercontent.com/49602892/145747983-ac815cb7-39f2-4384-b22f-3012069dcd0f.png)
+
+<p>Excluir Conta</p>
+
+![80](https://user-images.githubusercontent.com/49602892/145748118-e732b170-7876-4fff-bb6c-34df3261b789.png)
+
 
 Pré-requisitos<p id="pre-requisitos"></p>
 --------------
