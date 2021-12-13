@@ -333,8 +333,48 @@ Documentação<p id="documentacao"></p>
 
 ![64](https://user-images.githubusercontent.com/49602892/145737226-7b00aed1-b0fa-46cd-9083-09ce01de0a39.png)
 
+**Arquivos na raiz do sistema**
+<p>Começando com index.php, para que o arquivo não ficasse um monolitico enorme, foram separados as rotas e criados arquivos condizentes com o que cada rota faz, e solicitados com o require_once().</p>
 
+![65](https://user-images.githubusercontent.com/49602892/145741926-77330e53-2745-4ced-94b4-d06e75c8dc85.png)
 
+<p>Em admin-categories.php, se encontram as rotas administrativas referêntes a criação, alteração, exclusão e o adicionar o animal na categoria.</p>
+
+![66](https://user-images.githubusercontent.com/49602892/145743176-b37b0016-9a4c-4a10-a7c2-e217cfa964a4.png)
+
+<p>Em admin-login.php, se encontram as rotas administrativas referêntes a login, logout, e recuperação de senha.</p>
+
+![67](https://user-images.githubusercontent.com/49602892/145743436-6ecdd73b-6411-4309-b0ec-2116ada4fb4a.png)
+
+<p>Em admin-ongs.php, se encontram as rotas administrativas referêntes a criação, alteração, exclusão e o relatório das ongs.</p>
+
+![68](https://user-images.githubusercontent.com/49602892/145743655-caad8ce0-ca4f-45dd-9478-08c1be2e1db9.png)
+
+<p>Em admin-pets.php, se encontram as rotas administrativas referêntes a criação, alteração, exclusão e o relatório dos animais.</p>
+
+![69](https://user-images.githubusercontent.com/49602892/145743817-7bedf8e0-28a8-4ad1-a035-484c50bf1126.png)
+
+<p>Em admin-users.php, se encontram as rotas administrativas referêntes a criação, alteração, exclusão e o relatório dos usuários.</p>
+
+![70](https://user-images.githubusercontent.com/49602892/145743955-dc7532af-e5ca-42fc-9429-b3ad9429514d.png)
+
+<p>Em admin.php, se encontram a rota da administração.</p>
+
+![71](https://user-images.githubusercontent.com/49602892/145744112-8060a6ec-d760-44bf-a05a-26c1d0a8d197.png)
+
+<p>Em function.php, as funções externas usadas no sistema.</p>
+
+![72](https://user-images.githubusercontent.com/49602892/145744249-83f4face-ff4d-4026-b763-ed8152ea4829.png)
+
+<p>Em ong.php, se encontram as rotas administrativas do usuário que representa uma ong, referêntes a criação, alteração, exclusão da ong a qual ele representa.</p>
+
+![73](https://user-images.githubusercontent.com/49602892/145744677-2a122177-90ce-4979-bee1-2f8b0ad5ce59.png)
+
+![74](https://user-images.githubusercontent.com/49602892/145744679-516ea4e5-7371-4220-b913-5d75fd0971b1.png)
+
+<p>Em site.php, se encontram as rotas do site, referêntes a apresentção da página inicial.</p>
+
+![75](https://user-images.githubusercontent.com/49602892/145744979-0f2d5122-4591-424f-bd8d-8dc4971bffe3.png)
 
 
 🛠 Tecnologias<p id="tecnologias"></p>

@@ -3,7 +3,7 @@
 session_start();
 
 // vendor/autoload.php contem os arquivos necessarios para que nosso sistema possa
-// encontre os demais arquivos necessarios para o sistema.
+// encontrar os demais arquivos necessários para o sistema.
 require_once("vendor/autoload.php");
 
 // Utilização das classes necessarias para a configuração do sistema.
