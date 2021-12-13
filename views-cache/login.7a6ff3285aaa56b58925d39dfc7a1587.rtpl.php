@@ -23,18 +23,31 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body class="hold-transition lockscreen">
-<div class="lockscreen-wrapper">
-  <div class="lockscreen-logo">
+<body class="hold-transition login-page">
+<div class="login-box">
+  <div class="login-logo">
     <a href="/"><b>My</b>Pets</a>
   </div>
-  <div class="text-center">
-    <p>A equipe MyPets agradece o feedback.</p><br>
-    <p>Obrigado!</p>
-  </div>
-  <div class="lockscreen-footer text-center">
-    Copyright &copy; 2021 <b><a href="/" class="text-black">MyPets </a></b><span class="fa fa-paw"></span><br>
-    All rights reserved.
+  <div class="login-box-body">
+    <div align="center"><p class="fa fa-paw"></p></div>
+    <form action="/admin/login" method="post">
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" placeholder="Login" name="login">
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" class="form-control" placeholder="Password" name="password">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+      <div class="row">
+        <div class="col-xs-8">
+          <a href="/admin/forgot" class="fa fa-key"> Esqueceu a senha?</a><br>
+        </div>
+        <div class="col-xs-4">
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Entrar</button>
+        </div>
+      </div>
+    </form>
   </div>
 </div>
 
