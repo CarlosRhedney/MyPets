@@ -486,6 +486,10 @@ Como Usar<p id="como-usar"></p>
 
 ![80](https://user-images.githubusercontent.com/49602892/145748118-e732b170-7876-4fff-bb6c-34df3261b789.png)
 
+![81](https://user-images.githubusercontent.com/49602892/145749246-13af9fcb-80d8-4dc9-a4cd-50f3de362a41.png)
+
+![82](https://user-images.githubusercontent.com/49602892/145749249-c07000c8-a208-4356-a08c-4c59000c866e.png)
+
 
 Pré-requisitos<p id="pre-requisitos"></p>
 --------------
