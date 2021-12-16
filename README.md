@@ -417,6 +417,11 @@ Como Usar<p id="como-usar"></p>
 
 ![10](https://user-images.githubusercontent.com/49602892/144687678-3bbd127e-55c8-4028-a423-1c243838f3b1.png)
 
+<p>O usuário administrador da plataforma, pode se logar no sistema tanto na parte administrativa quanto na parte do usuário na plataforma</p>
+<p>Frizando que, o usuário seja ele representante de uma ong ou não, só pode se logar na plataforma com o email e na parte de login da plataforma, já o usuário administrador da plataforma deve se logar com um login escolhido por ele.</p>
+
+![screencapture-mypets-br-login-2021-12-16-02_22_31](https://user-images.githubusercontent.com/49602892/146313108-d79a6d77-7968-4afa-aeb0-63fe0ae296ca.png)
+
 <p>No banco de dados já existe um usuário cadastrado, cujo login e senha são:</p>
 <p>Login: IronMan</p>
 <p>Senha: admin</p>
