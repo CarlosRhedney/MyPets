@@ -109,6 +109,7 @@ Primeiramente faça o download do projeto [aqui](https://github.com/CarlosRhedne
 <p>Agora com todos os arquivos do projeto contido no diretório htdocs, atualize o navegador, a página inicial já tem que estar funcionando.</p>
 
 ![5](https://user-images.githubusercontent.com/49602892/144559450-e2e2021f-1536-496d-81d3-1368fe235da1.png)
+![screencapture-mypets-br-2021-12-16-02_39_01](https://user-images.githubusercontent.com/49602892/146314607-27d64ef4-d40a-47ad-a8c3-ee35d181dd8a.png)
 
 <p>Para a criar o banco de dados, abra uma nova aba do navegador e digite:</p>
 <p>localhost/phpmyadmin</p>
@@ -413,11 +414,11 @@ Como Usar<p id="como-usar"></p>
 
 ![5](https://user-images.githubusercontent.com/49602892/144559450-e2e2021f-1536-496d-81d3-1368fe235da1.png)
 
-<p>Para acessar a parte administrativa da aplicação, basta inserir na url um /admin, e você será redirecionado para a página de login da administração, como ilustrado na imagem a seguir, o ideal é que o usuário comum nem saiba desta parte administrativa.</p>
+<p>Para acessar a parte administrativa da aplicação, basta inserir na url <strong>/admin</strong>, e você será redirecionado para a página de login da administração, como ilustrado na imagem a seguir, o ideal é que o usuário comum nem saiba desta parte administrativa.</p>
 
 ![10](https://user-images.githubusercontent.com/49602892/144687678-3bbd127e-55c8-4028-a423-1c243838f3b1.png)
 
-<p>O usuário administrador da plataforma, pode se logar no sistema tanto na parte administrativa quanto na parte do usuário na plataforma</p>
+<p>O usuário administrador da plataforma, pode se logar no sistema tanto na parte administrativa quanto na parte do usuário na plataforma.</p>
 <p>Frizando que, o usuário seja ele representante de uma ong ou não, só pode se logar na plataforma com o email e na parte de login da plataforma, já o usuário administrador da plataforma deve se logar com um login escolhido por ele.</p>
 
 ![screencapture-mypets-br-login-2021-12-16-02_22_31](https://user-images.githubusercontent.com/49602892/146313108-d79a6d77-7968-4afa-aeb0-63fe0ae296ca.png)
