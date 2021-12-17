@@ -109,7 +109,7 @@ Primeiramente faça o download do projeto [aqui](https://github.com/CarlosRhedne
 <p>Agora com todos os arquivos do projeto contido no diretório htdocs, atualize o navegador, a página inicial já tem que estar funcionando.</p>
 
 ![5](https://user-images.githubusercontent.com/49602892/144559450-e2e2021f-1536-496d-81d3-1368fe235da1.png)
-![screencapture-mypets-br-2021-12-16-02_39_01](https://user-images.githubusercontent.com/49602892/146314607-27d64ef4-d40a-47ad-a8c3-ee35d181dd8a.png)
+![screencapture-mypets-br-2021-12-17-02_38_24](https://user-images.githubusercontent.com/49602892/146494936-11c629a2-2c0d-4d7b-b69e-b550f2c64fc9.png)
 
 <p>Para a criar o banco de dados, abra uma nova aba do navegador e digite:</p>
 <p>localhost/phpmyadmin</p>
@@ -321,7 +321,7 @@ Documentação<p id="documentacao"></p>
 
 ![62](https://user-images.githubusercontent.com/49602892/145736885-72391c50-e5f6-4108-a644-60609b40d757.png)
 
-<p>Em <strong>views</strong>, diretório <strong>mail</strong>, contém os template HTML do email.</p>
+<p>Em <strong>views</strong>, diretório <strong>mail</strong>, contém o template HTML do email.</p>
 
 ![39](https://user-images.githubusercontent.com/49602892/145723249-88a7e772-fa7a-45e1-9828-3a2163e19b60.png)
 
@@ -373,7 +373,7 @@ Documentação<p id="documentacao"></p>
 
 ![74](https://user-images.githubusercontent.com/49602892/145744679-516ea4e5-7371-4220-b913-5d75fd0971b1.png)
 
-<p>Em site.php, se encontram as rotas do site, referêntes a apresentção da página inicial.</p>
+<p>Em site.php, se encontram as rotas do site, referêntes a apresentação da página inicial.</p>
 
 ![75](https://user-images.githubusercontent.com/49602892/145744979-0f2d5122-4591-424f-bd8d-8dc4971bffe3.png)
 
@@ -471,7 +471,7 @@ Como Usar<p id="como-usar"></p>
 
 ![20](https://user-images.githubusercontent.com/49602892/144689300-b2ee5eb1-8595-47b2-a9e0-4a42b17ef234.png)
 
-<p>Clicando em Minha Conta, somos redirecionados para a parte de administração do usuário.</p>
+<p>Clicando em Minha Conta, somos redirecionados para a parte de administração da conta do usuário.</p>
 <p>Editar Dados</p>
 
 ![76](https://user-images.githubusercontent.com/49602892/145747576-9473f190-7e10-486d-bbce-06ac7e8c1c59.png)
