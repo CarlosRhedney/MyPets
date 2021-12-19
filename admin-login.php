@@ -21,22 +21,34 @@ $app->get('/admin/login', function(){
 
 	// Chamamos o metodo setTpl() contido em Page.php, e chamamos o template login.html contido em views/admin.
 	// Para mais detalhes verificar o template em views/admin/login.html.
-	$page->setTpl("login");
+	$page->setTpl("login", array(
+		"error"=>User::getError()
+	));
 
 });
 
 // Rota da administração para verificação do login e senha.
 $app->post('/admin/login', function(){
 
-	// Metodo estatico login criado na classe User.
-	// Metodo verifica se o login e senha digitados realmente existem no sistema, caso não exista erros durante a verificação o usuario é redirecionado para a parte administrativa do sistema.
-	User::login($_POST["login"], $_POST["password"]);
+	try{
+		// Metodo estatico login criado na classe User.
+		// Metodo verifica se o login e senha digitados realmente existem no sistema, caso não exista erros durante a verificação o usuario é redirecionado para a parte administrativa do sistema.
+		User::login($_POST["login"], $_POST["password"]);
 
-	// Redirecionamento o usuario para parte da administração.
-	header("Location: /admin");
+		// Redirecionamento o usuario para parte da administração.
+		header("Location: /admin");
 
-	// Interrompemos a execução, uma vez que o usuario já está logado.
-	exit;
+		// Interrompemos a execução, uma vez que o usuario já está logado.
+		exit;
+
+	}catch(Exception $e){
+
+		User::setError($e->getMessage());
+
+		header("Location: /admin/login");
+
+		exit;
+	}
 
 });
 
@@ -68,24 +80,36 @@ $app->get('/admin/forgot', function(){
 
 	// Chamamos o metodo setTpl() contido em Page.php, e chamamos o template forgot.html contido em views/admin.
 	// Para mais detalhes verificar o template em views/admin/forgot.html.
-	$page->setTpl("forgot");
+	$page->setTpl("forgot", array(
+		"error"=>User::getError()
+	));
 
 });
 
 // Rota da administração que envia o email informado pelo usuario.
 $app->post('/admin/forgot', function(){
 
-	// Metodo estatico getForgot() criado na classe User.
-	// Verifica se o email informado pelo usuario existe no Banco de Dados.
-	// Caso o email exista na Base de Dados, então é enviado um link de recuperação para aquele email.
-	// Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/Model/User.php.
-	$user = User::getForgot($_POST["mail"]);
+	try{
+		// Metodo estatico getForgot() criado na classe User.
+		// Verifica se o email informado pelo usuario existe no Banco de Dados.
+		// Caso o email exista na Base de Dados, então é enviado um link de recuperação para aquele email.
+		// Para mais detalhes verificar a classe em vendor/mypets/php-classes/src/Model/User.php.
+		$user = User::getForgot($_POST["mail"]);
 
-	// Redirecionamos o usuario para o template sent.html.
-	header("Location: /admin/forgot/sent");
+		// Redirecionamos o usuario para o template sent.html.
+		header("Location: /admin/forgot/sent");
 
-	// Interrompemos a execução, uma vez que o usuario acabou de realizar uma ação no sistema.
-	exit;
+		// Interrompemos a execução, uma vez que o usuario acabou de realizar uma ação no sistema.
+		exit;
+	}catch(Exception $e){
+
+		User::setError($e->getMessage());
+
+		header("Location: /admin/forgot");
+
+		exit;
+		
+	}
 	
 });
 

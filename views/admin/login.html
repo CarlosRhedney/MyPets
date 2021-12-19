@@ -28,6 +28,11 @@
   <div class="login-logo">
     <a href="/"><b>My</b>Pets</a>
   </div>
+  {if="$error != ''"}
+  <div class="alert alert-danger">
+      {$error}
+  </div>
+  {/if}
   <div class="login-box-body">
     <div align="center"><p class="fa fa-paw"></p></div>
     <form action="/admin/login" method="post">

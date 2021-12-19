@@ -28,6 +28,11 @@
   <div class="lockscreen-logo">
     <a href="/"><b>My</b>Pets</a>
   </div>
+  {if="$error != ''"}
+  <div class="alert alert-danger">
+      {$error}
+  </div>
+  {/if}
   <div class="lockscreen-item">
     <form  action="/admin/forgot" method="post">
       <div class="input-group">
